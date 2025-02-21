@@ -1,0 +1,948 @@
+{% extends 'epr/base.html' %}
+
+
+{% block content %}
+
+<!-- Header -->
+<header id="header" class="header d-flex align-items-center bottom-top">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+    <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      {% load static %}
+      <img src="{% static 'img/logo.png' %}" alt="">
+      
+
+      <!-- <h1 class="sitename">EPR Groupers</h1> -->
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="{% url 'epr:index' %}" class="active">Home<br></a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="courses.html">Services</a></li>
+        <!-- <li class="dropdown"><a href="#"><span>Product</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="#">Dropdown 1</a></li>
+            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Deep Dropdown 1</a></li>
+                <li><a href="#">Deep Dropdown 2</a></li>
+                <li><a href="#">Deep Dropdown 3</a></li>
+                <li><a href="#">Deep Dropdown 4</a></li>
+                <li><a href="#">Deep Dropdown 5</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Dropdown 2</a></li>
+            <li><a href="#">Dropdown 3</a></li>
+            <li><a href="#">Dropdown 4</a></li>
+          </ul>
+        </li> -->
+        <li><a href="events.html">About Us</a></li>
+        <li><a href="{% url 'epr:contact' %}">Contact</a></li>
+
+
+
+        <li><a href="#">Careers</a></li>
+
+        <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="#">Dropdown 1</a></li>
+            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Deep Dropdown 1</a></li>
+                <li><a href="#">Deep Dropdown 2</a></li>
+                <li><a href="#">Deep Dropdown 3</a></li>
+                <li><a href="#">Deep Dropdown 4</a></li>
+                <li><a href="#">Deep Dropdown 5</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Dropdown 2</a></li>
+            <li><a href="#">Dropdown 3</a></li>
+            <li><a href="#">Dropdown 4</a></li>
+          </ul>
+        </li> -->
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+    <!-- <a class="btn-getstarted" href="">Login</a> -->
+
+  </div>
+</header>
+<!-- End Header -->
+
+<body class="index-page">
+
+
+  <main class="main">
+    {% if messages %}
+    <div class="alert-container">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+        {% load static %}
+        <img src="{% static 'img/16.jpg' %}" alt="" data-aos="fade-in">
+        
+
+
+      <div class="container">
+        <h2 data-aos="fade-up" data-aos-delay="100">Learning Today,<br>Leading Tomorrow</h2>
+        <p data-aos="fade-up" data-aos-delay="200">We are team of talented designers making websites with Bootstrap</p>
+        <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="courses.html" class="btn-get-started">Get Started</a>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+            {% load static %}
+            <img src="{% static 'img/about3.jpg' %}" alt="">
+
+          </div>
+
+          <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
+            <h3>About Us</h3>
+            <p class="fst-italic" style="text-align: justify;">
+              Welcome to EPR Groupers, where innovation meets excellence! 
+              We are a forward-thinking technology company dedicated to delivering top-notch solutions 
+              that empower businesses to thrive in a competitive world. 
+              Our mission is to leverage cutting-edge technology and creativity to help our 
+              clients achieve their goals with confidence and efficiency.
+              At EPR Groupers, we specialize in a diverse range of services 
+              designed to address the modern challenges of businesses across industries. 
+              Whether you're looking for AI-driven solutions to revolutionize your operations, 
+              intelligent data analysis to unlock powerful insights, or seamless web development 
+              to establish your digital presence, we have you covered.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>AI Solutions</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Intelligent Data Analysis</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Web Development</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>AI Solutions</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Intelligent Data Analysis</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Web Development</span></li>
+            </ul>
+            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- /About Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section py-5" style="background-color: #f8f9fa;">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h4 class="text-primary">What We Offer</h4>
+          <h2 class="display-4 mb-4">Our Services</h2>
+          <p class="lead">We provide innovative solutions to help your business grow and thrive in the digital age.</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item bg-white rounded p-4 text-center shadow">
+              <div class="icon mb-4">
+                <i class="fas fa-robot fa-3x text-primary"></i>
+              </div>
+              <h4 class="mb-3">AI Solutions</h4>
+              <p class="mb-4">Transform your business with cutting-edge AI solutions that enhance efficiency, automate processes, and drive innovation.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item bg-white rounded p-4 text-center shadow">
+              <div class="icon mb-4">
+                <i class="fas fa-chart-line fa-3x text-primary"></i>
+              </div>
+              <h4 class="mb-3">Intelligent Data Analysis</h4>
+              <p class="mb-4">Unlock insights and drive decisions with intelligent data analysis powered by AI.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item bg-white rounded p-4 text-center shadow">
+              <div class="icon mb-4">
+                <i class="fas fa-code fa-3x text-primary"></i>
+              </div>
+              <h4 class="mb-3">Web Development</h4>
+              <p class="mb-4">Crafting dynamic, responsive, and user-friendly websites to elevate your online presence.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item bg-white rounded p-4 text-center shadow">
+              <div class="icon mb-4">
+                <i class="fas fa-network-wired fa-3x text-primary"></i>
+              </div>
+              <h4 class="mb-3">IoT Solutions</h4>
+              <p class="mb-4">Design and implement IoT systems for industries like manufacturing, agriculture, and smart homes.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item bg-white rounded p-4 text-center shadow">
+              <div class="icon mb-4">
+                <i class="fas fa-mobile-alt fa-3x text-primary"></i>
+              </div>
+              <h4 class="mb-3">Mobile Applications</h4>
+              <p class="mb-4">Designing seamless, innovative, and user-centric mobile applications for all platforms.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item bg-white rounded p-4 text-center shadow">
+              <div class="icon mb-4">
+                <i class="fas fa-bullhorn fa-3x text-primary"></i>
+              </div>
+              <h4 class="mb-3">Digital Marketing</h4>
+              <p class="mb-4">Boost your brand with strategic digital marketing solutions that drive engagement and growth.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Services Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="section why-us">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="why-box">
+              <h3>Why Choose Us?</h3>
+              <p style="text-align: justify;">
+                At EPR Groupers, we combine innovation, expertise, and a customer-first approach 
+                to deliver tailored solutions that drive measurable results. 
+                With a skilled team and a proven track record, we offer a wide range of 
+                services, including AI-powered solutions, web development, and digital marketing, 
+                to help businesses thrive. Choose us for our commitment to quality, innovation, and your success.
+              </p>
+              <div class="text-center">
+                <a href="#" class="more-btn"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Why Box -->
+
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="col-xl-4">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-clipboard-data"></i>
+                  <h4>Innovation at the Core</h4>
+                  <p>We embrace cutting-edge technologies and stay ahead of trends to ensure you receive forward-thinking solutions tailored to your needs.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-gem"></i>
+                  <h4>Tailored to Your Success</h4>
+                  <p>Your business is unique, and so are our strategies. We take the time to understand your goals and customize our services to help you achieve them efficiently.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-inboxes"></i>
+                  <h4>Expert Team of Professionals</h4>
+                  <p>Our team consists of highly skilled professionals with expertise across various industries and technologies, ensuring the highest quality and reliability.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="features-item">
+              <i class="bi bi-eye" style="color: #ffbb2c;"></i>
+              <h3><a href="" class="stretched-link">PyTorch</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="features-item">
+              <i class="bi bi-infinity" style="color: #5578ff;"></i>
+              <h3><a href="" class="stretched-link">TensorFlow</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="features-item">
+              <i class="bi bi-mortarboard" style="color: #e80368;"></i>
+              <h3><a href="" class="stretched-link">Sed perspiciatis</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="features-item">
+              <i class="bi bi-nut" style="color: #e361ff;"></i>
+              <h3><a href="" class="stretched-link">Magni Dolores</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="features-item">
+              <i class="bi bi-shuffle" style="color: #47aeff;"></i>
+              <h3><a href="" class="stretched-link">Nemo Enim</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="features-item">
+              <i class="bi bi-star" style="color: #ffa76e;"></i>
+              <h3><a href="" class="stretched-link">Eiusmod Tempor</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="700">
+            <div class="features-item">
+              <i class="bi bi-x-diamond" style="color: #11dbcf;"></i>
+              <h3><a href="" class="stretched-link">Midela Teren</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="800">
+            <div class="features-item">
+              <i class="bi bi-camera-video" style="color: #4233ff;"></i>
+              <h3><a href="" class="stretched-link">Pira Neve</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="900">
+            <div class="features-item">
+              <i class="bi bi-command" style="color: #b2904f;"></i>
+              <h3><a href="" class="stretched-link">Dirada Pack</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1000">
+            <div class="features-item">
+              <i class="bi bi-dribbble" style="color: #b20969;"></i>
+              <h3><a href="" class="stretched-link">Moton Ideal</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1100">
+            <div class="features-item">
+              <i class="bi bi-activity" style="color: #ff5828;"></i>
+              <h3><a href="" class="stretched-link">Verdo Park</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1200">
+            <div class="features-item">
+              <i class="bi bi-brightness-high" style="color: #29cc61;"></i>
+              <h3><a href="" class="stretched-link">Flavor Nivelanda</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+<!-- Testimonial Start -->
+<div class="container-fluid testimonial py-5" style="background-color: #f8f9fa;">
+  <div class="container py-5">
+      <div class="text-center mb-5">
+          <h4 class="text-primary">What Our Clients Say</h4>
+          <h1 class="display-4 mb-4">Client Testimonials</h1>
+          <p class="lead">Hear from our satisfied clients about their experiences with us.</p>
+      </div>
+      <div class="row g-4">
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="testimonial-item bg-white rounded p-4">
+                  <div class="d-flex align-items-center mb-4">
+                    {% load static %}
+                    <img src="{% static 'img/testimonials/client2.jpg' %}" class="rounded-circle me-3" style="width: 60px; height: 60px;" alt="">
+                    
+                      <div>
+                          <h5 class="mb-0">John Doe</h5>
+                          <p class="text-muted mb-0">CEO, Company A</p>
+                      </div>
+                  </div>
+                  <p class="mb-4">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                  <div class="d-flex justify-content-end">
+                      <i class="fas fa-quote-right fa-2x text-primary text-black"></i>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="testimonial-item bg-white rounded p-4">
+                  <div class="d-flex align-items-center mb-4">
+                    {% load static %}
+                    <img src="{% static 'img/kalam.jpg' %}" class="rounded-circle me-3" style="width: 60px; height: 60px;" alt="">
+                    
+                      <div>
+                          <h5 class="mb-0">Abdul Kalam</h5>
+                          <p class="text-muted mb-0">Marketing Director, Company B</p>
+                      </div>
+                  </div>
+                  <p class="mb-4">"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+                  <div class="d-flex justify-content-end">
+                      <i class="fas fa-quote-right fa-2x text-primary text-black"></i>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="testimonial-item bg-white rounded p-4">
+                  <div class="d-flex align-items-center mb-4">
+                    {% load static %}
+                    <img src="{% static 'img/billgates.jpg' %}" class="rounded-circle me-3" style="width: 60px; height: 60px;" alt="">
+                    
+                      <div>
+                          <h5 class="mb-0">Billgates</h5>
+                          <p class="text-muted mb-0">CTO, Company C</p>
+                      </div>
+                  </div>
+                  <p class="mb-4">"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
+                  <div class="d-flex justify-content-end">
+                      <i class="fas fa-quote-right fa-2x text-primary text-black"></i>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Testimonial End -->
+
+
+
+<!-- Recent Projects Section Start -->
+<section id="projects" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h4 class="text-primary">Our Work</h4>
+      <h1 class="display-4 mb-4">Recent Projects</h1>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-sm project-card">
+            {% load static %}
+            <img src="{% static 'img/erp.jpg' %}" class="card-img-top project-img" alt="Project 1">
+            
+          <div class="card-body">
+            <h5 class="card-title">ERP</h5>
+            <p class="card-text">A brief description of the project goes here.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-sm project-card">
+            {% load static %}
+            <img src="{% static 'img/crm.jpg' %}" class="card-img-top project-img" alt="Project 2">
+            
+          <div class="card-body">
+            <h5 class="card-title">CRM</h5>
+            <p class="card-text">A brief description of the project goes here.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-sm project-card">
+            {% load static %}
+            <img src="{% static 'img/pos.jpg' %}" class="card-img-top project-img" alt="Project 3">
+            
+          <div class="card-body">
+            <h5 class="card-title">POS</h5>
+            <p class="card-text">A brief description of the project goes here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Recent Projects Section End -->
+
+<!-- Our Team Section Start -->
+<section id="team" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h4 class="text-primary">Meet Our Team</h4>
+      <h1 class="display-4 mb-4">Our Dedicated Professionals</h1>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 mx-auto">
+        <div class="card shadow-sm text-center w-75 mx-auto">
+            {% load static %}
+            <img src="{% static 'img/member3.jpeg' %}" class="card-img-top img-fluid w-75 mx-auto mt-3 rounded" alt="Team Member 1">
+            
+          <div class="card-body">
+            <h5 class="card-title">John Doe</h5>
+            <p class="card-text">CEO & Founder</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mx-auto">
+        <div class="card shadow-sm text-center w-75 mx-auto">
+            {% load static %}
+            <img src="{% static 'img/member1.jpeg' %}" class="card-img-top img-fluid w-75 mx-auto mt-3 rounded" alt="Team Member 1">
+            
+          <div class="card-body">
+            <h5 class="card-title">Jane Smith</h5>
+            <p class="card-text">Project Manager</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mx-auto">
+        <div class="card shadow-sm text-center w-75 mx-auto">
+            {% load static %}
+            <img src="{% static 'img/member2.jpeg' %}" class="card-img-top img-fluid w-75 mx-auto mt-3 rounded" alt="Team Member 1">
+            
+          <div class="card-body">
+            <h5 class="card-title">Emily Johnson</h5>
+            <p class="card-text">Lead Developer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Our Team Section End -->
+
+<!-- Contact Section Start -->
+<section id="contact" class="py-5" style="background-color: #f8f9fa;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h4 class="text-primary">Get in Touch</h4>
+      <h1 class="display-4 mb-4">Contact Us</h1>
+      <p class="lead">Have questions or want to work together? Reach out to us and we’ll get back to you as soon as possible!</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Contact Form -->
+      <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+        <div class="bg-white rounded p-4 p-sm-5 shadow">
+          <h3 class="mb-4">Send Us a Message</h3>
+          <form action="/submit-contact" method="POST">
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter the subject" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="5" placeholder="Write your message here..." style="resize: none; width: 100%; height: 262px;" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.1s">
+        <div class="bg-white rounded p-4 p-sm-5 shadow">
+          <h3 class="mb-4">Our Information</h3>
+          <div class="d-flex align-items-center mb-4">
+            <div class="icon bg-primary text-white rounded-circle me-3 p-3">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <div>
+              <h5 class="mb-0">Address</h5>
+              <p class="mb-0">123 Main Street, Colombo 6</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <div class="icon bg-primary text-white rounded-circle me-3 p-3">
+              <i class="bi bi-telephone"></i>
+            </div>
+            <div>
+              <h5 class="mb-0">Phone</h5>
+              <p class="mb-0">+94 762544297</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <div class="icon bg-primary text-white rounded-circle me-3 p-3">
+              <i class="bi bi-envelope"></i>
+            </div>
+            <div>
+              <h5 class="mb-0">Email</h5>
+              <p class="mb-0">info@eprgroupers.com</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mb-4">
+            <div class="icon bg-primary text-white rounded-circle me-3 p-3">
+              <i class="bi bi-share"></i>
+            </div>
+            <div>
+              <h5 class="mb-0">Follow Us</h5>
+              <div class="d-flex mt-2">
+                <a href="#" class="btn btn-outline-primary btn-sm me-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="btn btn-outline-primary btn-sm me-2"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="btn btn-outline-primary btn-sm me-2"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Schedule a Call Card -->
+        <div class="bg-white rounded p-4 p-sm-5 shadow mt-4 text-center">
+          <h3 class="mb-3">Need a Consultation?</h3>
+          <p class="text-muted">Schedule a call with our experts for personalized support and guidance.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scheduleModal">
+            Schedule a Call
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Contact Section End -->
+
+<!-- Schedule Call Modal -->
+<div class="modal fade" id="scheduleModal" tabindex="-1" aria-labelledby="scheduleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="scheduleModalLabel">Schedule a Call</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <!-- Left Section -->
+          <div class="col-md-6 border-end">
+            <h4>Introductory Call</h4>
+            <p>Duration: <strong>30 minutes</strong></p>
+            <p>We have transformed hundreds of businesses worldwide with our expertise. Let's discuss how we can help your business.</p>
+            <p><strong>The meeting link will be shared via email once confirmed.</strong></p>
+          </div>
+
+          <!-- Right Section -->
+          <div class="col-md-6">
+            <h5>Select a Date & Time</h5>
+            <div id="calendar-container">
+              <h3 id="calendar-month"></h3>
+              <table id="calendar">
+                <thead>
+                  <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Calendar Dates Will Be Populated Dynamically -->
+                </tbody>
+              </table>
+            </div>
+
+            <div id="time-container">
+              <div id="time-slots">
+                <!-- Time slots will be dynamically populated here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" id="confirm-date-time" class="btn btn-primary">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact END -->
+
+
+  </main>
+
+  <a href="https://wa.me/94753922147?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services!" 
+  class="whatsapp-float" 
+  target="_blank">
+   <i class="fab fa-whatsapp"></i>
+</a>
+
+
+  
+
+  
+  
+
+  <!-- Scroll Top -->
+  <!-- <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  {% load static %}
+
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="lib/wow/wow.min.js"></script> -->
+  <!-- <script src="lib/easing/easing.min.js"></script> -->
+  <!-- <script src="lib/waypoints/waypoints.min.js"></script> -->
+  <!-- <script src="lib/counterup/counterup.min.js"></script> -->
+  <!-- <script src="lib/owlcarousel/owl.carousel.min.js"></script> -->
+  <!-- <script src="lib/lightbox/js/lightbox.min.js"></script> -->
+      
+  <!-- Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+
+
+<script>
+  // JavaScript to hide flash messages after 3 seconds
+  document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(function () {
+          const alertContainer = document.querySelector('.alert-container');
+          if (alertContainer) {
+              alertContainer.style.transition = 'opacity 0.5s ease-out';
+              alertContainer.style.opacity = '0';
+              setTimeout(() => alertContainer.remove(), 500); // Remove the element after fading out
+          }
+      }, 3000); // Hide after 3 seconds
+  });
+
+////////////////// Calendar
+document.addEventListener('DOMContentLoaded', function () {
+  const calendarBody = document.querySelector("#calendar tbody");
+  const calendarMonth = document.getElementById("calendar-month");
+  const timeSlotsElement = document.getElementById("time-slots");
+
+  // Sample time slots
+  const sampleTimeSlots = [
+    "05:00 AM", "05:30 AM", "06:00 AM", "06:30 AM",
+    "07:00 AM", "07:30 AM", "08:00 AM", "08:30 AM"
+  ];
+
+  // Generate the calendar
+  function generateCalendar(year, month) {
+    const currentDate = new Date();
+    const today = currentDate.getDate();
+    const currentMonth = currentDate.getMonth();
+    const currentYear = currentDate.getFullYear();
+
+    // Set the calendar's month and year
+    const monthNames = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+    calendarMonth.textContent = `${monthNames[month]} ${year}`;
+
+    // Clear existing rows
+    calendarBody.innerHTML = "";
+
+    // First day of the month
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    let date = 1;
+    for (let i = 0; i < 6; i++) {
+      const row = document.createElement("tr");
+
+      for (let j = 0; j < 7; j++) {
+        const cell = document.createElement("td");
+
+        if (i === 0 && j < firstDay) {
+          // Empty cells before the first day
+          cell.textContent = "";
+        } else if (date > daysInMonth) {
+          // Empty cells after the last day
+          cell.textContent = "";
+        } else {
+          cell.textContent = date;
+
+          // Highlight today's date
+          if (year === currentYear && month === currentMonth && date === today) {
+            cell.style.fontWeight = "bold";
+          }
+
+          // Style Sundays and disable them
+          if (j === 0) { // Sunday column
+            cell.style.color = "red";
+            cell.style.pointerEvents = "none"; // Disable click
+            cell.style.backgroundColor = "#f8d7da"; // Optional: light red background for disabled Sundays
+          } else {
+            // Add click event to select date (non-Sunday)
+            cell.addEventListener("click", function () {
+              // Clear previously selected date
+              document.querySelectorAll("#calendar td").forEach(td => td.classList.remove("selected"));
+              cell.classList.add("selected");
+
+              // Show time slots only (no date)
+              showTimeSlots();
+            });
+          }
+
+          date++;
+        }
+
+        row.appendChild(cell);
+      }
+
+      calendarBody.appendChild(row);
+
+      if (date > daysInMonth) break;
+    }
+  }
+
+  // Display only time slots for the selected date
+  function showTimeSlots() {
+    // Populate time slots
+    timeSlotsElement.innerHTML = ""; // Clear existing slots
+    sampleTimeSlots.forEach(slot => {
+      const button = document.createElement("button");
+      button.textContent = slot;
+      button.classList.add("btn", "btn-outline-primary", "m-2");
+
+      // Add click event to select a time slot
+      button.addEventListener("click", function () {
+        document.querySelectorAll("#time-slots button").forEach(btn => btn.classList.remove("selected"));
+        button.classList.add("selected");
+      });
+
+      timeSlotsElement.appendChild(button);
+    });
+  }
+
+  // Initialize the calendar
+  const currentDate = new Date();
+  const currentMonth = currentDate.getMonth();
+  const currentYear = currentDate.getFullYear();
+  generateCalendar(currentYear, currentMonth);
+});
+
+// Modal Management
+
+document.addEventListener("DOMContentLoaded", function () {
+  const confirmButton = document.getElementById("confirm-date-time");
+  const selectedDateTime = document.getElementById("selected-date-time");
+  const scheduleModal = new bootstrap.Modal(document.getElementById("scheduleModal"));
+  const detailsModal = new bootstrap.Modal(document.getElementById("detailsModal"));
+
+  let selectedDate = null;
+  let selectedTime = null;
+
+  // Event listener for calendar date selection
+  document.getElementById("calendar").addEventListener("click", (event) => {
+    if (event.target.tagName === "TD" && event.target.textContent.trim() !== "") {
+      selectedDate = event.target.textContent.trim();
+      document.querySelectorAll("#calendar td").forEach(td => td.classList.remove("selected"));
+      event.target.classList.add("selected");
+    }
+  });
+
+  // Event listener for time slot selection
+  document.getElementById("time-slots").addEventListener("click", (event) => {
+    if (event.target.tagName === "BUTTON") {
+      selectedTime = event.target.textContent.trim();
+      document.querySelectorAll("#time-slots button").forEach(btn => btn.classList.remove("selected"));
+      event.target.classList.add("selected");
+    }
+  });
+
+  // Confirm button action
+  confirmButton.addEventListener("click", () => {
+    if (selectedDate && selectedTime) {
+      selectedDateTime.textContent = `Selected Date and Time: ${selectedDate}, ${selectedTime}`;
+      scheduleModal.hide();
+      detailsModal.show();
+    } else {
+      alert("Please select a date and time.");
+    }
+  });
+
+  // Close both modals when the close button in the second modal is clicked
+  const detailsCloseButton = document.querySelector("#detailsModal .btn-close");
+  detailsCloseButton.addEventListener("click", () => {
+    scheduleModal.hide();
+    detailsModal.hide();
+
+    // Manually remove the modal backdrop
+    document.querySelectorAll(".modal-backdrop").forEach(backdrop => backdrop.remove());
+
+    // Remove the 'modal-open' class from the body to make the page clickable again
+    document.body.classList.remove("modal-open");
+    document.body.style.overflow = "auto"; // Reset the overflow property
+  });
+});
+
+
+document.querySelectorAll('.btn-close').forEach((closeButton) => {
+  closeButton.addEventListener('click', () => {
+    // Close both modals
+    const scheduleModal = document.getElementById('scheduleModal');
+    const detailsModal = document.getElementById('detailsModal');
+    const bootstrapModal = bootstrap.Modal; // Bootstrap Modal class reference
+
+    if (scheduleModal && bootstrapModal.getInstance(scheduleModal)) {
+      bootstrapModal.getInstance(scheduleModal).hide();
+    }
+
+    if (detailsModal && bootstrapModal.getInstance(detailsModal)) {
+      bootstrapModal.getInstance(detailsModal).hide();
+    }
+  });
+});
+
+
+</script>
+
+{% endblock %}

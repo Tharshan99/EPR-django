@@ -1,0 +1,85 @@
+{% extends "epr/base2.html" %}
+
+
+
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Job Vacancy</title>
+    <!-- Include TinyMCE -->
+    <script src="https://cdn.tiny.cloud/1/9iq4qzezfhnq4k8kok6nz2b7yw9bwigfj8ptli5o9rpaeztw/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <script>
+      tinymce.init({
+        selector: '.rich-text-editor',
+        plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+        toolbar_mode: 'floating',
+        toolbar: 'undo redo | formatselect | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+        menubar: 'edit view insert format tools table',
+        setup: function (editor) {
+          editor.on('change', function () {
+            editor.save();  // Save content back to the textarea
+          });
+        }
+      });
+
+      // Ensure TinyMCE updates textarea values before form submission
+      document.querySelector('form').addEventListener('submit', function () {
+        tinymce.triggerSave();  // Save all TinyMCE instances
+      });
+    </script>
+
+<style>
+    /* static/css/styles.css */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+</style>    
+</head>
+
+<body>
+    <h1>Create Job Vacancy</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+</body>
+
+
+{% endblock %}

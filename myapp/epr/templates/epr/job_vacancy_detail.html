@@ -1,0 +1,98 @@
+{% extends 'epr/base.html' %}
+
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ job.job_title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .job-details {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .job-details h2 {
+            margin-top: 0;
+        }
+        .job-details p {
+            margin: 10px 0;
+        }
+        .job-details ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .job-details ul li {
+            list-style-type: disc;
+        }
+    </style>
+</head>
+<head>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    
+  </head>
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+  
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        {% load static %}
+        <img src="{% static 'img/logo.png' %}" alt="">
+        
+  
+        <!-- <h1 class="sitename">EPR Groupers</h1> -->
+      </a>
+  
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'epr:index' %}" class="active">Home<br></a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html">Services</a></li>
+          <li><a href="events.html">About Us</a></li>
+          <li><a href="{% url 'epr:contact' %}">Contact</a></li>
+  
+  
+  
+          <li><a href="#">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+  
+    </div>
+  </header>
+  
+  
+  <section id="hero">  
+  </section>
+  
+
+<body>
+    <h1>{{ job.job_title }}</h1>
+    <div class="job-details">
+        <p><strong>Location:</strong> {{ job.location }}</p>
+        <p><strong>Job Type:</strong> {{ job.get_job_type_display }}</p>
+        <p><strong>Closing Date:</strong> {{ job.closing_date }}</p>
+        <p><strong>Pay Details:</strong> {{ job.pay_details }}</p>
+
+        <h2>Job Details</h2>
+        <p>{{ job.job_details|safe }}</p>
+
+        <h2>Qualifications</h2>
+        <p>{{ job.qualifications|safe }}</p>
+
+        <h2>Requirements</h2>
+        <p>{{ job.requirements|safe }}</p>
+    </div>
+</body>
+{% endblock %}

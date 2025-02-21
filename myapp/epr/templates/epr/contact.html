@@ -1,0 +1,280 @@
+{% extends 'epr/base.html' %}
+
+{% block content %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+<style>
+  .custom-btn {
+        background-color: #360065;
+        color: white;
+        width: 150px;  /* Ensures all buttons have the same width */
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .custom-btn:hover {
+        background-color: #10002B ;
+        color: white;
+    }
+    #calendlyModal .modal-dialog {
+    max-width: 30%;
+    width: 1200px; /* Adjust width */
+}
+
+#calendlyModal .modal-content {
+    padding: 0px; /* Reduce padding */
+}
+
+#calendlyModal .modal-body {
+    padding: 0; /* Remove extra padding inside */
+}
+
+
+    
+</style>
+<head>
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  
+</head>
+<!-- Header -->
+<header id="header" class="header d-flex align-items-center sticky-top">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+    <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      {% load static %}
+      <img src="{% static 'img/logo.png' %}" alt="">
+      
+
+      <!-- <h1 class="sitename">EPR Groupers</h1> -->
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="{% url 'epr:index' %}" class="active">Home<br></a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="courses.html">Services</a></li>
+        <li><a href="events.html">About Us</a></li>
+        <li><a href="{% url 'epr:contact' %}">Contact</a></li>
+
+
+
+        <li><a href="#">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+  </div>
+</header>
+
+
+<section id="hero">  
+</section>
+<div class="contact-header mt-10">
+  <h1 style="color:white">Let’s Build Something Great Together</h1>
+  <p>Connect with EPR Groupers - your trusted AI-powered service partner.</p>
+</div>
+<!-- Display Success Messages -->
+{% if messages %}
+<div class="alert alert-success">
+    {% for message in messages %}
+    {{ message }}
+    {% endfor %}
+</div>
+{% endif %}
+
+<div class="container my-5">
+    <div class="row">
+        <!-- Schedule Call -->
+        <div class="col-md-4">
+            <div class="card text-center" style="height: 280px;">
+                <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                    <i class="bi bi-calendar-check" style="font-size: 3rem; color: #360065;"></i>
+                    <h5 class="card-title mt-3">Schedule Call</h5>
+                    <p class="card-text">Book a call with our team.</p>
+                    <!-- Trigger Button -->
+                    <button onclick="openCalendlyModal()" class="btn custom-btn">
+                      Schedule Now
+                    </button>
+
+                    <!-- Calendly Modal -->
+                    <div id="calendlyModal" class="modal fade" tabindex="-1" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title">Schedule a Meeting</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                  <div id="calendly-widget-container">
+                                      <!-- Calendly Widget will be injected here -->
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>          
+                </div>
+            </div>
+        </div>
+
+        <!-- Email Us -->
+        <div class="col-md-4">
+            <div class="card text-center" style="height: 280px;">
+                <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                    <i class="bi bi-envelope" style="font-size: 3rem; color: #360065;"></i>
+                    <h5 class="card-title mt-3">Email Us</h5>
+                    <p class="card-text">Send us an email for inquiries.</p>
+                    <a href="mailto:info@eprgroupers.com" class="btn custom-btn">
+                        <i class="bi bi-send"></i> Email Now
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Give Us a Call -->
+        <div class="col-md-4">
+            <div class="card text-center" style="height: 280px;">
+                <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                    <i class="bi bi-telephone" style="font-size: 3rem; color: #360065;"></i>
+                    <h5 class="card-title mt-3">Give Us a Call</h5>
+                    <p class="card-text">+94 741717 118</p>
+                    <a href="tel:+1234567890" class="btn custom-btn">
+                        <i class="bi bi-phone"></i> Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Section 3: Two Columns (Left Side Content + Right Side Form) -->
+<div class="container my-5">
+  <div class="row" style="background-color: #8427E2; border-radius: 20px; padding-left: 60px;">
+      <!-- Left Side: Have a Question Section -->
+      <div class="col-md-4 d-flex flex-column justify-content-center p-4">
+          <h1 style="color:#ffffff; font-weight:bold;" class="mb-4">Have a Question?</h1>
+          <br>
+          <p style="color:#ffffff; text-align: justify;" class="mt-3">
+              We’re here to help! Fill out the form or reach us via email or phone. 
+              Our Customer Care Team is available to assist you with your concerns, 
+              whether it’s about an order or helpful tips.
+          </p>
+          <p style="color:#ffffff; text-align: justify;" class="mb-6">
+              Everyone gets a personalized response, so please allow 24 hours during business hours for a reply.
+              Our business hours are Monday - Friday, 9 AM to 5 PM.
+          </p>
+          <br>
+          <!-- Contact Information -->
+          <p><i style="color:#ffffff" class="bi bi-envelope"></i> <a style="color:#ffffff" href="mailto:info@eprgroupers.com">info@eprgroupers.com</a></p>
+          <p><i style="color:#ffffff" class="bi bi-telephone"></i> <a style="color:#ffffff" href="tel:+1844564082">+94 741717 118</a></p>
+          <p>
+            <i style="color:#ffffff" class="bi bi-chat"></i> 
+            <a style="color:#ffffff" href="https://wa.me/94741717118" target="_blank">
+                Chat with us
+            </a>
+        </p>
+        
+      </div>
+
+      <!-- Right Side: Contact Form -->
+      <div class="col-md-6 contact-form" 
+      style="background-color: #360065; border-radius: 20px; padding-right: 40px; margin:70px;">
+          <h2 style="color:#ffffff">Contact Form</h2>
+          
+          <form method="post" action="{% url 'epr:contact' %}">
+
+            {% csrf_token %}
+              <div class="mb-3">
+                  <label style="color:#ffffff" for="name" class="form-label">Name</label>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name" required>
+              </div>
+              <div class="mb-3">
+                  <label style="color:#ffffff" for="email" class="form-label">Email</label>
+                  <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" required>
+              </div>
+              <div class="mb-3">
+                  <label style="color:#ffffff" for="contact" class="form-label">Contact Number</label>
+                  <input type="tel" name="contact" class="form-control" id="contact" placeholder="Enter your phone number" required>
+              </div>
+              <div class="mb-3">
+                  <label style="color:#ffffff" for="message" class="form-label">Message</label>
+                  <textarea name="message" class="form-control" id="message" rows="5" placeholder="Enter your message" required></textarea>
+              </div>
+              <!-- Terms & Conditions -->
+              <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="terms" required>
+                  <label style="color:#ffffff" class="form-check-label" for="terms">I agree to the <a style="color:white" href="#">Terms and Conditions</a></label>
+              </div>
+              <button type="submit" class="btn" style="background-color: #ffffff; color: #360065;">Submit</button>
+          </form>
+      </div>
+  </div>
+</div>
+
+
+  <!-- Section 4: Map -->
+  <div class="container my-5">
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d355934.6664626144!2d79.73636314254074!3d9.718573755174809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afe55d4ceda37d5%3A0xe9bd876cb96a9af9!2sE.P.R%20GROUPERS!5e0!3m2!1sen!2slk!4v1738607767840!5m2!1sen!2slk"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <a href="https://wa.me/94753922147?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services!" 
+  class="whatsapp-float margin-bottom=20px" 
+  target="_blank">
+   <i class="fab fa-whatsapp"></i>
+</a>
+
+
+<!-- Scripts Start -->
+
+{% load static %}
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/script_contact.js' %}"></script>
+
+  <script>
+    function openCalendlyModal() {
+    // Show the Bootstrap modal
+    let calendlyModal = new bootstrap.Modal(document.getElementById('calendlyModal'));
+    calendlyModal.show();
+
+    // Inject Calendly widget only when modal opens
+    let calendlyContainer = document.getElementById('calendly-widget-container');
+    calendlyContainer.innerHTML = `<div class="calendly-inline-widget" data-url="https://calendly.com/eprgroupers-info/30min" style="width: 100%; height: 600px;"></div>`;
+
+    // Ensure Calendly script is loaded
+    let script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.type = "text/javascript";
+    document.body.appendChild(script);
+}
+
+// Ensure Calendly widget is removed when modal closes to prevent multiple instances
+document.getElementById('calendlyModal').addEventListener('hidden.bs.modal', function () {
+    document.getElementById('calendly-widget-container').innerHTML = "";
+});
+
+
+
+</script>
+
+
+
+    
+    
+{% endblock %}

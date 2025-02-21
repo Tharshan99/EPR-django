@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer with Wave Animation</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Footer Styles */
+    footer {
+      background-color: #8427E2;
+      color: white;
+      padding: 60px 20px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Wave SVG Styles */
+    .wave {
+      position: absolute;
+      top: -100px;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%238427e2' fill-opacity='1' d='M0,160L48,149.3C96,139,192,117,288,128C384,139,480,181,576,176C672,171,768,117,864,101.3C960,85,1056,107,1152,128C1248,149,1344,171,1392,181.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'%3E%3C/path%3E%3C/svg%3E");
+      animation: wave-animation 3s infinite linear;
+    }
+
+    /* Wave Animation */
+    @keyframes wave-animation {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* Footer Content */
+    .footer-content {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Content -->
+  <div class="container my-5">
+    <h1>Welcome to My Website</h1>
+    <p>This is an example of a website with a wave animation in the footer.</p>
+  </div>
+
+  <!-- Footer with Wave Animation -->
+  <footer>
+    <!-- Wave SVG -->
+    <div class="wave"></div>
+
+    <!-- Footer Content -->
+    <div class="footer-content sticky-bottom">
+      <p>&copy; 2023 Your Company. All rights reserved.</p>
+      <p>Contact us at <a href="mailto:info@example.com" style="color: white;">info@example.com</a></p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+{% extends "epr/base2.html" %}
+
+{% block title %}
+    Contact Dashboard
+{% endblock %}
+
+<head>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    
+
+    <style>
+        body {
+                font-family: Arial, sans-serif;
+                max-width: 600px;
+                margin: auto;
+                padding: 20px;
+                background-color: #f9f9f9;
+            }
+            form {
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            input, textarea, select {
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            label {
+                font-weight: bold;
+            }
+            button {
+                background: #28a745;
+                color: white;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+            button:hover {
+                background: #218838;
+            }
+    </style>
+    <script>
+        tinymce.init({
+            selector: '.tinymce',
+            plugins: 'lists advlist link image',
+            toolbar: 'undo redo | bold italic underline | fontsizeselect forecolor | numlist bullist | link',
+            menubar: false
+        });
+    </script>
+</head>
+
+
+
+{% block content %}
+<body>
+
+    <h2>Create Job Vacan</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="id_title">Job Title</label>
+        {{ form.title }}
+
+        <label for="id_details">Job Details</label>
+        {{ form.details }}
+
+        <label for="id_closing_date">Closing Date</label>
+        {{ form.closing_date }}
+
+        <label for="id_qualifications">Qualifications</label>
+        {{ form.qualifications }}
+
+        <label for="id_requirements">Requirements</label>
+        {{ form.requirements }}
+
+        <label for="id_location">Location</label>
+        {{ form.location }}
+
+        <label for="id_pay_details">Pay Details</label>
+        {{ form.pay_details }}
+
+        <label for="id_job_type">Job Type</label>
+        {{ form.job_type }}
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+
+{% endblock %}

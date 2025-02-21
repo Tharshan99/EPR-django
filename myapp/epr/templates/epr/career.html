@@ -1,0 +1,222 @@
+{% extends 'epr/base3.html' %}
+
+{% block content %}
+<style>
+    .container {
+            background: #FBFCFE;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0.1, 0, 0, 0.2);
+            max-width: 1200px;
+            text-align: center;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 15px;
+        }
+        .description {
+            font-size: 18px;
+            color: #000000;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+        }
+        .step {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background: #360065;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between; /* Distribute content evenly */
+            min-height: 250px; /* Set a minimum height for consistency */
+            max-height: 250px; /* Set a minimum height for consistency */
+        }
+        .step h3 {
+            position: absolute;
+            top: -30px;
+            left: 10px;
+            font-size: 16px;
+            color: black;
+        }
+        .step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .step-icon {
+            font-size: 40px;
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+        .step-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+        .step-description {
+            font-size: 14px;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+
+/* For Job Vacancy */
+.job-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.job-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    width: 70%;
+    height: 150px;
+}
+.job-card:hover {
+    transform: translateY(-5px);
+}
+.job-details {
+    display: flex;
+    flex-direction: column;
+}
+.job-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.job-meta {
+    font-size: 14px;
+    color: #555;
+}
+.apply {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+.apply i {
+    margin-left: 5px;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+  
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        {% load static %}
+        <img src="{% static 'img/logo.png' %}" alt="">
+        
+  
+        <!-- <h1 class="sitename">EPR Groupers</h1> -->
+      </a>
+  
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'epr:index' %}" class="active">Home<br></a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html">Services</a></li>
+          <li><a href="events.html">About Us</a></li>
+          <li><a href="{% url 'epr:contact' %}">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+  
+  <section id="hero">  
+  </section>
+  <div class="contact-header mt-10" style="background-color:#360065">
+    <h1 style="color:white">Join with EPR Family</h1>
+    <p>Connect with EPR Groupers - your trusted AI-powered service partner.</p>
+  </div>
+  <br>
+  
+  <div class="container">
+    <div class="title">Our Interview Process</div>
+    <div class="description">
+        At EPR Groupers, we’ve designed a seamless and transparent 4-step process to ensure we find the perfect match for both you and our team. 
+        Showcase your skills, passion, and personality - we’re excited to meet the best version of you!
+    </div>
+    <div class="steps">
+        <div class="step">
+            <h3>Step 1</h3>
+            <div class="step-icon"><i class="fas fa-phone-alt" style="color: #4361EE;"></i></div>
+            <div class="step-title">Initial Screening</div>
+            <div class="step-description">
+                Our team will review your application and reach out for a quick chat to learn more about your background and aspirations.
+            </div>
+        </div>
+        <div class="step">
+            <h3>Step 2</h3>
+            <div class="step-icon"><i class="fas fa-handshake" style="color: #4361EE;"></i></div>
+            <div class="step-title">Technical Interview</div>
+            <div class="step-description mb-4">
+                Dive deeper into your expertise with a technical discussion led by our team leads. Show us what you’re made of!
+            </div>
+        </div>
+        <div class="step">
+            <h3>Step 3</h3>
+            <div class="step-icon"><i class="fas fa-tasks" style="color: #4361EE;"></i></div>
+            <div class="step-title">Practical Assessment</div>
+            <div class="step-description mb-4">
+                Tackle a real-world challenge designed to test your problem-solving skills and creativity. Let your work speak for itself.
+            </div>
+        </div>
+        <div class="step">
+            <h3>Step 4</h3>
+            <div class="step-icon"><i class="fas fa-users" style="color: #4361EE;"></i></div>
+            <div class="step-title">Final Evaluation</div>
+            <div class="step-description mb-4">
+                Meet with our senior leadership team for a comprehensive discussion about your fit within Rootcode’s culture and vision.
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<h1 style="text-align: center; font-weight: bold;">Current Opening Vacancies</h1>
+<!-- Job card -->
+<div class="job-container">
+    {% if published_jobs %}
+        {% for job in published_jobs %}
+        <div class="job-card">
+            <div class="job-details">
+                <div class="job-title">{{ job.job_title }}</div>
+                <div class="job-meta">{{ job.get_job_type_display }} | On-site | {{ job.location }}</div>
+            </div>
+            <div class="apply">Apply <i class="fas fa-arrow-right"></i></div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No current job openings available.</p>
+    {% endif %}
+</div>
+
+
+{% endblock %}
+
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/script_contact.js' %}"></script>
