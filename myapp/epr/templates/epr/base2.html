@@ -20,6 +20,10 @@
             <div class="col-md-2 sidebar">
                 <a href="{% url 'epr:dashboard' %}" class="{% if active_page == 'dashboard' %}active{% endif %}">Dashboard</a>
                 <a href="{% url 'epr:contact_dashboard' %}">Contact Dashboard</a>
+                <a href="{% url 'epr:create_job_vacancy' %}">Create Job Vacancy</a>
+                <a href="{% url 'epr:vacancy_dashboard' %}">Job Vacancy Dashboard</a>
+                <a href="{% url 'epr:create_blog_post' %}">Create Blog</a>
+                <a href="{% url 'epr:blog_list' %}">Blog Dashboard</a>
                 <a href="#">Submission Dashboard</a>
                 <a href="#">Vacancy Dashboard</a>
                 <a href="#">Our Projects</a>

@@ -1,0 +1,93 @@
+{% extends "epr/base2.html" %}
+
+{% block title %}
+    Edit Blog Post
+{% endblock %}
+
+{% block content %}
+<head>
+    <!-- TinyMCE Script -->
+    <script src="https://cdn.tiny.cloud/1/9iq4qzezfhnq4k8kok6nz2b7yw9bwigfj8ptli5o9rpaeztw/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 100%;
+            margin: auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label {
+            font-weight: bold;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+
+    <!-- TinyMCE Initialization -->
+    <script>
+      tinymce.init({
+        selector: '#id_content',  // Match the ID of the content textarea
+        plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+        toolbar_mode: 'floating',
+        toolbar: 'undo redo | formatselect | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+        menubar: 'edit view insert format tools table',
+        setup: function (editor) {
+          editor.on('change', function () {
+            editor.save();  // Save content back to the textarea
+          });
+        }
+      });
+
+      // Ensure TinyMCE updates textarea values before form submission
+      document.querySelector('form').addEventListener('submit', function () {
+        tinymce.triggerSave();  // Save all TinyMCE instances
+      });
+    </script>
+</head>
+
+<body>
+    <h2>Edit Blog Post</h2>
+    <form method="POST">
+        {% csrf_token %}
+        
+        <!-- Title Field -->
+        <label for="id_title">Title</label>
+        {{ form.title }}
+
+        <!-- Content Field with TinyMCE -->
+        <label for="id_content">Content</label>
+        <textarea id="id_content" name="content" class="rich-text-editor">{{ form.content.value|default_if_none:'' }}</textarea>
+
+        <!-- Author Field -->
+        <label for="id_author">Author</label>
+        {{ form.author }}
+
+        <!-- Save Button -->
+        <button type="submit">Save Changes</button>
+    </form>
+</body>
+{% endblock %}

@@ -1,0 +1,132 @@
+<!-- templates/epr/apply_job.html -->
+{% extends 'epr/base.html' %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for {{ job.job_title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .application-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .application-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .application-form input,
+        .application-form textarea,
+        .application-form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .application-form button {
+            background-color: #360065;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .application-form button:hover {
+            background-color: #2a004f;
+        }
+        .errorlist {
+            color: red;
+            margin-bottom: 15px;
+            list-style: none;
+            padding-left: 0;
+        }
+        .terms-checkbox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically center the checkbox and text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.terms-checkbox input[type="checkbox"] {
+    margin-right: 10px; /* Add space between the checkbox and text */
+    flex-shrink: 0; /* Prevent the checkbox from shrinking */
+}
+
+.terms-checkbox label {
+    font-weight: normal;
+    margin-bottom: 0; /* Remove default margin */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+    </style>
+</head>
+
+<body>
+    <h1>Apply for {{ job.job_title }}</h1>
+    <div class="application-form">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% if form.errors %}
+                <ul class="errorlist">
+                    {% for field, errors in form.errors.items %}
+                        {% for error in errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <div>
+                <label for="id_first_name">First Name:</label>
+                {{ form.first_name }}
+            </div>
+            <div>
+                <label for="id_last_name">Last Name:</label>
+                {{ form.last_name }}
+            </div>
+            <div>
+                <label for="id_email">Email:</label>
+                {{ form.email }}
+            </div>
+            <div>
+                <label for="id_confirm_email">Confirm Email:</label>
+                {{ form.confirm_email }}
+            </div>
+            <div>
+                <label for="id_phone_number">Phone Number:</label>
+                {{ form.phone_number }}
+            </div>
+            <div>
+                <label for="id_place_of_residence">Place of Residence:</label>
+                {{ form.place_of_residence }}
+            </div>
+            <div>
+                <label for="id_message">Message to EPR Groupers:</label>
+                {{ form.message }}
+            </div>
+            <div>
+                <label for="id_cv">Upload Your CV:</label>
+                {{ form.cv }}
+            </div>
+            <div class="terms-checkbox">
+                <input type="checkbox" id="id_accept_terms" name="accept_terms" required>
+                <label for="id_accept_terms">I agree to the <a href="{% url 'epr:terms_and_conditions' %}" target="_blank">terms and conditions</a>.</label>
+            </div>
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+{% endblock %}

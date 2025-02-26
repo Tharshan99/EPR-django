@@ -1,0 +1,79 @@
+{% extends "epr/base2.html" %}
+
+{% block title %}
+    Blog List
+{% endblock %}
+
+{% block content %}
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 100%;
+            margin: auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .blog-card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .blog-card h2 {
+            margin-top: 0;
+        }
+        .blog-card p {
+            margin: 10px 0;
+        }
+        .read-more, .edit-btn, .delete-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        .read-more {
+            background: #28a745;
+            color: white;
+        }
+        .read-more:hover {
+            background: #218838;
+        }
+        .edit-btn {
+            background: #007bff;
+            color: white;
+        }
+        .edit-btn:hover {
+            background: #0056b3;
+        }
+        .delete-btn {
+            background: #dc3545;
+            color: white;
+        }
+        .delete-btn:hover {
+            background: #c82333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Blog Posts</h1>
+
+    {% for post in posts %}
+        <div class="blog-card">
+            <h2>{{ post.title }}</h2>
+            <p><strong>Author:</strong> {{ post.author }}</p>
+            <p><strong>Published:</strong> {{ post.created_at|date:"F j, Y" }}</p>
+            <p>{{ post.content|truncatewords:30|safe }}</p>  <!-- Show a preview of the content -->
+            <a href="{% url 'epr:blog_detail' post.id %}" class="read-more">Read More</a>
+            <a href="{% url 'epr:edit_blog_post' post.id %}" class="edit-btn">Edit</a>
+            <a href="{% url 'epr:delete_blog_post' post.id %}" class="delete-btn">Delete</a>
+        </div>
+    {% empty %}
+        <p>No blog posts available.</p>
+    {% endfor %}
+</body>
+{% endblock %}

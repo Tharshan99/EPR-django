@@ -1,0 +1,87 @@
+<!-- templates/blog/blog_dashboard.html -->
+{% extends 'epr/base.html' %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .blog-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .blog-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .blog-card-content {
+            padding: 15px;
+        }
+        .blog-card h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            color: #333;
+        }
+        .blog-card p {
+            margin: 0 0 15px;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+        .blog-card a {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #360065;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .blog-card a:hover {
+            background-color: #2a004f;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Blog Dashboard</h1>
+    <div class="blog-container">
+        {% for post in posts %}
+        <div class="blog-card">
+            {% if post.formatted_img_url %}
+            <img src="{{ post.formatted_img_url }}" alt="{{ post.title }}">
+            {% else %}
+            <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
+            {% endif %}
+            <div class="blog-card-content">
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.content|truncatewords:20 }}</p>
+                <a href="{% url 'epr:post_detail' post.id %}">View More</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+{% endblock %}

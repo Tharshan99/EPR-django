@@ -199,6 +199,7 @@
 <br>
 <h1 style="text-align: center; font-weight: bold;">Current Opening Vacancies</h1>
 <!-- Job card -->
+<!-- templates/epr/career_page.html -->
 <div class="job-container">
     {% if published_jobs %}
         {% for job in published_jobs %}
@@ -207,7 +208,9 @@
                 <div class="job-title">{{ job.job_title }}</div>
                 <div class="job-meta">{{ job.get_job_type_display }} | On-site | {{ job.location }}</div>
             </div>
-            <div class="apply">Apply <i class="fas fa-arrow-right"></i></div>
+            <a href="{% url 'epr:job_vacancy_detail' job.id %}" class="apply">
+                Apply <i class="fas fa-arrow-right"></i>
+            </a>
         </div>
         {% endfor %}
     {% else %}

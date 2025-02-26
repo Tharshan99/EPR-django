@@ -1,0 +1,53 @@
+{% extends "epr/base2.html" %}
+
+{% block title %}
+    {{ post.title }}
+{% endblock %}
+
+{% block content %}
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 100%;
+            margin: auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .blog-detail {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .blog-detail h1 {
+            margin-top: 0;
+        }
+        .blog-detail p {
+            margin: 10px 0;
+        }
+        .back-to-list {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .back-to-list:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blog-detail">
+        <h1>{{ post.title }}</h1>
+        <p><strong>Author:</strong> {{ post.author }}</p>
+        <p><strong>Published:</strong> {{ post.created_at|date:"F j, Y" }}</p>
+        <p>{{ post.content|safe }}</p>  <!-- Display full content with line breaks -->
+        <a href="{% url 'epr:blog_list' %}" class="back-to-list">Back to Blog List</a>
+    </div>
+</body>
+{% endblock %}

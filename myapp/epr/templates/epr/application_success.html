@@ -1,0 +1,8 @@
+<!-- templates/epr/application_success.html -->
+{% extends 'epr/base.html' %}
+
+{% block content %}
+<h1>Application Submitted Successfully!</h1>
+<p>Thank you for applying. We will review your application and get back to you soon.</p>
+<a href="{% url 'epr:index' %}">Return to Home</a>
+{% endblock %}

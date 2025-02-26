@@ -1,6 +1,5 @@
 {% extends 'epr/base.html' %}
 
-
 {% block content %}
 <head>
     <meta charset="UTF-8">
@@ -15,7 +14,12 @@
         h1 {
             color: #333;
         }
+        .job-container {
+            display: flex;
+            gap: 20px;
+        }
         .job-details {
+            flex: 2;
             background-color: #f9f9f9;
             padding: 20px;
             border-radius: 5px;
@@ -34,65 +38,159 @@
         .job-details ul li {
             list-style-type: disc;
         }
+        .job-sidebar {
+            flex: 1;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .job-sidebar h3 {
+            margin-top: 0;
+        }
+        .job-sidebar .interested-button {
+            background-color: #360065;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .job-sidebar .interested-button:hover {
+            background-color: #2a004f;
+        }
+        .job-sidebar .social-sharing {
+            margin-bottom: 20px;
+        }
+        .job-sidebar .social-sharing a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #333;
+            font-size: 20px;
+        }
+        .job-sidebar .social-sharing a:hover {
+            color: #360065;
+        }
+        .job-sidebar .other-jobs {
+            margin-top: 20px;
+        }
+        .job-sidebar .other-jobs a {
+            display: block;
+            margin-bottom: 10px;
+            color: #360065;
+            text-decoration: none;
+        }
+        .job-sidebar .other-jobs a:hover {
+            text-decoration: underline;
+        }
+        /* Add this to your existing CSS */
+.job-details .interested-button {
+    background-color: #360065; /* Purple background */
+    color: white; /* White text */
+    padding: 12px 24px; /* Padding for better spacing */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center text */
+    width: 100%; /* Full width */
+    margin-top: 20px; /* Space above the button */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    display: flex; /* Flexbox for icon alignment */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center content horizontally */
+}
+
+.job-details .interested-button:hover {
+    background-color: #2a004f; /* Darker purple on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.job-details .interested-button i {
+    margin-left: 10px; /* Space between text and icon */
+    font-size: 18px; /* Slightly larger icon */
+}
+
     </style>
 </head>
-<head>
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    
-  </head>
-  <!-- Header -->
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
-  
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        {% load static %}
-        <img src="{% static 'img/logo.png' %}" alt="">
-        
-  
-        <!-- <h1 class="sitename">EPR Groupers</h1> -->
-      </a>
-  
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="{% url 'epr:index' %}" class="active">Home<br></a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="courses.html">Services</a></li>
-          <li><a href="events.html">About Us</a></li>
-          <li><a href="{% url 'epr:contact' %}">Contact</a></li>
-  
-  
-  
-          <li><a href="#">Careers</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-  
-    </div>
-  </header>
-  
-  
-  <section id="hero">  
-  </section>
-  
 
 <body>
-    <h1>{{ job.job_title }}</h1>
-    <div class="job-details">
-        <p><strong>Location:</strong> {{ job.location }}</p>
-        <p><strong>Job Type:</strong> {{ job.get_job_type_display }}</p>
-        <p><strong>Closing Date:</strong> {{ job.closing_date }}</p>
-        <p><strong>Pay Details:</strong> {{ job.pay_details }}</p>
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
+                {% load static %}
+                <img src="{% static 'img/logo.png' %}" alt="">
+            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="{% url 'epr:index' %}" class="active">Home<br></a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Services</a></li>
+                    <li><a href="events.html">About Us</a></li>
+                    <li><a href="{% url 'epr:contact' %}">Contact</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
 
-        <h2>Job Details</h2>
-        <p>{{ job.job_details|safe }}</p>
+    <section id="hero"></section>
 
-        <h2>Qualifications</h2>
-        <p>{{ job.qualifications|safe }}</p>
+    <div class="job-container">
+        <!-- Left Side: Job Details -->
+        <div class="job-details">
+            <h1>{{ job.job_title }}</h1>
+            <p><strong>Location:</strong> {{ job.location }}</p>
+            <p><strong>Job Type:</strong> {{ job.get_job_type_display }}</p>
+            <p><strong>Closing Date:</strong> {{ job.closing_date }}</p>
+            <p><strong>Pay Details:</strong> {{ job.pay_details }}</p>
 
-        <h2>Requirements</h2>
-        <p>{{ job.requirements|safe }}</p>
+            <h2>Job Details</h2>
+            <p>{{ job.job_details|safe }}</p>
+
+            <h2>Qualifications</h2>
+            <p>{{ job.qualifications|safe }}</p>
+
+            <h2>Requirements</h2>
+            <p>{{ job.requirements|safe }}</p>
+            <button class="interested-button" onclick="location.href='{% url 'epr:apply_job' job.id %}'" style="font-weight: bold;">Apply Now &nbsp; &nbsp; <i class="fas fa-solid fa-arrow-right"></i></button>
+        </div>
+        <!-- Right Side: Sidebar -->
+        <div class="job-sidebar">
+            <!-- I'm Interested Button -->
+            <button class="interested-button" onclick="location.href='{% url 'epr:apply_job' job.id %}'" style="font-weight: bold;">Apply Now &nbsp; &nbsp; <i class="fas fa-solid fa-arrow-right"></i></button>
+
+            <!-- Social Sharing -->
+            <div class="social-sharing">
+                <h4>Share This Job</h4>
+                <a href="https://www.linkedin.com/shareArticle?url={{ request.build_absolute_uri }}" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="mailto:?subject={{ job.job_title }}&body=Check out this job: {{ request.build_absolute_uri }}">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?text=Check out this job: {{ request.build_absolute_uri }}" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+
+            <!-- Other Jobs at EPR Groupers -->
+            <div class="other-jobs">
+                <h6>Other Jobs at EPR Groupers</h6>
+                {% for other_job in other_jobs %}
+                    <a href="{% url 'epr:job_vacancy_detail' other_job.id %}">{{ other_job.job_title }}</a>
+                {% endfor %}
+            </div>
+            
+        </div>
     </div>
 </body>
 {% endblock %}

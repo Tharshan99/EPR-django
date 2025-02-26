@@ -19,7 +19,8 @@
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="{% url 'epr:index' %}" class="active">Home<br></a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="courses.html">Services</a></li>
         <!-- <li class="dropdown"><a href="#"><span>Product</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
@@ -38,12 +39,8 @@
             <li><a href="#">Dropdown 4</a></li>
           </ul>
         </li> -->
-        <li><a href="events.html">About Us</a></li>
         <li><a href="{% url 'epr:contact' %}">Contact</a></li>
-
-
-
-        <li><a href="#">Careers</a></li>
+        <li><a href="{% url 'epr:career' %}">Careers</a></li>
 
         <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
@@ -62,7 +59,6 @@
             <li><a href="#">Dropdown 4</a></li>
           </ul>
         </li> -->
-        <li><a href="contact.html">Contact</a></li>
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>
@@ -512,7 +508,7 @@
       <div class="col-lg-4 col-md-6 mx-auto">
         <div class="card shadow-sm text-center w-75 mx-auto">
             {% load static %}
-            <img src="{% static 'img/member3.jpeg' %}" class="card-img-top img-fluid w-75 mx-auto mt-3 rounded" alt="Team Member 1">
+            <img src="{% static 'img/kalam.jpg' %}" class="card-img-top img-fluid w-75 mx-auto mt-3 rounded" alt="Team Member 1">
             
           <div class="card-body">
             <h5 class="card-title">John Doe</h5>
@@ -523,7 +519,7 @@
       <div class="col-lg-4 col-md-6 mx-auto">
         <div class="card shadow-sm text-center w-75 mx-auto">
             {% load static %}
-            <img src="{% static 'img/member1.jpeg' %}" class="card-img-top img-fluid w-75 mx-auto mt-3 rounded" alt="Team Member 1">
+            <img src="{% static 'img/kalam.jpg' %}" class="card-img-top img-fluid w-75 mx-auto mt-3 rounded" alt="Team Member 1">
             
           <div class="card-body">
             <h5 class="card-title">Jane Smith</h5>
@@ -534,7 +530,7 @@
       <div class="col-lg-4 col-md-6 mx-auto">
         <div class="card shadow-sm text-center w-75 mx-auto">
             {% load static %}
-            <img src="{% static 'img/member2.jpeg' %}" class="card-img-top img-fluid w-75 mx-auto mt-3 rounded" alt="Team Member 1">
+            <img src="{% static 'img/kalam.jpg' %}" class="card-img-top img-fluid w-75 mx-auto mt-3 rounded" alt="Team Member 1">
             
           <div class="card-body">
             <h5 class="card-title">Emily Johnson</h5>
