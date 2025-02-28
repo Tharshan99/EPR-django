@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,15 +22,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-lh6**odedyrvxaew7w80n7%n6ksjf^y=a#^)qv5ai*wpi4hxt5'
+# SECRET_KEY = 'django-insecure-lh6**odedyrvxaew7w80n7%n6ksjf^y=a#^)qv5ai*wpi4hxt5'
+SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-lh6**odedyrvxaew7w80n7%n6ksjf^y=a#^)qv5ai*wpi4hxt5')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
+# DEBUG = True
 
-ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1'
-]
+# ALLOWED_HOSTS = [
+#     'eprgroupers.com'
+#     'localhost',
+#     '127.0.0.1'
+# ]
+
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
 
 
 # Application definition
@@ -84,8 +91,12 @@ WSGI_APPLICATION = 'myapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',  # Correct backend for PostgreSQL
+        'NAME': 'epr',  # Your database name
+        'USER': 'postgres',  # Your PostgreSQL username
+        'PASSWORD': 'admin',  # Your PostgreSQL password
+        'HOST': 'localhost',  # Usually 'localhost' for local database
+        'PORT': '5432',  # Default PostgreSQL port
     }
 }
 

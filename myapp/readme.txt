@@ -30,3 +30,5 @@ python manage.py migrate
 
 rajahtharshan99@gmail.com
 root@1999
+
+sample deploy
