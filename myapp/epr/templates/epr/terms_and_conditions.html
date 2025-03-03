@@ -1,8 +1,111 @@
-<!-- templates/epr/terms_and_conditions.html -->
 {% extends 'epr/base.html' %}
 
 {% block content %}
-<h1>Terms and Conditions</h1>
-<p>Here are the terms and conditions for applying to EPR Groupers.</p>
-<!-- Add your terms and conditions content here -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>Spangle Web Design</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="{% static 'epr/style-terms.css' %}">
+  </head>
+  <body>
+    <div class="termsAndConditions fadeIn">
+      <h1 class="termsAndConditionsHeading">Terms Of Service</h1>
+      <h4 class="spangleWelcome">Welcome to EPRGROUPERS!</h4>
+      <p class="termsParagraphIntro">These terms and conditions outline the rules and regulations for the use of EPRGROUPERS' Website, located at [EPRGROUPERS Website URL].</p>
+      <p>By accessing this website, we assume you accept these terms and conditions. Do not continue to use EPRGROUPERS if you do not agree to all the terms and conditions stated on this page.</p>
+
+      <h2>1. Terminology</h2>
+      <p>The following terminology applies to these Terms and Conditions, Privacy Statement, and Disclaimer Notice, and all Agreements:</p>
+      <ul>
+        <li><strong>"Client", "You", "Your"</strong> refers to you, the person who logs on this website and complies with the Company's terms and conditions.</li>
+        <li><strong>"The Company", "Ourselves", "We", "Our", and "Us"</strong> refers to EPRGROUPERS.</li>
+        <li><strong>"Party", "Parties", or "Us"</strong> refers to both the Client and ourselves.</li>
+      </ul>
+      <p>All terms refer to the offer, acceptance, and consideration of payment necessary to undertake our services to the Client, in accordance with the prevailing law of [Insert Country/Region].</p>
+
+      <h2>2. Cookies</h2>
+      <p>We use cookies to enhance your experience. By accessing EPRGROUPERS, you agree to use cookies in agreement with our [Privacy Policy].</p>
+      <p>Cookies help us optimize user experience by enabling certain website functionalities. Some affiliate/advertising partners may also use cookies.</p>
+
+      <h2>3. License</h2>
+      <p>Unless stated otherwise, EPRGROUPERS and/or its licensors own all intellectual property rights for content on this website. All rights are reserved.</p>
+      <p>You may access this website for personal use, subject to these restrictions:</p>
+      <ul>
+        <li>You must NOT:</li>
+        <li>Republish material from EPRGROUPERS</li>
+        <li>Sell, rent, or sub-license material from EPRGROUPERS</li>
+        <li>Reproduce, duplicate, or copy material from EPRGROUPERS</li>
+        <li>Redistribute content from EPRGROUPERS</li>
+      </ul>
+
+      <h2>4. User Comments</h2>
+      <p>Certain areas of the website may allow users to post and exchange opinions or information. EPRGROUPERS does not filter, edit, publish, or review Comments before they appear. Comments reflect the views of the individual posting them, not the views of EPRGROUPERS.</p>
+      <p>We reserve the right to monitor all Comments and remove any that are deemed inappropriate, offensive, or in violation of these Terms.</p>
+      <p>By posting Comments, you warrant that:</p>
+      <ul>
+        <li>You have the right and necessary licenses to post them.</li>
+        <li>The Comments do not infringe any intellectual property rights.</li>
+        <li>The Comments are not defamatory, offensive, or illegal.</li>
+        <li>The Comments will not be used for commercial promotion or illegal activities.</li>
+      </ul>
+      <p>EPRGROUPERS reserves a non-exclusive right to use, reproduce, and edit your Comments in any form or media.</p>
+
+      <h2>5. Hyperlinking to Our Content</h2>
+      <p>The following organizations may link to our Website without prior written approval:</p>
+      <ul>
+        <li>Government agencies</li>
+        <li>Search engines</li>
+        <li>News organizations</li>
+        <li>Online directories</li>
+        <li>Accredited businesses (excluding non-profit fundraising groups)</li>
+      </ul>
+      <p>Other organizations may request approval to link, such as:</p>
+      <ul>
+        <li>Consumer and business information sources</li>
+        <li>Community websites</li>
+        <li>Educational institutions and trade associations</li>
+      </ul>
+      <p>Approved organizations may link using:</p>
+      <ul>
+        <li>Our corporate name</li>
+        <li>The uniform resource locator (URL)</li>
+        <li>Any other relevant description</li>
+      </ul>
+      <p>No use of EPRGROUPERS' logo or artwork is permitted without a trademark license agreement.</p>
+
+      <h2>6. iFrames</h2>
+      <p>Without written permission, you may not create frames around our webpages that alter the visual presentation or appearance of our website.</p>
+
+      <h2>7. Content Liability</h2>
+      <p>We are not responsible for content that appears on your website. By linking to EPRGROUPERS, you agree to defend us against any claims arising from content on your site.</p>
+
+      <h2>8. Privacy Policy</h2>
+      <p>Please review our [Privacy Policy] for details on how we collect, use, and protect your data.</p>
+
+      <h2>9. Reservation of Rights</h2>
+      <p>We reserve the right to request removal of any links to our website. We may also update these Terms and Conditions at any time. By continuously using our website, you agree to comply with the updated terms.</p>
+
+      <h2>10. Disclaimer</h2>
+      <p>To the fullest extent permitted by law, we exclude all warranties relating to the website and its use. Nothing in this disclaimer will:</p>
+      <ul>
+        <li>Limit or exclude liability for death or personal injury</li>
+        <li>Limit or exclude liability for fraud or misrepresentation</li>
+        <li>Limit any liabilities that are not allowed under applicable law</li>
+      </ul>
+      <p>As long as the website and its services are provided free of charge, EPRGROUPERS will not be liable for any loss or damage of any nature.</p>
+
+      <h4 class="closeTerms">CLOSE TERMS AND CONDITIONS</h4>
+    </div>
+    <!-- <div class="footer">
+        <p>&copy; [Year] Your Company. All rights reserved.</p>
+    </div> -->
+  </body>
+</html>
 {% endblock %}
+

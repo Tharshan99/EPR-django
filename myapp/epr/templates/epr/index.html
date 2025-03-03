@@ -2,7 +2,16 @@
 
 
 {% block content %}
-
+<head>
+  {% load static %}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'epr/style-service.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="{% static 'epr/style-testimonial.css' %}">
+  <link rel="stylesheet" href="{% static 'epr/style-faq.css' %}">
+  <link rel="stylesheet" href="{% static 'epr/style-recognition.css' %}">
+  <!-- <link rel="stylesheet" href="{% static 'epr/style-lanquage.css' %}"> -->
+</head>
 <!-- Header -->
 <header id="header" class="header d-flex align-items-center bottom-top">
   <div class="container-fluid container-xl position-relative d-flex align-items-center">
@@ -148,7 +157,7 @@
     <!-- /About Section -->
 
     <!-- Services Section -->
-    <section id="services" class="services section py-5" style="background-color: #f8f9fa;">
+    <!-- <section id="services" class="services section py-5" style="background-color: #f8f9fa;">
       <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
           <h4 class="text-primary">What We Offer</h4>
@@ -224,7 +233,103 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
+    
+    <i class="mobile-nav-toggle"></i>   
+
+    <main class="main">
+  
+      <!-- Services Section -->
+      <section id="services" class="services section">
+  
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Services</h2>
+          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        </div><!-- End Section Title -->
+  
+        <div class="container">
+  
+          <div class="row gy-4">
+  
+            <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="100">
+              <div class="service-item d-flex">
+                <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+                <div>
+                  <h4 class="title"><a href="services-details.html" class="stretched-link">Lorem Ipsum</a></h4>
+                  <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Service Item -->
+  
+            <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
+              <div class="service-item d-flex">
+                <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+                <div>
+                  <h4 class="title"><a href="services-details.html" class="stretched-link">Dolor Sitema</a></h4>
+                  <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+                </div>
+              </div>
+            </div><!-- End Service Item -->
+  
+            <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="300">
+              <div class="service-item d-flex">
+                <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+                <div>
+                  <h4 class="title"><a href="services-details.html" class="stretched-link">Sed ut perspiciatis</a></h4>
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                </div>
+              </div>
+            </div><!-- End Service Item -->
+  
+            <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="400">
+              <div class="service-item d-flex">
+                <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+                <div>
+                  <h4 class="title"><a href="services-details.html" class="stretched-link">Magni Dolores</a></h4>
+                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>
+              </div>
+            </div><!-- End Service Item -->
+  
+            <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="500">
+              <div class="service-item d-flex">
+                <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+                <div>
+                  <h4 class="title"><a href="services-details.html" class="stretched-link">Nemo Enim</a></h4>
+                  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                </div>
+              </div>
+            </div><!-- End Service Item -->
+  
+            <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="600">
+              <div class="service-item d-flex">
+                <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
+                <div>
+                  <h4 class="title"><a href="services-details.html" class="stretched-link">Eiusmod Tempor</a></h4>
+                  <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+                </div>
+              </div>
+            </div><!-- End Service Item -->
+  
+          </div>
+  
+        </div>
+  
+      </section><!-- /Services Section -->
+  
+  
+  
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+  
+  
+
+  
+    
+    
     <!-- /Services Section -->
 
     <!-- Why Us Section -->
@@ -286,168 +391,232 @@
 
     </section><!-- /Why Us Section -->
 
-    <!-- Features Section -->
-    <section id="features" class="features section">
+<!-- recognition secction start -->
+<section>
+  <h1>Membership and Recognition</h1>
+  <div class="slider">
+      <div class="slider-items">
+          <img src="https://www.zarla.com/images/nike-logo-2400x2400-20220504.png?crop=1:1,smart&width=150&dpr=2"
+              alt="">
+          <img src="https://www.zarla.com/images/apple-logo-2400x2400-20220512-1.png?crop=1:1,smart&width=150&dpr=2"
+              alt="">
+          <img src="https://www.zarla.com/images/disney-logo-2400x2400-20220513-2.png?crop=1:1,smart&width=150&dpr=2"
+              alt="">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Loon_%28company%29_logo.svg/800px-Loon_%28company%29_logo.svg.png"
+              alt="">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/1200px-Jumpman_logo.svg.png"
+              alt="">
+          <img src="https://www.svgrepo.com/show/303123/bmw-logo.svg" alt="">
+          <img src="https://brandlogos.net/wp-content/uploads/2014/12/starbucks_coffee_company-logo_brandlogos.net_9jqys.png"
+              alt="">
+          <img src="https://www.zarla.com/images/nike-logo-2400x2400-20220504.png?crop=1:1,smart&width=150&dpr=2"
+              alt="">
+          <img src="https://www.zarla.com/images/apple-logo-2400x2400-20220512-1.png?crop=1:1,smart&width=150&dpr=2"
+              alt="">
+          <img src="https://www.zarla.com/images/disney-logo-2400x2400-20220513-2.png?crop=1:1,smart&width=150&dpr=2"
+              alt="">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Loon_%28company%29_logo.svg/800px-Loon_%28company%29_logo.svg.png"
+              alt="">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/1200px-Jumpman_logo.svg.png"
+              alt="">
+          <img src="https://www.svgrepo.com/show/303123/bmw-logo.svg" alt="">
+          <img src="https://brandlogos.net/wp-content/uploads/2014/12/starbucks_coffee_company-logo_brandlogos.net_9jqys.png"
+              alt="">
 
-      <div class="container">
 
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="features-item">
-              <i class="bi bi-eye" style="color: #ffbb2c;"></i>
-              <h3><a href="" class="stretched-link">PyTorch</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="features-item">
-              <i class="bi bi-infinity" style="color: #5578ff;"></i>
-              <h3><a href="" class="stretched-link">TensorFlow</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="features-item">
-              <i class="bi bi-mortarboard" style="color: #e80368;"></i>
-              <h3><a href="" class="stretched-link">Sed perspiciatis</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="features-item">
-              <i class="bi bi-nut" style="color: #e361ff;"></i>
-              <h3><a href="" class="stretched-link">Magni Dolores</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
-            <div class="features-item">
-              <i class="bi bi-shuffle" style="color: #47aeff;"></i>
-              <h3><a href="" class="stretched-link">Nemo Enim</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="features-item">
-              <i class="bi bi-star" style="color: #ffa76e;"></i>
-              <h3><a href="" class="stretched-link">Eiusmod Tempor</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="700">
-            <div class="features-item">
-              <i class="bi bi-x-diamond" style="color: #11dbcf;"></i>
-              <h3><a href="" class="stretched-link">Midela Teren</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="800">
-            <div class="features-item">
-              <i class="bi bi-camera-video" style="color: #4233ff;"></i>
-              <h3><a href="" class="stretched-link">Pira Neve</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="900">
-            <div class="features-item">
-              <i class="bi bi-command" style="color: #b2904f;"></i>
-              <h3><a href="" class="stretched-link">Dirada Pack</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1000">
-            <div class="features-item">
-              <i class="bi bi-dribbble" style="color: #b20969;"></i>
-              <h3><a href="" class="stretched-link">Moton Ideal</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1100">
-            <div class="features-item">
-              <i class="bi bi-activity" style="color: #ff5828;"></i>
-              <h3><a href="" class="stretched-link">Verdo Park</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1200">
-            <div class="features-item">
-              <i class="bi bi-brightness-high" style="color: #29cc61;"></i>
-              <h3><a href="" class="stretched-link">Flavor Nivelanda</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Features Section -->
-
-<!-- Testimonial Start -->
-<div class="container-fluid testimonial py-5" style="background-color: #f8f9fa;">
-  <div class="container py-5">
-      <div class="text-center mb-5">
-          <h4 class="text-primary">What Our Clients Say</h4>
-          <h1 class="display-4 mb-4">Client Testimonials</h1>
-          <p class="lead">Hear from our satisfied clients about their experiences with us.</p>
-      </div>
-      <div class="row g-4">
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-              <div class="testimonial-item bg-white rounded p-4">
-                  <div class="d-flex align-items-center mb-4">
-                    {% load static %}
-                    <img src="{% static 'img/testimonials/client2.jpg' %}" class="rounded-circle me-3" style="width: 60px; height: 60px;" alt="">
-                    
-                      <div>
-                          <h5 class="mb-0">John Doe</h5>
-                          <p class="text-muted mb-0">CEO, Company A</p>
-                      </div>
-                  </div>
-                  <p class="mb-4">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-                  <div class="d-flex justify-content-end">
-                      <i class="fas fa-quote-right fa-2x text-primary text-black"></i>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-              <div class="testimonial-item bg-white rounded p-4">
-                  <div class="d-flex align-items-center mb-4">
-                    {% load static %}
-                    <img src="{% static 'img/kalam.jpg' %}" class="rounded-circle me-3" style="width: 60px; height: 60px;" alt="">
-                    
-                      <div>
-                          <h5 class="mb-0">Abdul Kalam</h5>
-                          <p class="text-muted mb-0">Marketing Director, Company B</p>
-                      </div>
-                  </div>
-                  <p class="mb-4">"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
-                  <div class="d-flex justify-content-end">
-                      <i class="fas fa-quote-right fa-2x text-primary text-black"></i>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-              <div class="testimonial-item bg-white rounded p-4">
-                  <div class="d-flex align-items-center mb-4">
-                    {% load static %}
-                    <img src="{% static 'img/billgates.jpg' %}" class="rounded-circle me-3" style="width: 60px; height: 60px;" alt="">
-                    
-                      <div>
-                          <h5 class="mb-0">Billgates</h5>
-                          <p class="text-muted mb-0">CTO, Company C</p>
-                      </div>
-                  </div>
-                  <p class="mb-4">"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
-                  <div class="d-flex justify-content-end">
-                      <i class="fas fa-quote-right fa-2x text-primary text-black"></i>
-                  </div>
-              </div>
-          </div>
       </div>
   </div>
+
+</section>
+<!-- recognition secction end -->
+
+    <!-- language section -->
+      <!-- <div class="container py-5">
+          <h1>🚀 Explore Our Technical Expertise</h1>
+          <p class="sub-heading">Innovative Solutions with Modern Technologies</p>
+          <p class="description">We utilize the latest tools and technologies to craft dynamic, scalable, and efficient software solutions that drive success. Our expertise spans multiple programming languages, frameworks, and databases.</p>
+          
+          <div class="divider">
+          <div class="image-container"> 
+              <p class="description">💡 Discover the technologies we master and how they power our solutions:</p>
+  
+              <div class="tech-container ">
+                  <div class="tech-card">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+                      <p>Python</p>
+                  </div>
+                  <div class="tech-card">
+                      <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java">
+                      <p>Java</p>
+                  </div>
+                  <div class="tech-card">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js">
+                      <p>Node.js</p>
+                  </div>
+                  <div class="tech-card">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP">
+                      <p>PHP</p>
+                  </div>
+                  <div class="tech-card">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg" alt="C#">
+                      <p>C#</p>
+                  </div>
+                  <div class="tech-card">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React">
+                      <p>React</p>
+                  </div>
+                  <div class="tech-card">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg" alt="Vue.js">
+                      <p>Vue.js</p>
+                  </div>
+                  <div class="tech-card">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" alt="Kotlin">
+                      <p>Kotlin</p>
+                  </div>
+                  <div class="tech-card">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Swift_logo.svg" alt="Swift">
+                      <p>Swift</p>
+                  </div>
+                  <div class="tech-card">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Flutter-logo.svg" alt="Flutter">
+                      <p>Flutter</p>
+                  </div>
+                  <div class="tech-card">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Database-mysql.svg" alt="MySQL">
+                      <p>MySQL</p>
+                  </div>
+                  <div class="tech-card">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg" alt="MongoDB">
+                      <p>MongoDB</p>
+                  </div>
+              </div>
+          </div>
+      </div> -->
+  
+    <!-- /language section -->
+
+<!-- Testimonial Start -->
+<div class="container mt-5 swiper">
+  <div class="text-center">
+      <h2 class="section-heading">Client Testimonials</h2>
+  </div>
+  <p class="description">
+      Read how our product has transformed workflows and increased productivity for professionals.
+  </p>
+
+  <div class="slider-wrapper">
+      <div class="row mt-4 swiper-wrapper">
+          <!-- Testimonial Cards -->
+          <div class="col-md-3 col-sm-6 col-12 d-flex swiper-slide">
+              <div class="testimonial-card w-100">
+                  <div class="user-info-wrapper">
+                      <div class="user-info">
+                          <span class="name">John Doe</span>
+                          <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="User Image" class="user-img">
+                      </div>
+                      <hr class="hr-line">
+                  </div>
+                  <p class="testimonial-text">
+                      "This product changed my workflow completely. I have been using it for months now, and I can confidently say that it has improved my productivity. Highly recommended for professionals in any field looking to streamline their work."
+                  </p>
+                  <p class="position-text">Software Engineer</p>
+              </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-12 d-flex swiper-slide">
+              <div class="testimonial-card w-100">
+                  <div class="user-info-wrapper">
+                      <div class="user-info">
+                          <span class="name">Emma Smith</span>
+                          <img src="https://randomuser.me/api/portraits/women/20.jpg" alt="User Image" class="user-img">
+                      </div>
+                      <hr class="hr-line">
+                  </div>
+                  <p class="testimonial-text">
+                      "A must-have tool for professionals. I was struggling with organization and productivity, but this software completely turned things around for me. I can't imagine my work without it anymore!"
+                  </p>
+                  <p class="position-text">Marketing Manager</p>
+              </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-12 d-flex swiper-slide">
+              <div class="testimonial-card w-100">
+                  <div class="user-info-wrapper">
+                      <div class="user-info">
+                          <span class="name">Michael Brown</span>
+                          <img src="https://randomuser.me/api/portraits/men/30.jpg" alt="User Image" class="user-img">
+                      </div>
+                      <hr class="hr-line">
+                  </div>
+                  <p class="testimonial-text">
+                      "Superb customer support and excellent features! Every time I needed help, the team was quick to respond. I will definitely be recommending this to my colleagues."
+                  </p>
+                  <p class="position-text">Product Designer</p>
+              </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-12 d-flex swiper-slide">
+              <div class="testimonial-card w-100">
+                  <div class="user-info-wrapper">
+                      <div class="user-info">
+                          <span class="name">Sophia Lee</span>
+                          <img src="https://randomuser.me/api/portraits/women/40.jpg" alt="User Image" class="user-img">
+                      </div>
+                      <hr class="hr-line">
+                  </div>
+                  <p class="testimonial-text">
+                      "I’ve tried many alternatives, but nothing compares to this. It’s incredibly user-friendly, efficient, and has all the features I need. Thank you for such an amazing product!"
+                  </p>
+                  <p class="position-text">HR Specialist</p>
+              </div>
+          </div>
+
+      </div>
+
+      
+  </div>
+  <div class="swiper-button-prev"> </div>
+      <div class="swiper-button-next"></div>
 </div>
 <!-- Testimonial End -->
 
+<!-- FAQ Start-->
+<div class="container">
+  <h2>Frequently Asked Questions</h2>
+  <div class="accordion">
+    <div class="accordion-item">
+      &nbsp;&nbsp;&nbsp;&nbsp;<button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Why is the moon sometimes out during the day?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Why is the sky blue?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Will we ever discover aliens?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">How much does the Earth weigh?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">How do airplanes stay up?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FAQ END-->
 
 
 <!-- Recent Projects Section Start -->
@@ -731,6 +900,10 @@
   <!-- JavaScript Libraries -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="{% static 'js/testimonial.js' %}"></script> 
+  <script src="{% static 'js/faq.js' %}"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- <script src="lib/wow/wow.min.js"></script> -->
   <!-- <script src="lib/easing/easing.min.js"></script> -->
   <!-- <script src="lib/waypoints/waypoints.min.js"></script> -->
@@ -742,6 +915,20 @@
   <script src="{% static 'js/main.js' %}"></script>
   <script src="{% static 'js/script.js' %}"></script>
 
+
+      <!-- Vendor JS Files -->
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- <scripts src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></scripts> -->
+      <script src="assets/vendor/php-email-form/validate.js"></script>
+      <script src="assets/vendor/aos/aos.js"></script>
+      <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+      <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+      <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    
+      <!-- Main JS File -->
+      <script src="{% static 'js/service.js' %}"></script>
 
 <script>
   // JavaScript to hide flash messages after 3 seconds

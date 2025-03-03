@@ -1,0 +1,198 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Maven Pro', sans-serif;
+  background-color: #FBFCFE; /* Light background */
+  color: #10002B; /* Main text color */
+  line-height: 1.6; /* Improved line height for readability */
+}
+
+/* remove the focus from all input fields.*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.termsAndConditions {
+  z-index: 1000;
+  border-radius: 10px; /* Rounded corners for a softer look */
+  position: relative;
+  width: 90%;
+  max-width: none;
+  margin: 40px auto; /* Center the container with margin */
+  padding: 30px; /* Increased padding inside the container */
+  background-color: white; /* White background for the content */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.termsAndConditionsHeading {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 36px; /* Larger font size for the main heading */
+  color: #8427E2; /* Highlight color for the main heading */
+  text-align: center;
+}
+
+.termsParagraphIntro {
+  margin: 15px 0; /* Vertical margin for paragraphs */
+  text-align: justify; /* Justify text for better alignment */
+}
+
+.spangleWelcome {
+  font-weight: 500;
+  font-size: 24px; /* Slightly larger font for welcome message */
+  text-align: center;
+  margin-bottom: 20px; /* Space below the welcome message */
+}
+
+.serviceLeadingSection {
+  width: 80%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.serviceLeadingSection h4 {
+  color: #4361EE; /* Color for section headings */
+}
+
+.sn {
+  font-size: 32px;
+  padding-right: 5px;
+}
+
+.st {
+  font-size: 32px;
+  color: #360065; /* Main color for service leads */
+}
+
+.spl {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.serviceInfoContainer {
+  position: relative;
+  width: 100%;
+}
+
+.serviceLead {
+  font-weight: 700;
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-block-end: 5px;
+  color: #360065; /* Main color for service leads */
+}
+
+.serviceDetails {
+  margin-left: 15px;
+  color: #10002B; /* Main text color */
+}
+
+.displayNone {
+  display: none;
+}
+
+.secionLine {
+  height: 40px;
+  width: 5px;
+  position: absolute;
+  top: 7px;
+}
+
+/*Font Colours below*/
+.lightGreen {
+  color: rgb(85, 189, 134);
+}
+
+.blue {
+  color: #2998ff;
+}
+
+.orange {
+  color: #ff7730;
+}
+
+.purple {
+  color: #2a0073
+}
+
+/*Set the colours for the lines*/
+.lineColorGreen {
+  background-image: linear-gradient(to right bottom, rgb(85, 189, 134), rgb(11, 103, 92));
+}
+
+.lineColorBlue {
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+}
+
+.lineColorOrange {
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+}
+
+.lineColorPurple {
+  background-image: linear-gradient(to bottom right, #b25f88, #2a0073)
+}
+
+.closeTerms {
+  border-top: 1px solid #ddd; /* Light border above close terms */
+  margin-top: 30px; /* Space above close terms */
+  padding-top: 10px; /* Space below close terms */
+  text-align: center; /* Center the close terms text */
+  font-weight: bold; /* Bold text for emphasis */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  color: #360065; /* Color for close terms */
+}
+
+.footer {
+  background-color: #360065; /* Dark footer background */
+  color: white; /* White text in footer */
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  position: relative; /* Position relative for footer */
+  border-top: 5px solid #8427E2; /* Top border for footer */
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: .8s;
+  animation-timing-function: ease-out;
+  z-index: 1001;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h1 {
+  font-weight: bold; /* Make the main heading bold */
+}
+
+h2 {
+  color: #360065; /* Color for section headings */
+  margin-top: 30px; /* Space above section headings */
+  margin-bottom: 10px; /* Space below section headings */
+  font-size: 28px; /* Font size for section headings */
+  border-bottom: 2px solid #8427E2; /* Underline for section headings */
+  padding-bottom: 5px; /* Space below the underline */
+  font-weight: bold; /* Make section headings bold */
+}
+
+h4 {
+  font-weight: bold; /* Make subheadings bold */
+}
+
+ul {
+  margin-left: 20px; /* Indent unordered lists */
+  margin-bottom: 20px; /* Space below lists */
+  color: #10002B; /* Main text color for list items */
+}

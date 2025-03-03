@@ -1,8 +1,148 @@
-<!-- templates/epr/application_success.html -->
 {% extends 'epr/base.html' %}
 
 {% block content %}
-<h1>Application Submitted Successfully!</h1>
-<p>Thank you for applying. We will review your application and get back to you soon.</p>
-<a href="{% url 'epr:index' %}">Return to Home</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Submitted</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #FBFCFE;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            color: #10002B;
+        }
+        h1 {
+            color: #10002B;
+            margin-top: 5px;
+            animation: slideIn 1s ease-in-out;
+            font-size: 1.8em;
+        }
+        .message {
+            background-color: rgba(54, 0, 101, 0.9);
+            color: white;
+            padding: 8px;
+            border-radius: 6px;
+            animation: fadeIn 2s ease-in-out;
+            font-size: 0.9em;
+            margin-top: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .info {
+            margin-top: 10px;
+            text-align: center;
+            max-width: 450px;
+            color: #10002B;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .info-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            padding: 8px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .info-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .info-card i {
+            color: #8427E2;
+            font-size: 1.1em;
+        }
+        .celebration-image {
+            width: 250px;
+            animation: bounce 1s infinite alternate;
+            margin-top: 10px;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-3px);
+            }
+        }
+        .button {
+            margin-top: 10px;
+            padding: 6px 12px;
+            background-color: #4361EE;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-size: 0.8em;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #360065;
+            transform: translateY(-1px);
+        }
+        .info-card a {
+            color: #10002B;
+        }
+    </style>
+</head>
+<body>
+    {% load static %}
+    <h1>Thank You!</h1>
+    <img src="{% static 'img/application_success/Business success.gif' %}" alt="Celebration" class="celebration-image">
+    <div class="message">
+        Application Successfully Submitted!
+    </div>
+    <div class="info">
+        <div class="info-card">
+            <i class="fas fa-clock"></i>
+            <p>Your application has been received and is currently being processed.</p>
+        </div>
+        <div class="info-card">
+            <i class="fas fa-thumbs-up"></i>
+            <p>We appreciate your interest and will get back to you shortly with updates.</p>
+        </div>
+        <div class="info-card">
+            <i class="fas fa-question-circle"></i>
+            <p>For more information, feel free to visit our <a href="#" style="color: #8427E2; text-decoration: underline;">FAQ page</a>.</p>
+        </div>
+    </div>
+    <button class="button" onclick="location.href='{% url 'epr:index' %}'">Return to Home</button>
+    <script>
+        // Optional: You can add more animations or interactions here
+    </script>
+</body>
+</html>
+
 {% endblock %}
