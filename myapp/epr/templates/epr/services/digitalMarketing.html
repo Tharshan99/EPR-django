@@ -1,0 +1,159 @@
+{% extends 'epr/base.html' %}
+
+{% block content %}
+
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Better Email - Landing Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{% static 'epr/landingStyle.css' %}" rel="stylesheet">
+    <link href="{% static 'epr/serviceStyle.css' %}" rel="stylesheet">
+    <link href="{% static 'epr/imageCard.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="floating-shape shape1"></div>
+    <div class="floating-shape shape2"></div>
+    <div class="floating-shape shape3"></div>
+
+    <div class="container1">
+        <div class="hero-text">
+            <h1 class="hero-text-heading">Elevate your Business<br>with <span class="highlight">EPR GROUPS</span></h1>
+            <p>We deliver comprehensive business solutions designed to drive your organization forward. Whether it's
+                strategic consulting, operational excellence, or digital transformation, we provide the expertise to
+                meet your evolving business requirements.</p>
+        </div>
+        <div class="buttons">
+            <a href="#services" class="btn btn-primary">
+                Contact Us
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container2">
+        <div class="row">
+            <!-- First Card (Image Left, Text Right) -->
+            <div class="col-12">
+                <div class="card-container row align-items-center">
+                    <!-- Image Section -->
+                    <div class="col-lg-5 col-md-12 text-center">
+                        <img src="{% static 'img/Service/digital1.jpg' %}" alt="Recognition Image" class="profile-img"/>
+                    </div>
+
+                    <!-- Text Section -->
+                    <div class="col-lg-7 col-md-12 content">
+                        <h4>Our Digital Marketing Services</h4>
+                        
+                        <p class="text-muted text-justify">
+                            We specialize in providing comprehensive digital marketing services that help businesses grow and engage their audience effectively.  
+                            Our offerings include search engine optimization (SEO), social media marketing, pay-per-click (PPC) advertising, content marketing, and email marketing.  
+                            With a data-driven approach and a focus on ROI, our team is dedicated to delivering impactful digital strategies that drive success.
+                        </p>
+                    </div>                    
+                </div>
+            </div>
+
+            <!-- Second Card (Text Left, Image Right) -->
+            <div class="col-12">
+                <div class="card-container row align-items-center">
+                    <!-- Text Section -->
+                    <div class="col-lg-7 col-md-12 content">
+                        <h4>Our Digital Marketing Expertise</h4>
+                        
+                        <p class="text-muted text-justify">
+                            Our digital marketing expertise covers a wide range of strategies and platforms to enhance your brand’s online presence.  
+                            We craft data-driven marketing campaigns, optimize search engine rankings, and create engaging content tailored to your audience.  
+                            From social media management to paid advertising, our team ensures effective brand positioning and measurable results.
+                        </p>
+                    </div>                    
+
+                    <!-- Image Section -->
+                    <div class="col-lg-5 col-md-12 text-center">
+                        <img src="{% static 'img/Service/digital2.jpg' %}" alt="Recognition Image" class="profile-img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container3 container py-5">
+        <h1 class="text-center">🚀 Explore Our Technical Expertise</h1>
+        <br>
+        <p class="description">We utilize the latest tools and technologies to craft dynamic, scalable, and
+            efficient software solutions that drive success. Our expertise spans multiple programming languages,
+            frameworks, and databases.</p>
+
+        <div class="divider">
+            <div class="image-container">
+                
+
+                <div class="tech-container">
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/Google-Ads-logo.svg' %}" alt="Google Ads">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/Facebook-Ads-logo.png' %}" alt="Facebook Ads">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/Instagram-logo.svg' %}" alt="Instagram Marketing">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/LinkedIn-logo.svg' %}" alt="LinkedIn Marketing">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/YouTube-logo.svg' %}" alt="YouTube Marketing">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/Twitter-logo.svg' %}" alt="Twitter Marketing">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/shopify-logo.svg' %}" alt="SEO">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/Google-Analytics-logo.svg' %}" alt="Google Analytics">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/SEMrush-logo.svg' %}" alt="SEMrush">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/HubSpot-logo.svg' %}" alt="HubSpot">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/Mailchimp-logo.svg' %}" alt="Mailchimp">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/Canva-logo.jpeg' %}" alt="Canva">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/Google-Tag-Manager-logo.svg' %}" alt="Google Tag Manager">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/WordPress_blue_logo.svg' %}" alt="WordPress">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+</body>
+
+{% endblock %}

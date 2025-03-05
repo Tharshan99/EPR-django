@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    background: white;
+    font-family: Arial, sans-serif;
+}
+
+.container1 {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    min-height: 70vh;
+    top: 150px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.highlight span {
+    background: #10002B;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s infinite alternate;
+    color:white;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #ff6347;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.3s;
+}
+
+.btn:hover::before {
+    left: 0;
+}
+
+.btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+    background-color: #10002B;
+    border-color: #10002B;
+    color: white;
+}
+
+.btn svg {
+    margin-left: 0.5rem;
+}
+
+/* Floating geometric shapes */
+.floating-shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.2;
+    animation: float 10s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-20px) rotate(45deg); }
+    100% { transform: translateY(0) rotate(0); }
+}
+
+.shape1 { 
+    width: 150px; 
+    height: 150px; 
+    background-color: black; /* Big circle color */
+    top: 10%; 
+    left: 5%; 
+}
+
+.shape2 { 
+    width: 100px; 
+    height: 100px; 
+    background-color: #10002B; /* Medium circle color */
+    top: 70%; 
+    right: 10%; 
+}
+
+.shape3 { 
+    width: 80px; 
+    height: 80px; 
+    background-color: #360065; /* Small circle color */
+    top: 40%; 
+    left: 85%; 
+}
+
+.hero-text h1 {
+    font-size: 64px;
+    line-height: 1.2;
+    text-align: center;
+    font-weight: bold;
+}
+@media (max-width: 1200px) {
+    .container1 {
+        top: 300px;
+        max-height: 50vh;
+        margin-bottom: 0;
+        max-width: 90%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container1 {
+        top: 200px;
+        max-height: 55vh;
+        margin: 0;
+        max-width: 90%;
+        padding: 15px;
+    }
+    .hero-text h1  {
+        font-size: 36px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .content h4 {
+        font-size: 20px;
+    }
+
+    .content h5 {
+        font-size: 18px;
+    }
+
+    .text-muted {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .container1 {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Media query for responsive design */
+@media (max-width: 600px) {
+    .shape1 { 
+        width: 100px; 
+        height: 100px; 
+    }
+
+    .shape2 { 
+        width: 70px; 
+        height: 70px; 
+    }
+
+    .shape3 { 
+        width: 50px; 
+        height: 50px; 
+    }
+}
+
+/* Content Styles */
+.content h4 {
+    font-size: 24px;
+}
+
+.content h5 {
+    font-size: 20px;
+}
+
+.text-muted {
+    color: #6c757d;
+}
+
+/* Additional Styles */
+.container1, .container2 {
+    margin: 20px;
+}
+
+.text-justify {
+    text-align: justify; /* Justify text */
+}
+
+.description {
+    text-align: justify; /* Justify the text */
+}
