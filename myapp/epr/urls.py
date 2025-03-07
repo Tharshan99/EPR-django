@@ -47,4 +47,5 @@ urlpatterns = [
     path('IOTMain/', views.IOTMain, name='IOTMain'),
     path('mobileMain/', views.mobileMain, name='mobileMain'),
     path('webMain/', views.webMain, name='webMain'),
+    path('about-us/', views.about_us, name='about_us'),
 ]

@@ -384,3 +384,6 @@ def mobileMain(request):
 
 def webMain(request):
     return render(request, 'epr/services/webMain.html')
+
+def about_us(request):
+    return render(request, 'epr/about_us.html')

@@ -1,0 +1,135 @@
+{% extends 'epr/base.html' %}
+
+{% block content %}
+
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us – EPRGROUPERS</title>
+    <link rel="stylesheet" href="{% static 'epr/style-aboutus.css' %}">
+    <!-- <script src="{% static 'js/about.js' %}" defer></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<!-- Header -->
+<header id="header" class="header d-flex align-items-center sticky-top " style="background-color: #61199f">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        {% load static %}
+        <img src="{% static 'img/logo.png' %}" alt="">
+      </a>
+  
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'epr:index' %}" class="active">Home<br></a></li>
+          <li><a href="{% url 'epr:about_us'	 %}">About Us</a></li>
+          <!-- <li><a href="courses.html">Services</a></li> -->
+          <!-- <li><a href="events.html">About Us</a></li> -->
+          <li><a href="{% url 'epr:contact' %}">Contact</a></li>
+          <li><a href="{% url 'epr:career' %}">Careers</a></li>
+          <!-- <li><a href="contact.html">Contact</a></li> -->
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+  
+  <section id="hero"></section>
+  
+
+<body>
+
+    <!-- Header Section -->
+    <!-- <header class="hero-section">
+        <div class="overlay"></div>
+        <div class="container text-center">
+            <h1 class="hero-title">About Us</h1>
+            <p class="hero-subtitle">We create AI-driven solutions that redefine industries.</p>
+        </div>
+    </header> -->
+
+    <!-- About Section -->
+    <section class="about-section container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2>Our Story</h2>
+                <p>At EPRGROUPERS, we may be a small team, but our impact is anything but small. Founded with a vision to leverage artificial intelligence and advanced technologies, our mission is to solve real-world challenges, optimize business operations, and drive transformative change across industries. We believe that innovation isn’t about size—it’s about creativity, dedication, and a relentless pursuit of excellence.</p>
+                <p>From the very beginning, our team has been committed to pushing boundaries and exploring how AI can be used to create smarter, more efficient solutions. Every member of EPRGROUPERS brings a unique blend of technical expertise, problem-solving skills, and passion, allowing us to develop scalable, AI-powered solutions that have a real impact. Our goal is to provide businesses and organizations with intelligent tools that enhance decision-making, automate processes, and unlock new opportunities.</p>
+                <p>
+                    What sets EPRGROUPERS apart is our practical approach to AI innovation. We don’t just build theoretical models; we create real-world applications that deliver measurable results. Whether it’s enhancing project management in construction, optimizing workforce efficiency, revolutionizing healthcare with AI-driven insights, or empowering education with personalized learning solutions, our focus is on making a meaningful difference.
+                </p>
+                <p>Through continuous research, collaboration, and technological advancements, we are constantly evolving to meet the changing needs of industries. We take pride in developing ethical AI solutions that are trustworthy, transparent, and impactful.</p>
+                <p>At EPRGROUPERS, we are not just building software—we are shaping the future. 🚀 Our journey has just begun, and we are excited to continue developing cutting-edge AI technologies that drive progress and create a better world.</p>
+                <p>Join us as we turn challenges into opportunities and redefine what’s possible through innovation, excellence, integrity, and impact.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'img/aboutus.jpg' %}" alt="Our Team" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+<section class="gallery container text-center">
+    <h2>📸 Our Journey in Pictures</h2>
+    <p>Take a look at some of our milestones and innovative projects.</p>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{% static 'img/tshirt2.jpg' %}" alt="AI Development" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'img/mug4.jpg' %}" alt="Team Collaboration" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'img/lap2.jpg' %}" alt="Technology in Action" class="img-fluid rounded shadow">
+        </div>
+        <!-- <div class="col-md-3">
+            <img src="{% static 'img/aboutus.jpg' %}" alt="Technology in Action" class="img-fluid rounded shadow">
+        </div> -->
+    </div>
+</section>
+
+
+    <!-- Vision & Mission -->
+    <section class="vision-mission container text-center">
+        <h2>Our Vision & Mission</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>🔹 Company Vision</h3>
+                <p>To be a global leader in AI-driven solutions, empowering businesses with smart, scalable, and sustainable innovations that redefine industries.</p>
+            </div>
+            <div class="col-md-6">
+                <h3>🔹 Company Mission</h3>
+                <p>To leverage the power of AI and advanced technologies to solve real-world challenges, enhance operational efficiency, and drive business success with intelligent, data-driven solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialization -->
+    <section class="specialization container">
+        <h2 class="text-center">Our Areas of Specialization</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>✅ Construction</h4>
+                <p>Enhancing project management, safety, and efficiency through AI-driven insights and automation.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>✅ Workforce Management</h4>
+                <p>Streamlining employee processes and optimizing operations with intelligent workforce solutions.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>✅ Healthcare</h4>
+                <p>Transforming patient care, medical data analysis, and operational efficiency with AI-driven healthcare solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- <footer class="footer text-center">
+        <p>© 2025 EPRGROUPERS | Innovation, Excellence, Integrity, and Impact</p>
+    </footer> -->
+
+</body>
+</html>
+{% endblock content %}
