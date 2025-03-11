@@ -120,7 +120,7 @@
 }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<header id="header" class="header d-flex align-items-center sticky-top">
+<header id="header" class="header d-flex align-items-center sticky-top" style="background-color: #61199f">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
   
       <a href="index.html" class="logo d-flex align-items-center me-auto">
@@ -134,13 +134,10 @@
   
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="{% url 'epr:index' %}" class="active">Home<br></a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="courses.html">Services</a></li>
-          <li><a href="events.html">About Us</a></li>
-          <li><a href="{% url 'epr:contact' %}">Contact</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="contact.html">Contact</a></li>
+            <li><a href="{% url 'epr:index' %}" class="active">Home<br></a></li>
+            <li><a href="{% url 'epr:about_us'	 %}">About Us</a></li>
+            <li><a href="{% url 'epr:contact' %}">Contact</a></li>
+            <li><a href="{% url 'epr:career' %}">Careers</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>

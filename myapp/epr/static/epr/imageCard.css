@@ -1,0 +1,157 @@
+body {
+    font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Container */
+.container3 {
+    border-radius: 16px;
+    padding: 40px;
+    
+    margin: 5px;
+    
+}
+
+/* Heading */
+h1 {
+    color: #10002B;
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+/* Paragraph */
+p.description {
+    font-size: 16px;
+    color: #10002B;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Image Container */
+.image-container {
+    max-width: 90%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+/* Tech Grid */
+.tech-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 40px;
+    max-width: 90%;
+    margin: 30px auto;
+}
+
+/* Tech Card */
+.tech-card {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #10002B;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tech-card img {
+    width: 80px;
+    height: 80px;
+    padding: 3px;
+}
+
+.tech-card p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #10002B;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container3 {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .image-container {
+        margin: 30px auto;
+        max-width: 95%;
+    }
+
+    .tech-container {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 15px;
+    }
+
+    .tech-card {
+        width: 100px;
+        height: 100px;
+    }
+
+    .tech-card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .tech-card p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container3 {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .image-container {
+        margin: 20px auto;
+        max-width: 100%;
+    }
+
+    .tech-container {
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+        gap: 10px;
+    }
+
+    .tech-card {
+        width: 80px;
+        height: 80px;
+        border-radius: 15px;
+    }
+
+    .tech-card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .tech-card p {
+        font-size: 10px;
+    }
+}

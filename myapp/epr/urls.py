@@ -41,4 +41,11 @@ urlpatterns = [
     path('blog-detail/<int:post_id>/', views.blog_detail, name='blog_detail'),
     path('edit-blog-post/<int:post_id>/', views.edit_blog_post, name='edit_blog_post'),
     path('delete-blog-post/<int:post_id>/', views.delete_blog_post, name='delete_blog_post'),
+    path('AI_Solutions/', views.ai_sollution, name='AI_Solutions'),
+    path('digitalMarketing/', views.digitalMarketing, name='digitalMarketing'),
+    path('IntelligentDataAnalysis/', views.IntelligentDataAnalysis, name='IntelligentDataAnalysis'),
+    path('IOTMain/', views.IOTMain, name='IOTMain'),
+    path('mobileMain/', views.mobileMain, name='mobileMain'),
+    path('webMain/', views.webMain, name='webMain'),
+    path('about-us/', views.about_us, name='about_us'),
 ]

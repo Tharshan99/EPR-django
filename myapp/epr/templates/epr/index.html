@@ -28,9 +28,9 @@
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="{% url 'epr:index' %}" class="active">Home<br></a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="courses.html">Services</a></li>
+        <li><a href="{% url 'epr:about_us'	 %}">About Us</a></li>
+        <!-- <li><a href="blog.html">Blog</a></li> -->
+        <!-- <li><a href="courses.html">Services</a></li> -->
         <!-- <li class="dropdown"><a href="#"><span>Product</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
             <li><a href="#">Dropdown 1</a></li>
@@ -97,22 +97,22 @@
     <section id="hero" class="hero section dark-background">
 
         {% load static %}
-        <img src="{% static 'img/16.jpg' %}" alt="" data-aos="fade-in">
+        <img src="{% static 'img/22.png' %}" alt="" data-aos="fade-in">
         
 
 
       <div class="container">
-        <h2 data-aos="fade-up" data-aos-delay="100">Learning Today,<br>Leading Tomorrow</h2>
-        <p data-aos="fade-up" data-aos-delay="200">We are team of talented designers making websites with Bootstrap</p>
+        <h2 data-aos="fade-up" data-aos-delay="100">Fight for Future with AI</h2>
+        <p data-aos="fade-up" data-aos-delay="200">Revolutionizing industries with AI-powered intelligence <br> for efficiency, growth, and digital transformation</p>
         <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
-          <a href="courses.html" class="btn-get-started">Get Started</a>
+          <a href="courses.html" class="btn-get-started">Start Your AI Journey Today</a>
         </div>
       </div>
 
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section">
+    <!-- <section id="about" class="about section">
 
       <div class="container">
 
@@ -153,7 +153,7 @@
 
       </div>
 
-    </section>
+    </section> -->
     <!-- /About Section -->
 
     <!-- Services Section -->
@@ -244,8 +244,8 @@
   
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Services</h2>
-          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+          <h3 class="font-weight-bold">Services</h3>
+          <p>Empowering Businesses with AI & Technology Solutions</p>
         </div><!-- End Section Title -->
   
         <div class="container">
@@ -256,8 +256,8 @@
               <div class="service-item d-flex">
                 <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
                 <div>
-                  <h4 class="title"><a href="services-details.html" class="stretched-link">Lorem Ipsum</a></h4>
-                  <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                  <h4 class="title"><a href="{% url 'epr:AI_Solutions' %}" class="stretched-link">Empower your business with intelligent AI solutions that optimize workflows, automate operations, and drive smarter decisions</a></h4>
+                  <p> Leverage cutting-edge AI technology to enhance business processes, streamline operations, and make data-driven decisions effortlessly.</p>
                 </div>
               </div>
             </div>
@@ -267,8 +267,8 @@
               <div class="service-item d-flex">
                 <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
                 <div>
-                  <h4 class="title"><a href="services-details.html" class="stretched-link">Dolor Sitema</a></h4>
-                  <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+                  <h4 class="title"><a href="{% url 'epr:digitalMarketing' %}" class="stretched-link">Optimize your brand’s digital presence for maximum impact</a></h4>
+                  <p>Maximize your online presence with strategic digital marketing solutions designed to amplify your brand’s reach and engagement.</p>
                 </div>
               </div>
             </div><!-- End Service Item -->
@@ -277,8 +277,8 @@
               <div class="service-item d-flex">
                 <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
                 <div>
-                  <h4 class="title"><a href="services-details.html" class="stretched-link">Sed ut perspiciatis</a></h4>
-                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                  <h4 class="title"><a href="{% url 'epr:IntelligentDataAnalysis' %}" class="stretched-link">Discover patterns and trends for smarter business decisions</a></h4>
+                  <p> Uncover actionable insights and key trends that drive informed decision-making for improved business outcomes.</p>
                 </div>
               </div>
             </div><!-- End Service Item -->
@@ -287,8 +287,8 @@
               <div class="service-item d-flex">
                 <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
                 <div>
-                  <h4 class="title"><a href="services-details.html" class="stretched-link">Magni Dolores</a></h4>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                  <h4 class="title"><a href="{% url 'epr:IOTMain' %}" class="stretched-link">Design, develop, and implement smart IoT ecosystems</a></h4>
+                  <p>Develop and deploy integrated IoT systems that enhance connectivity, efficiency, and automation across your business operations.</p>
                 </div>
               </div>
             </div><!-- End Service Item -->
@@ -297,8 +297,8 @@
               <div class="service-item d-flex">
                 <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
                 <div>
-                  <h4 class="title"><a href="services-details.html" class="stretched-link">Nemo Enim</a></h4>
-                  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                  <h4 class="title"><a href="{% url 'epr:mobileMain' %}" class="stretched-link">Build user-friendly, innovative apps that engage and delight</a></h4>
+                  <p> Craft intuitive, high-performing mobile apps that provide seamless user experiences and boost engagement.</p>
                 </div>
               </div>
             </div><!-- End Service Item -->
@@ -307,8 +307,8 @@
               <div class="service-item d-flex">
                 <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
                 <div>
-                  <h4 class="title"><a href="services-details.html" class="stretched-link">Eiusmod Tempor</a></h4>
-                  <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+                  <h4 class="title"><a href="{% url 'epr:webMain' %}" class="stretched-link">Build fast, secure, and responsive websites tailored to your needs</a></h4>
+                  <p> Create high-performance, scalable websites designed to meet your specific business objectives with security and speed.</p>
                 </div>
               </div>
             </div><!-- End Service Item -->
@@ -341,13 +341,9 @@
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="why-box">
-              <h3>Why Choose Us?</h3>
+              <h3>Why Partner with EPR Groupers?</h3>
               <p style="text-align: justify;">
-                At EPR Groupers, we combine innovation, expertise, and a customer-first approach 
-                to deliver tailored solutions that drive measurable results. 
-                With a skilled team and a proven track record, we offer a wide range of 
-                services, including AI-powered solutions, web development, and digital marketing, 
-                to help businesses thrive. Choose us for our commitment to quality, innovation, and your success.
+                At EPR Groupers, we specialize in delivering AI-driven solutions tailored to meet your unique needs. Our expert team is dedicated to ensuring seamless integration and superior performance, helping your business thrive in a rapidly evolving digital landscape. Partner with us for innovative solutions and exceptional support.
               </p>
               <div class="text-center">
                 <a href="#" class="more-btn"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
@@ -361,24 +357,24 @@
               <div class="col-xl-4">
                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                   <i class="bi bi-clipboard-data"></i>
-                  <h4>Innovation at the Core</h4>
-                  <p>We embrace cutting-edge technologies and stay ahead of trends to ensure you receive forward-thinking solutions tailored to your needs.</p>
+                  <h4>Innovation for Tomorrow</h4>
+                  <p>By staying ahead of trends, we create advanced, adaptable solutions that drive long-term success.</p>
                 </div>
               </div><!-- End Icon Box -->
 
               <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                   <i class="bi bi-gem"></i>
-                  <h4>Tailored to Your Success</h4>
-                  <p>Your business is unique, and so are our strategies. We take the time to understand your goals and customize our services to help you achieve them efficiently.</p>
+                  <h4>Your Vision, Our Strategy</h4>
+                  <p>We take the time to understand your goals and create customized solutions that drive real results</p>
                 </div>
               </div><!-- End Icon Box -->
 
               <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                   <i class="bi bi-inboxes"></i>
-                  <h4>Expert Team of Professionals</h4>
-                  <p>Our team consists of highly skilled professionals with expertise across various industries and technologies, ensuring the highest quality and reliability.</p>
+                  <h4>Experienced & Skilled Professionals</h4>
+                  <p>Our team brings deep industry expertise and technical excellence to deliver high-quality, reliable solutions.</p>
                 </div>
               </div><!-- End Icon Box -->
 
@@ -396,7 +392,7 @@
   <h1>Membership and Recognition</h1>
   <div class="slider">
       <div class="slider-items">
-          <img src="https://www.zarla.com/images/nike-logo-2400x2400-20220504.png?crop=1:1,smart&width=150&dpr=2"
+          <!-- <img src="https://www.zarla.com/images/nike-logo-2400x2400-20220504.png?crop=1:1,smart&width=150&dpr=2"
               alt="">
           <img src="https://www.zarla.com/images/apple-logo-2400x2400-20220512-1.png?crop=1:1,smart&width=150&dpr=2"
               alt="">
@@ -419,9 +415,17 @@
               alt="">
           <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/1200px-Jumpman_logo.svg.png"
               alt="">
-          <img src="https://www.svgrepo.com/show/303123/bmw-logo.svg" alt="">
-          <img src="https://brandlogos.net/wp-content/uploads/2014/12/starbucks_coffee_company-logo_brandlogos.net_9jqys.png"
-              alt="">
+          <img src="https://www.svgrepo.com/show/303123/bmw-logo.svg" alt=""> -->
+          <!-- <img src="https://brandlogos.net/wp-content/uploads/2014/12/starbucks_coffee_company-logo_brandlogos.net_9jqys.png"
+              alt=""> -->
+          <img src="{% static 'img/img-1.png' %}">
+          <img src="{% static 'img/img-2.jpg' %}">
+          <img src="{% static 'img/img-3.jpg' %}">
+          <img src="{% static 'img/img-4.png' %}">
+          <img src="{% static 'img/img-5.png' %}">
+          <img src="{% static 'img/img-6.jpg' %}">
+          <img src="{% static 'img/img-7.avif' %}">
+          <img src="{% static 'img/img-8.png' %}">
 
 
       </div>
@@ -511,19 +515,82 @@
               <div class="testimonial-card w-100">
                   <div class="user-info-wrapper">
                       <div class="user-info">
-                          <span class="name">John Doe</span>
-                          <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="User Image" class="user-img">
+                          <span class="name">Ramanan</span>
+                          <img src="{% static 'img/client-1.jpg' %}" alt="User Image" class="user-img">
                       </div>
                       <hr class="hr-line">
                   </div>
                   <p class="testimonial-text">
-                      "This product changed my workflow completely. I have been using it for months now, and I can confidently say that it has improved my productivity. Highly recommended for professionals in any field looking to streamline their work."
+                    "EPR Groupers delivered an outstanding AI solution that transformed our business operations. Their expertise in automation helped us save time and reduce costs. The team was highly professional, understood our needs, and provided a seamless experience from start to finish."
                   </p>
-                  <p class="position-text">Software Engineer</p>
+                  <p class="position-text">Canada</p>
               </div>
           </div>
 
           <div class="col-md-3 col-sm-6 col-12 d-flex swiper-slide">
+              <div class="testimonial-card w-100">
+                  <div class="user-info-wrapper">
+                      <div class="user-info">
+                          <span class="name">Mathijugan</span>
+                          <img src="{% static 'img/client-2.jpg' %}" alt="User Image" class="user-img">
+                      </div>
+                      <hr class="hr-line">
+                  </div>
+                  <p class="testimonial-text">
+                    "EPR Groupers built a custom AI model for our company that improved our workflow significantly. They listened to our requirements carefully and delivered a solution that integrated perfectly into our existing system. Their support and expertise made a huge difference in our success."
+                  </p>
+                  <p class="position-text">UK</p>
+              </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-12 d-flex swiper-slide">
+              <div class="testimonial-card w-100">
+                  <div class="user-info-wrapper">
+                      <div class="user-info">
+                          <span class="name">Keapiriyan</span>
+                          <img src="{% static 'img/client-3.jpg' %}" alt="User Image" class="user-img">
+                      </div>
+                      <hr class="hr-line">
+                  </div>
+                  <p class="testimonial-text">
+                    "EPR Groupers provides high-quality services at affordable prices. They never compromise on quality, and their team is always ready to help. Whether it’s AI, web development, or mobile apps, they deliver excellent solutions that truly add value to our business."
+                  </p>
+                  <p class="position-text">Canada</p>
+              </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-12 d-flex swiper-slide">
+              <div class="testimonial-card w-100">
+                  <div class="user-info-wrapper">
+                      <div class="user-info">
+                          <span class="name">Thusi</span>
+                          <img src="{% static 'img/client-4.jpg' %}" alt="User Image" class="user-img">
+                      </div>
+                      <hr class="hr-line">
+                  </div>
+                  <p class="testimonial-text">
+                    "EPR Groupers is always ahead of the curve with AI technology. Their solutions are future-ready and perfectly suited for modern businesses. If you want innovative AI services that actually work, they are the best choice. Highly recommended!"
+                  </p>
+                  <p class="position-text">Sri Lanka</p>
+              </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-12 d-flex swiper-slide">
+              <div class="testimonial-card w-100">
+                  <div class="user-info-wrapper">
+                      <div class="user-info">
+                          <span class="name">Ronald</span>
+                          <img src="{% static 'img/client-5.jpg' %}" alt="User Image" class="user-img">
+                      </div>
+                      <hr class="hr-line">
+                  </div>
+                  <p class="testimonial-text">
+                    "EPR Groupers delivers cutting-edge technology solutions with a strong focus on AI and innovation. Their team is reliable, skilled, and always ready to meet business needs with high-quality results."
+                  </p>
+                  <p class="position-text">Germany</p>
+              </div>
+          </div>
+
+          <!-- <div class="col-md-3 col-sm-6 col-12 d-flex swiper-slide">
               <div class="testimonial-card w-100">
                   <div class="user-info-wrapper">
                       <div class="user-info">
@@ -533,13 +600,13 @@
                       <hr class="hr-line">
                   </div>
                   <p class="testimonial-text">
-                      "A must-have tool for professionals. I was struggling with organization and productivity, but this software completely turned things around for me. I can't imagine my work without it anymore!"
+                    "We appreciate EPR Groupers’ professionalism and expertise. Their AI-driven solutions have streamlined our operations, making our business more efficient. They provide great service and support throughout the entire process."
                   </p>
                   <p class="position-text">Marketing Manager</p>
               </div>
-          </div>
+          </div> -->
 
-          <div class="col-md-3 col-sm-6 col-12 d-flex swiper-slide">
+          <!-- <div class="col-md-3 col-sm-6 col-12 d-flex swiper-slide">
               <div class="testimonial-card w-100">
                   <div class="user-info-wrapper">
                       <div class="user-info">
@@ -549,13 +616,13 @@
                       <hr class="hr-line">
                   </div>
                   <p class="testimonial-text">
-                      "Superb customer support and excellent features! Every time I needed help, the team was quick to respond. I will definitely be recommending this to my colleagues."
+                    "Working with EPR Groupers was a smooth and rewarding experience. Their ability to deliver smart, AI-powered solutions with great attention to detail has helped us achieve our business goals efficiently."
                   </p>
                   <p class="position-text">Product Designer</p>
               </div>
-          </div>
+          </div> -->
 
-          <div class="col-md-3 col-sm-6 col-12 d-flex swiper-slide">
+          <!-- <div class="col-md-3 col-sm-6 col-12 d-flex swiper-slide">
               <div class="testimonial-card w-100">
                   <div class="user-info-wrapper">
                       <div class="user-info">
@@ -565,11 +632,11 @@
                       <hr class="hr-line">
                   </div>
                   <p class="testimonial-text">
-                      "I’ve tried many alternatives, but nothing compares to this. It’s incredibly user-friendly, efficient, and has all the features I need. Thank you for such an amazing product!"
+                    "With EPR Groupers, we found a team that truly understands technology. Their AI, web, and mobile solutions are impressive, and their dedication to client success makes them a valuable business partner."
                   </p>
                   <p class="position-text">HR Specialist</p>
               </div>
-          </div>
+          </div> -->
 
       </div>
 
@@ -581,34 +648,34 @@
 <!-- Testimonial End -->
 
 <!-- FAQ Start-->
-<div class="container">
+<div class="container" >
   <h2>Frequently Asked Questions</h2>
-  <div class="accordion">
-    <div class="accordion-item">
+  <div class="accordion" >
+    <div class="accordion-item" style="border:none;">
       &nbsp;&nbsp;&nbsp;&nbsp;<button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Why is the moon sometimes out during the day?</span><span class="icon" aria-hidden="true"></span></button>
       <div class="accordion-content">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
       </div>
     </div>
-    <div class="accordion-item">
+    <div class="accordion-item" style="border:none;">
       <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Why is the sky blue?</span><span class="icon" aria-hidden="true"></span></button>
       <div class="accordion-content">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
       </div>
     </div>
-    <div class="accordion-item">
+    <div class="accordion-item" style="border:none;">
       <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Will we ever discover aliens?</span><span class="icon" aria-hidden="true"></span></button>
       <div class="accordion-content">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
       </div>
     </div>
-    <div class="accordion-item">
+    <div class="accordion-item" style="border:none;">
       <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">How much does the Earth weigh?</span><span class="icon" aria-hidden="true"></span></button>
       <div class="accordion-content">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
       </div>
     </div>
-    <div class="accordion-item">
+    <div class="accordion-item" style="border:none;">
       <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">How do airplanes stay up?</span><span class="icon" aria-hidden="true"></span></button>
       <div class="accordion-content">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
@@ -620,11 +687,11 @@
 
 
 <!-- Recent Projects Section Start -->
-<section id="projects" class="py-5">
+<!-- <section id="projects" class="py-5">
   <div class="container">
     <div class="text-center mb-5">
       <h4 class="text-primary">Our Work</h4>
-      <h1 class="display-4 mb-4">Recent Projects</h1>
+      <h1 class="display-4 mb-4">Upcoming Projects</h1>
     </div>
     <div class="row g-4">
       <div class="col-lg-4 col-md-6">
@@ -662,12 +729,12 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- Recent Projects Section End -->
 
 <!-- Our Team Section Start -->
-<section id="team" class="py-5 bg-light">
+<!-- <section id="team" class="py-5 bg-light">
   <div class="container">
     <div class="text-center mb-5">
       <h4 class="text-primary">Meet Our Team</h4>
@@ -709,11 +776,11 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- Our Team Section End -->
 
 <!-- Contact Section Start -->
-<section id="contact" class="py-5" style="background-color: #f8f9fa;">
+<!-- <section id="contact" class="py-5" style="background-color: #f8f9fa;">
   <div class="container">
     <div class="text-center mb-5">
       <h4 class="text-primary">Get in Touch</h4>
@@ -722,7 +789,6 @@
     </div>
 
     <div class="row g-4">
-      <!-- Contact Form -->
       <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
         <div class="bg-white rounded p-4 p-sm-5 shadow">
           <h3 class="mb-4">Send Us a Message</h3>
@@ -747,8 +813,6 @@
           </form>
         </div>
       </div>
-
-      <!-- Contact Information -->
       <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.1s">
         <div class="bg-white rounded p-4 p-sm-5 shadow">
           <h3 class="mb-4">Our Information</h3>
@@ -794,7 +858,6 @@
             </div>
           </div>
         </div>
-        <!-- Schedule a Call Card -->
         <div class="bg-white rounded p-4 p-sm-5 shadow mt-4 text-center">
           <h3 class="mb-3">Need a Consultation?</h3>
           <p class="text-muted">Schedule a call with our experts for personalized support and guidance.</p>
@@ -805,7 +868,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- Contact Section End -->
 
 <!-- Schedule Call Modal -->

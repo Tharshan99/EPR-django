@@ -366,3 +366,24 @@ def delete_blog_post(request, post_id):
         post.delete()
         return redirect('epr:blog_list')  # Redirect to the blog list after deleting
     return render(request, 'epr/confirm_delete.html', {'post': post})
+
+def ai_sollution(request):
+    return render(request, 'epr/services/AI_Solutions.html')
+
+def digitalMarketing(request):
+    return render(request, 'epr/services/digitalMarketing.html')
+
+def IntelligentDataAnalysis(request):
+    return render(request, 'epr/services/IntelligentDataAnalysis.html')
+
+def IOTMain(request):
+    return render(request, 'epr/services/IOTMain.html')
+
+def mobileMain(request):
+    return render(request, 'epr/services/mobileMain.html')
+
+def webMain(request):
+    return render(request, 'epr/services/webMain.html')
+
+def about_us(request):
+    return render(request, 'epr/about_us.html')

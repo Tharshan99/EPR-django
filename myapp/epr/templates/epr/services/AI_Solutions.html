@@ -1,0 +1,159 @@
+{% extends 'epr/base.html' %}
+
+{% block content %}
+
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Better Email - Landing Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{% static 'epr/landingStyle.css' %}" rel="stylesheet">
+    <link href="{% static 'epr/serviceStyle.css' %}" rel="stylesheet">
+    <link href="{% static 'epr/imageCard.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="floating-shape shape1"></div>
+    <div class="floating-shape shape2"></div>
+    <div class="floating-shape shape3"></div>
+
+    <div class="container1">
+        <div class="hero-text">
+            <h1 class="hero-text-heading">Elevate your Business<br>with <span class="highlight">EPR GROUPS</span></h1>
+            <p>We deliver comprehensive business solutions designed to drive your organization forward. Whether it's
+                strategic consulting, operational excellence, or digital transformation, we provide the expertise to
+                meet your evolving business requirements.</p>
+        </div>
+        <div class="buttons">
+            <a href="#services" class="btn btn-primary">
+                Contact Us
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container2">
+        <div class="row">
+            <!-- First Card (Image Left, Text Right) -->
+            <div class="col-12">
+                <div class="card-container row align-items-center">
+                    <!-- Image Section -->
+                    <div class="col-lg-5 col-md-12 text-center">
+                        <img src="{% static 'img/Service/IT1.jpg' %}" alt="Recognition Image" class="profile-img"/>
+                    </div>
+
+                    <!-- Text Section -->
+                    <div class="col-lg-7 col-md-12 content">
+                        <h4>Our AI Solutions Services</h4>
+                        
+                        <p class="text-muted text-justify">
+                            We specialize in providing cutting-edge AI solutions tailored to enhance business efficiency and decision-making.  
+                            Our offerings include machine learning development, natural language processing, computer vision, AI-powered automation, and predictive analytics.  
+                            With a focus on innovation and performance, our team is dedicated to delivering intelligent solutions that drive measurable success.
+                        </p>
+                    </div>                    
+                </div>
+            </div>
+
+            <!-- Second Card (Text Left, Image Right) -->
+            <div class="col-12">
+                <div class="card-container row align-items-center">
+                    <!-- Text Section -->
+                    <div class="col-lg-7 col-md-12 content">
+                        <h4>Our AI Solutions Expertise</h4>
+                        
+                        <p class="text-muted text-justify">
+                            Our AI solutions expertise covers a wide range of advanced technologies and frameworks.  
+                            We develop intelligent systems, automate processes, and build machine learning models tailored to meet your business needs.  
+                            From natural language processing to computer vision, our team ensures seamless AI integration and optimal performance.
+                        </p>
+                    </div>                    
+
+                    <!-- Image Section -->
+                    <div class="col-lg-5 col-md-12 text-center">
+                        <img src="{% static 'img/Service/IT2.jpg' %}" alt="Recognition Image" class="profile-img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container3 container py-5">
+        <h1 class="text-center">🚀 Explore Our Technical Expertise</h1>
+        <br>
+        <p class="description">We utilize the latest tools and technologies to craft dynamic, scalable, and
+            efficient software solutions that drive success. Our expertise spans multiple programming languages,
+            frameworks, and databases.</p>
+
+        <div class="divider">
+            <div class="image-container">
+                
+
+                <div class="tech-container">
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/TensorFlow-logo.svg' %}" alt="TensorFlow">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/PyTorch-logo.svg' %}" alt="PyTorch">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/Scikit-learn-logo.svg' %}" alt="Scikit-learn">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/Keras-logo.svg' %}" alt="Keras">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/OpenAI-logo.svg' %}" alt="OpenAI">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/NLP-logo.svg' %}" alt="Natural Language Processing (NLP)">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/Computer-Vision-logo.webp' %}" alt="Computer Vision">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/Google-cloud-logo.svg' %}" alt="Google Cloud AI">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/Azure-logo.svg' %}" alt="Azure AI">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/AWS-logo.svg' %}" alt="AWS SageMaker">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/IBM-Watson-logo.svg' %}" alt="IBM Watson">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/BigML-logo.png' %}" alt="BigML">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/AutoML-logo.svg' %}" alt="AutoML">
+                    </div>
+                    <div class="tech-card">
+                        <img src="{% static 'img/Service/Edge-AI-logo.png' %}" alt="Edge AI">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+</body>
+
+{% endblock %}
