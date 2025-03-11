@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,11 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-lh6**odedyrvxaew7w80n7%n6ksjf^y=a#^)qv5ai*wpi4hxt5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'localhost',
-    '127.0.0.1'
+    '127.0.0.1',
+    'epr.onrender.com'
 ]
 
 
@@ -82,15 +84,19 @@ WSGI_APPLICATION = 'myapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',  # Correct backend for PostgreSQL
+#         'NAME': 'epr',  # Your database name
+#         'USER': 'postgres',  # Your PostgreSQL username
+#         'PASSWORD': 'admin',  # Your PostgreSQL password
+#         'HOST': 'localhost',  # Usually 'localhost' for local database
+#         'PORT': '5432',  # Default PostgreSQL port
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',  # Correct backend for PostgreSQL
-        'NAME': 'epr',  # Your database name
-        'USER': 'postgres',  # Your PostgreSQL username
-        'PASSWORD': 'admin',  # Your PostgreSQL password
-        'HOST': 'localhost',  # Usually 'localhost' for local database
-        'PORT': '5432',  # Default PostgreSQL port
-    }
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL')) 
 }
 
 
@@ -124,6 +130,7 @@ LANGUAGE_CODE = 'en-us'
 
 # USE_I18N = True
 
+TIME_ZONE = 'Asia/Colombo'
 USE_TZ = False
 
 
@@ -134,6 +141,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -148,7 +156,8 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"  # Gmail SMTP server
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "rajahtharshan99@gmail.com"
-EMAIL_HOST_PASSWORD = "aotn efbk qlst ebfn"
-# EMAIL_HOST_USER = "noreply@eprgroupers.com"
-# EMAIL_HOST_PASSWORD = "u0Pca1TfvgFT"
+# EMAIL_HOST_USER = "rajahtharshan99@gmail.com"
+# EMAIL_HOST_PASSWORD = "aotn efbk qlst ebfn"
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+
