@@ -48,4 +48,6 @@ urlpatterns = [
     path('mobileMain/', views.mobileMain, name='mobileMain'),
     path('webMain/', views.webMain, name='webMain'),
     path('about-us/', views.about_us, name='about_us'),
+    path('blog/', views.blog, name='blog'),
+    path('blog_detail_client/<int:post_id>/', views.blog_detail_client, name='blog_detail_client'),
 ]

@@ -1117,7 +1117,7 @@ section,
 --------------------------------------------------------------*/
 .why-us .why-box {
   color: var(--contrast-color);
-  background: black;
+  background: #360065;
   padding: 30px;
 }
 

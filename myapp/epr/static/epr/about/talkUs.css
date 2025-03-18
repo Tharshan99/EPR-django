@@ -1,0 +1,103 @@
+.background-container {
+    height: 40vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.orange-section {
+    height: 70%;
+    width: 100%;
+    background-color: #f2e6d9;
+}
+
+.talkus-hero-section {
+    height: 25vh;
+    display: flex;
+    align-items: center;
+}
+
+.talkus-heading {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.talkus-description {
+    font-size: 1.0rem;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.talkus-button {
+    font-size: 1rem;
+    padding: 12px 30px;
+    color: #fff;
+    background-color: #ff9933;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.talkus-button:hover {
+    background-color: #ff8000;
+    transform: translateY(-2px);
+}
+
+.talkus-arrow {
+    margin-left: 8px;
+}
+
+.talkus-image-container {
+    text-align: right;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.talkus-image {
+    max-width: 100%;
+    max-height: 90%;
+}
+
+/* Responsive Design */
+@media (max-width: 575.98px) {
+    .background-container, .talkus-hero-section {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .row {
+        flex-direction: column-reverse;
+        margin: 0;
+    }
+    
+    .col-lg-5 {
+        width: 100%;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+    
+    .col-lg-7 {
+        width: 100%;
+        padding: 2rem 1rem 0;
+    }
+    
+    .talkus-heading {
+        font-size: 1.7rem;
+    }
+    
+    .talkus-image-container {
+        justify-content: center;
+        text-align: center;
+        height: auto;
+    }
+    
+    .talkus-image {
+        max-height: 50vh;
+    }
+}

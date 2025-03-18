@@ -67,7 +67,7 @@ body {
 .testimonial-card::after {
     content: "\〟";
     font-size: 3rem;
-    color: #024a97;
+    color: #360065;
     position: absolute;
     right: 10px;
     bottom: 10px;

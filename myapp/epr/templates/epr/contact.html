@@ -6,6 +6,15 @@
 {% load crispy_forms_tags %}
 
 <style>
+  /* Contact */
+  .contact-header-contact {
+    background-color: #8427E2;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 108px; /* Ensure no margin at the top */
+  }
+
   .custom-btn {
     background-color: #360065;
     color: white;
@@ -145,11 +154,11 @@
   }
   
   /* Contact header responsive margins */
-  .contact-header {
+  /* .contact-header {
     margin-top: 2rem;
     text-align: center;
     padding: 0 15px;
-  }
+  } */
   
   @media (min-width: 768px) {
     .contact-header {
@@ -188,12 +197,30 @@
 </style>
 
 <head>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <!-- <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"> -->
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="{% static 'epr/style-about_us.css' %}">
+    <link rel="stylesheet" href="{% static 'epr/about/mission.css' %}">
+    <link rel="stylesheet" href="{% static 'epr/about/membership.css' %}">
+    <link rel="stylesheet" href="{% static 'epr/about/intern.css' %}">
+    <link rel="stylesheet" href="{% static 'epr/about/talkUs.css' %}">
+  
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<!-- Header -->
-<header id="header" class="header d-flex align-items-center sticky-top" style="background-color: #61199f">
+<header id="header" class="header d-flex align-items-center sticky-top " style="background-color: #61199f">
   <div class="container-fluid container-xl position-relative d-flex align-items-center">
     <a href="index.html" class="logo d-flex align-items-center me-auto">
       {% load static %}
@@ -202,19 +229,20 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-          <li><a href="{% url 'epr:index' %}" class="active">Home<br></a></li>
-          <li><a href="{% url 'epr:about_us'	 %}">About Us</a></li>
-          <li><a href="{% url 'epr:contact' %}">Contact</a></li>
-          <li><a href="{% url 'epr:career' %}">Careers</a></li>
+        <li><a href="{% url 'epr:index' %}">Home<br></a></li>
+        <li><a href="{% url 'epr:about_us' %}">About Us</a></li>
+        <li><a href="{% url 'epr:contact' %}" class="active">Contact</a></li>
+        <li><a href="{% url 'epr:career' %}">Careers</a></li>
+        <li><a href="{% url 'epr:blog' %}">Blog</a></li>
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>
   </div>
 </header>
 
-<section id="hero"></section>
+<!-- <section id="hero"></section> -->
 
-<div class="contact-header">
+<div class="contact-header-contact">
   <h1 style="color:white">Let's Build Something Great Together</h1>
   <p>Connect with EPR Groupers - your trusted AI-powered service partner.</p>
 </div>

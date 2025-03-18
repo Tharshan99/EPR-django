@@ -1,0 +1,200 @@
+{% extends 'epr/base.html' %}
+
+{% block content %}
+
+{% load static %}
+<style>
+      /* blog */
+  .contact-header-blog {
+    background-color: #8427E2;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 0px; /* Ensure no margin at the top */
+  }
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        color: #10002B;
+    }
+    .read-more {
+        margin-top: auto; 
+        background:#10002B;
+        color: #FBFCFE;
+    }
+    .read-more:hover{
+        color: #10002B;
+        background: #FBFCFE;
+        border-radius: 5px;
+        border: 1px solid #10002B;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Cards</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <!-- <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"> -->
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="{% static 'epr/style-about_us.css' %}">
+    <link rel="stylesheet" href="{% static 'epr/about/mission.css' %}">
+    <link rel="stylesheet" href="{% static 'epr/about/membership.css' %}">
+    <link rel="stylesheet" href="{% static 'epr/about/intern.css' %}">
+    <link rel="stylesheet" href="{% static 'epr/about/talkUs.css' %}">
+</head>
+
+<header id="header" class="header d-flex align-items-center sticky-top " style="background-color: #61199f">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        {% load static %}
+        <img src="{% static 'img/logo.png' %}" alt="">
+      </a>
+  
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'epr:index' %}">Home<br></a></li>
+          <li><a href="{% url 'epr:about_us' %}">About Us</a></li>
+          <li><a href="{% url 'epr:contact' %}">Contact</a></li>
+          <li><a href="{% url 'epr:career' %}">Careers</a></li>
+          <li><a href="{% url 'epr:blog' %}" class="active">Blog</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <div class="contact-header-blog">
+    <h1 style="color:white">Let's Build Something Great Together</h1>
+    <p>Connect with EPR Groupers - your trusted AI-powered service partner.</p>
+  </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            {% for post in posts %}
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card">
+                    <img src="{% static 'img/blog/wind-energy-with-wind-turbines.jpg' %}" class="card-img-top" alt="Power Grids">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <p class="card-text"></p>
+                        <a href="{% url 'epr:blog_detail_client' post.id %}" class="btn read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+                <p>No blog posts available.</p>
+            {% endfor %}
+
+            <!-- <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card">
+                    <img src="/Images/Way_Innovation.jpg" class="card-img-top" alt="EPR Groups">
+                    <div class="card-body">
+                        <h5 class="card-title">EPR GROUPS: Leading the Way in Innovation</h5>
+                        <p class="card-text">EPR Groups is at the forefront of technological innovation, creating cutting-edge solutions that drive progress and improve lives across the globe.</p>
+                        <a href="/read-more/epr-groups" class="btn read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card">
+                    <img src="/Images/Adopts_Third_School.jpg" class="card-img-top" alt="Rootcode Foundation">
+                    <div class="card-body">
+                        <h5 class="card-title">EPR GROUPS Foundation Adopts Third School</h5>
+                        <p class="card-text">We adopted our 3rd school through EPR GROUPS Foundation. As usual, we will be committing to this school for one year to teach students technology.</p>
+                        <a href="/read-more/rootcode-foundation" class="btn read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card">
+                    <img src="/Images/Placeholder1.jpg" class="card-img-top" alt="Placeholder 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Placeholder Title 1</h5>
+                        <p class="card-text">This is a placeholder text for the first card in the second row. Customize it with your content.</p>
+                        <a href="/read-more/placeholder1" class="btn read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card">
+                    <img src="/Images/Placeholder2.jpg" class="card-img-top" alt="Placeholder 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Placeholder Title 2</h5>
+                        <p class="card-text">This is a placeholder text for the second card in the second row. Customize it with your content.</p>
+                        <a href="/read-more/placeholder2" class="btn read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card">
+                    <img src="/Images/Placeholder3.jpg" class="card-img-top" alt="Placeholder 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Placeholder Title 3</h5>
+                        <p class="card-text">This is a placeholder text for the third card in the second row. Customize it with your content.</p>
+                        <a href="/read-more/placeholder3" class="btn read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card">
+                    <img src="/Images/Placeholder4.jpg" class="card-img-top" alt="Placeholder 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Placeholder Title 4</h5>
+                        <p class="card-text">This is a placeholder text for the first card in the third row. Customize it with your content.</p>
+                        <a href="/read-more/placeholder4" class="btn read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card">
+                    <img src="/Images/Placeholder5.jpg" class="card-img-top" alt="Placeholder 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Placeholder Title 5</h5>
+                        <p class="card-text">This is a placeholder text for the second card in the third row. Customize it with your content.</p>
+                        <a href="/read-more/placeholder5" class="btn read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card">
+                    <img src="/Images/Placeholder6.jpg" class="card-img-top" alt="Placeholder 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Placeholder Title 6</h5>
+                        <p class="card-text">This is a placeholder text for the third card in the third row. Customize it with your content.</p>
+                        <a href="/read-more/placeholder6" class="btn read-more">Read More</a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>
+{% endblock content %}

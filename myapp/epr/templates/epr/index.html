@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="{% static 'epr/style-recognition.css' %}">
   <!-- <link rel="stylesheet" href="{% static 'epr/style-lanquage.css' %}"> -->
 
-<style>
-  
+  <style> 
+    
 /* Fonts */
 :root {
   --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -23,8 +23,8 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
+  --background-color: #ffffff; 
+  --default-color: #212529; 
   --heading-color: #32353a; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #e84545; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
@@ -95,6 +95,17 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
+/* .header {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 20px 0;
+  transition: all 0.5s;
+  z-index: 997;
+} */
+
+
+
+
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
@@ -245,78 +256,34 @@ section,
 
 
 
-/* for service style END */
-</style>
+
+  </style>
+
 
 </head>
-<!-- Header -->
 <header id="header" class="header d-flex align-items-center bottom-top">
   <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
     <a href="index.html" class="logo d-flex align-items-center me-auto">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
       {% load static %}
       <img src="{% static 'img/logo.png' %}" alt="">
-      
-
-      <!-- <h1 class="sitename">EPR Groupers</h1> -->
     </a>
 
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="{% url 'epr:index' %}" class="active">Home<br></a></li>
         <li><a href="{% url 'epr:about_us'	 %}">About Us</a></li>
-        <!-- <li><a href="blog.html">Blog</a></li> -->
-        <!-- <li><a href="courses.html">Services</a></li> -->
-        <!-- <li class="dropdown"><a href="#"><span>Product</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li> -->
         <li><a href="{% url 'epr:contact' %}">Contact</a></li>
         <li><a href="{% url 'epr:career' %}">Careers</a></li>
-
-        <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li> -->
+        <li><a href="{% url 'epr:blog' %}">Blog</a></li>
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-    </nav>
-
-    <!-- <a class="btn-getstarted" href="">Login</a> -->
 
   </div>
 </header>
 <!-- End Header -->
 
 <body class="index-page">
-
 
   <main class="main">
     {% if messages %}
@@ -577,7 +544,7 @@ section,
         <div class="row gy-4">
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="why-box">
+            <div class="why-box" style="background-color: #360065;">
               <h3>Why Partner with EPR Groupers?</h3>
               <p style="text-align: justify;">
                 At EPR Groupers, we specialize in delivering AI-driven solutions tailored to meet your unique needs. Our expert team is dedicated to ensuring seamless integration and superior performance, helping your business thrive in a rapidly evolving digital landscape. Partner with us for innovative solutions and exceptional support.
@@ -593,7 +560,7 @@ section,
 
               <div class="col-xl-4">
                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                  <i class="bi bi-clipboard-data"></i>
+                  <i class="bi bi-clipboard-data" style="background-color: #360065;"></i>
                   <h4>Innovation for Tomorrow</h4>
                   <p>By staying ahead of trends, we create advanced, adaptable solutions that drive long-term success.</p>
                 </div>
@@ -601,7 +568,7 @@ section,
 
               <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                  <i class="bi bi-gem"></i>
+                  <i class="bi bi-gem" style="background-color: #360065;"></i>
                   <h4>Your Vision, Our Strategy</h4>
                   <p>We take the time to understand your goals and create customized solutions that drive real results</p>
                 </div>
@@ -609,7 +576,7 @@ section,
 
               <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                  <i class="bi bi-inboxes"></i>
+                  <i class="bi bi-inboxes" style="background-color: #360065;"></i>
                   <h4>Experienced & Skilled Professionals</h4>
                   <p>Our team brings deep industry expertise and technical excellence to deliver high-quality, reliable solutions.</p>
                 </div>
@@ -741,7 +708,7 @@ section,
   <div class="text-center">
       <h2 class="section-heading">Client Testimonials</h2>
   </div>
-  <p class="description">
+  <p class="description" style="background-color: #360065;">
       Read how our product has transformed workflows and increased productivity for professionals.
   </p>
 
@@ -760,7 +727,7 @@ section,
                   <p class="testimonial-text">
                     "EPR Groupers delivered an outstanding AI solution that transformed our business operations. Their expertise in automation helped us save time and reduce costs. The team was highly professional, understood our needs, and provided a seamless experience from start to finish."
                   </p>
-                  <p class="position-text">Canada</p>
+                  <p class="position-text" style="color:#360065">Canada</p>
               </div>
           </div>
 
@@ -776,7 +743,7 @@ section,
                   <p class="testimonial-text">
                     "EPR Groupers built a custom AI model for our company that improved our workflow significantly. They listened to our requirements carefully and delivered a solution that integrated perfectly into our existing system. Their support and expertise made a huge difference in our success."
                   </p>
-                  <p class="position-text">UK</p>
+                  <p class="position-text" style="color:#360065">UK</p>
               </div>
           </div>
 
@@ -792,7 +759,7 @@ section,
                   <p class="testimonial-text">
                     "EPR Groupers provides high-quality services at affordable prices. They never compromise on quality, and their team is always ready to help. Whether it’s AI, web development, or mobile apps, they deliver excellent solutions that truly add value to our business."
                   </p>
-                  <p class="position-text">Canada</p>
+                  <p class="position-text" style="color:#360065">Canada</p>
               </div>
           </div>
 
@@ -808,7 +775,7 @@ section,
                   <p class="testimonial-text">
                     "EPR Groupers is always ahead of the curve with AI technology. Their solutions are future-ready and perfectly suited for modern businesses. If you want innovative AI services that actually work, they are the best choice. Highly recommended!"
                   </p>
-                  <p class="position-text">Sri Lanka</p>
+                  <p class="position-text" style="color:#360065">Sri Lanka</p>
               </div>
           </div>
           <div class="col-md-3 col-sm-6 col-12 d-flex swiper-slide">
@@ -823,7 +790,7 @@ section,
                   <p class="testimonial-text">
                     "EPR Groupers delivers cutting-edge technology solutions with a strong focus on AI and innovation. Their team is reliable, skilled, and always ready to meet business needs with high-quality results."
                   </p>
-                  <p class="position-text">Germany</p>
+                  <p class="position-text" style="color:#360065">Germany</p>
               </div>
           </div>
 
@@ -885,7 +852,7 @@ section,
 <!-- Testimonial End -->
 
 <!-- FAQ Start-->
-<div class="container" >
+<div class="container-faq" style="padding-left:40px; padding-right:40px;">
   <h2>Frequently Asked Questions</h2>
   <div class="accordion" >
     <div class="accordion-item" style="border:none;">

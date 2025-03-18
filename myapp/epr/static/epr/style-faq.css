@@ -20,11 +20,11 @@
   font-size: 1rem;
 } */
 
-/* .container {
-  margin: 0 auto;
-  padding: 4rem;
-  width: 48rem;
-} */
+  .container-faq {
+    margin: 0 auto;
+    padding: 4rem;
+    width: 60rem;
+  }
 
 .accordion .accordion-item {
   border-bottom: 1px solid #e5e5e5;

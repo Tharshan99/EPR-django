@@ -1,0 +1,128 @@
+
+.mission-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+.mission-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #10002b;
+    font-family: 'Poppins', sans-serif;
+}
+.mission-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.mission-content {
+    width: 100%;
+}
+.mission-section {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    text-align: left;
+    text-align: justify;
+}
+.mission-section img {
+    margin-right: 20px;
+    border-radius: 50%;
+    border: 6px solid rgba(52, 2, 137, 0.3);
+    padding: 5px;
+    width: 60px;
+    height: auto;
+}
+.mission-section h3 {
+    margin: 0;
+    color: #10002b;
+    font-size: 1.3em;
+    text-align: justify;
+}
+.mission-section p {
+    margin: 5px 0 0;
+}
+.mission-image-container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+.mission-image-container::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: calc(100% + 80px);
+    height: calc(100% + 40px);
+    border: 6px #834be4 solid;
+    border-left: 6px solid transparent;
+    border-radius: 50%;
+    rotate: -45deg;
+}
+.mission-image-container img {
+    border-radius: 50%;
+    width: 100%;
+    border: 10px solid rgb(236, 232, 232);
+    margin: 10px;
+}
+
+/* Media queries for responsiveness */
+/* Small devices (phones) */
+@media only screen and (max-width: 600px) {
+    .mission-title {
+        font-size: 2em;
+    }
+    .mission-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .mission-section img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .mission-image-container {
+        max-width: 250px;
+    }
+    .mission-image-container::before {
+        top: -20px;
+        left: -20px;
+        width: calc(100% + 60px);
+        height: calc(100% + 30px);
+    }
+}
+
+/* Medium devices (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    .mission-image-container {
+        max-width: 300px;
+    }
+}
+
+/* Large devices (desktops) */
+@media only screen and (min-width: 993px) {
+    .mission-title {
+        font-size: 4em;
+    }
+    .mission-row {
+        flex-direction: row;
+        align-items: center;
+    }
+    .mission-content {
+        width: 50%;
+    }
+    .mission-image-container {
+        width: 50%;
+        max-width: 450px;
+    }
+    .mission-section h3 {
+        font-size: 1.5em;
+    }
+    .mission-section img {
+        width: 80px;
+    }
+}

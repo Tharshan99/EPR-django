@@ -1,0 +1,17 @@
+.intern{
+    margin: 30px 50px;
+}
+.row img {
+    padding: 0 20px;
+}
+
+.intern-heading {
+    font-size: 48px;
+}
+.intern-custom-heading{
+    color: #10002B;
+}
+.intern-custom-text {
+    color: #100;
+    font-size: 20px;
+}

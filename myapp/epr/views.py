@@ -387,3 +387,12 @@ def webMain(request):
 
 def about_us(request):
     return render(request, 'epr/about_us.html')
+
+def blog(request):
+    posts = BlogPost.objects.all().order_by('-created_at')  # Order by newest first
+    return render(request, 'epr/blog.html', {'posts': posts})
+
+def blog_detail_client(request, post_id):
+    # Fetch the blog post by ID or return a 404 error if not found
+    post = get_object_or_404(BlogPost, id=post_id)
+    return render(request, 'epr/blog_detail_client.html', {'post': post})

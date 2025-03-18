@@ -6,13 +6,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us – EPRGROUPERS</title>
-    <link rel="stylesheet" href="{% static 'epr/style-aboutus.css' %}">
-    <!-- <script src="{% static 'js/about.js' %}" defer></script> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>About Us</title>
+    <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+   <link rel="stylesheet" href="{% static 'epr/style-about_us.css' %}">
+   <link rel="stylesheet" href="{% static 'epr/about/mission.css' %}">
+   <link rel="stylesheet" href="{% static 'epr/about/membership.css' %}">
+   <link rel="stylesheet" href="{% static 'epr/about/intern.css' %}">
+   <link rel="stylesheet" href="{% static 'epr/about/talkUs.css' %}">
 </head>
 
-<!-- Header -->
 <header id="header" class="header d-flex align-items-center sticky-top " style="background-color: #61199f">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
       <a href="index.html" class="logo d-flex align-items-center me-auto">
@@ -22,113 +36,237 @@
   
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="{% url 'epr:index' %}" class="active">Home<br></a></li>
-          <li><a href="{% url 'epr:about_us' %}">About Us</a></li>
-          <!-- <li><a href="courses.html">Services</a></li> -->
-          <!-- <li><a href="events.html">About Us</a></li> -->
+          <li><a href="{% url 'epr:index' %}">Home<br></a></li>
+          <li><a href="{% url 'epr:about_us' %}" class="active">About Us</a></li>
           <li><a href="{% url 'epr:contact' %}">Contact</a></li>
           <li><a href="{% url 'epr:career' %}">Careers</a></li>
-          <!-- <li><a href="contact.html">Contact</a></li> -->
+          <li><a href="{% url 'epr:blog' %}">Blog</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>
   </header>
   
-  <section id="hero"></section>
-  
+  <div class="contact-header-about">
+    <h1 style="color:white">Let's Build Something Great Together</h1>
+    <p>Connect with EPR Groupers - your trusted AI-powered service partner.</p>
+  </div>
+
 
 <body>
-
-    <!-- Header Section -->
-    <!-- <header class="hero-section">
-        <div class="overlay"></div>
-        <div class="container text-center">
-            <h1 class="hero-title">About Us</h1>
-            <p class="hero-subtitle">We create AI-driven solutions that redefine industries.</p>
-        </div>
-    </header> -->
-
-    <!-- About Section -->
-    <section class="about-section container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <h2>Our Story</h2>
-                <p>At EPRGROUPERS, we may be a small team, but our impact is anything but small. Founded with a vision to leverage artificial intelligence and advanced technologies, our mission is to solve real-world challenges, optimize business operations, and drive transformative change across industries. We believe that innovation isn’t about size—it’s about creativity, dedication, and a relentless pursuit of excellence.</p>
-                <p>From the very beginning, our team has been committed to pushing boundaries and exploring how AI can be used to create smarter, more efficient solutions. Every member of EPRGROUPERS brings a unique blend of technical expertise, problem-solving skills, and passion, allowing us to develop scalable, AI-powered solutions that have a real impact. Our goal is to provide businesses and organizations with intelligent tools that enhance decision-making, automate processes, and unlock new opportunities.</p>
-                <p>
-                    What sets EPRGROUPERS apart is our practical approach to AI innovation. We don’t just build theoretical models; we create real-world applications that deliver measurable results. Whether it’s enhancing project management in construction, optimizing workforce efficiency, revolutionizing healthcare with AI-driven insights, or empowering education with personalized learning solutions, our focus is on making a meaningful difference.
-                </p>
-                <p>Through continuous research, collaboration, and technological advancements, we are constantly evolving to meet the changing needs of industries. We take pride in developing ethical AI solutions that are trustworthy, transparent, and impactful.</p>
-                <p>At EPRGROUPERS, we are not just building software—we are shaping the future. 🚀 Our journey has just begun, and we are excited to continue developing cutting-edge AI technologies that drive progress and create a better world.</p>
-                <p>Join us as we turn challenges into opportunities and redefine what’s possible through innovation, excellence, integrity, and impact.</p>
+    <div class="mission-container">
+        <div class="mission-title">Our Mission</div>
+        <div class="mission-row">
+            <div class="mission-content">
+                
+                <div class="mission-section">
+                    <img src="{% static 'img/about/vision-svgrepo-com.svg' %}" alt="Vision">
+                    <div>
+                        <h3>Vision</h3>
+                        <p>This slide is 100% editable. Adapt it to your needs and capture your audience's attention.This slide is 100% editable.</p>
+                    </div>
+                </div>
+                <div class="mission-section">
+                    <img src="{% static 'img/about/mission_13089918.png' %}" alt="Mission">
+                    <div>
+                        <h3>Mission</h3>
+                        <p>This slide is 100% editable. Adapt it to your needs and capture your audience's attention.This slide is 100% editable. </p>
+                    </div>
+                </div>
+                <div class="mission-section">
+                    <img src="{% static 'img/about/goal-idea.svg' %}" alt="Goal">
+                    <div>
+                        <h3>Goal</h3>
+                        <p>This slide is 100% editable. Adapt it to your needs and capture your audience's attention.This slide is 100% editable.</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-                <img src="{% static 'img/aboutus.jpg' %}" alt="Our Team" class="img-fluid rounded shadow">
+            <div class="mission-image-container">
+                <img src="{% static 'img/about/v.jpg' %}" alt="Exploration">
+            </div>
+        </div>
+    </div>
+
+    <!--Recogization  -->
+    <section>
+        <h1>Membership and Recognition</h1>
+        <div class="membership-slider">
+            <div class="membership-slider-items">
+                <img src="https://www.zarla.com/images/nike-logo-2400x2400-20220504.png?crop=1:1,smart&width=150&dpr=2"
+                    alt="">
+                <img src="https://www.zarla.com/images/apple-logo-2400x2400-20220512-1.png?crop=1:1,smart&width=150&dpr=2"
+                    alt="">
+                <img src="https://www.zarla.com/images/disney-logo-2400x2400-20220513-2.png?crop=1:1,smart&width=150&dpr=2"
+                    alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Loon_%28company%29_logo.svg/800px-Loon_%28company%29_logo.svg.png"
+                    alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/1200px-Jumpman_logo.svg.png"
+                    alt="">
+                <img src="https://www.svgrepo.com/show/303123/bmw-logo.svg" alt="">
+                <img src="https://brandlogos.net/wp-content/uploads/2014/12/starbucks_coffee_company-logo_brandlogos.net_9jqys.png"
+                    alt="">
+                <img src="https://www.zarla.com/images/nike-logo-2400x2400-20220504.png?crop=1:1,smart&width=150&dpr=2"
+                    alt="">
+                <img src="https://www.zarla.com/images/apple-logo-2400x2400-20220512-1.png?crop=1:1,smart&width=150&dpr=2"
+                    alt="">
+                <img src="https://www.zarla.com/images/disney-logo-2400x2400-20220513-2.png?crop=1:1,smart&width=150&dpr=2"
+                    alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Loon_%28company%29_logo.svg/800px-Loon_%28company%29_logo.svg.png"
+                    alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/1200px-Jumpman_logo.svg.png"
+                    alt="">
+                <img src="https://www.svgrepo.com/show/303123/bmw-logo.svg" alt="">
+                <img src="https://brandlogos.net/wp-content/uploads/2014/12/starbucks_coffee_company-logo_brandlogos.net_9jqys.png"
+                    alt="">
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-<!-- <section class="gallery container text-center">
-    <h2>📸 Our Journey in Pictures</h2>
-    <p>Take a look at some of our milestones and innovative projects.</p>
+    <!--About US -->
+    <i class="mobile-nav-toggle"></i>   
+
+    <main class="main">
+      <!-- About Section -->
+      <section id="about" class="about section light-background">
+  
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row align-items-xl-center gy-5">
+  
+            <div class="col-xl-5 content">
+              <h3>About Us</h3>
+              <h2>Ducimus rerum libero reprehenderit cumque</h2>
+              <p>Ipsa sint sit. Quis ducimus tempore dolores impedit et dolor cumque alias maxime. Enim reiciendis minus et rerum hic non. Dicta quas cum quia maiores iure. Quidem nulla qui assumenda incidunt voluptatem tempora deleniti soluta.</p>
+              <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+  
+            <div class="col-xl-7">
+              <div class="row gy-4 icon-boxes">
+  
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                  <div class="icon-box">
+                    <i class="bi bi-buildings"></i>
+                    <h3>Eius provident</h3>
+                    <p>Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor voluptatem</p>
+                  </div>
+                </div> <!-- End Icon Box -->
+  
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                  <div class="icon-box">
+                    <i class="bi bi-clipboard-pulse"></i>
+                    <h3>Rerum aperiam</h3>
+                    <p>Autem saepe animi et aut aspernatur culpa facere. Rerum saepe rerum voluptates quia</p>
+                  </div>
+                </div> <!-- End Icon Box -->
+  
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                  <div class="icon-box">
+                    <i class="bi bi-command"></i>
+                    <h3>Veniam omnis</h3>
+                    <p>Omnis perferendis molestias culpa sed. Recusandae quas possimus. Quod consequatur corrupti</p>
+                  </div>
+                </div> <!-- End Icon Box -->
+  
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                  <div class="icon-box">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <h3>Delares sapiente</h3>
+                    <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p>
+                  </div>
+                </div> <!-- End Icon Box -->
+              </div>
+            </div>
+  
+          </div>
+        </div>
+  
+      </section><!-- /About Section -->
+  
     
-    <div class="row">
-        <div class="col-md-4">
-            <img src="{% static 'img/tshirt2.jpg' %}" alt="AI Development" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-md-4">
-            <img src="{% static 'img/mug4.jpg' %}" alt="Team Collaboration" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-md-4">
-            <img src="{% static 'img/lap2.jpg' %}" alt="Technology in Action" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-md-3">
-            <img src="{% static 'img/aboutus.jpg' %}" alt="Technology in Action" class="img-fluid rounded shadow">
-        </div> -->
-    <!-- </div>
-</section> -->
+  
+  
+  
+    <!-- Vendor JS Files -->
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+    <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+    
 
 
-    <!-- Vision & Mission -->
-    <section class="vision-mission container text-center">
-        <h2>Our Vision & Mission</h2>
+    <!--Intern Expect -->
+    <div class="container mt-5 intern ">
         <div class="row">
-            <div class="col-md-6">
-                <h3>🔹 Company Vision</h3>
-                <p>To be a global leader in AI-driven solutions, empowering businesses with smart, scalable, and sustainable innovations that redefine industries.</p>
+            <div class="col-sm-12 col-md-6">
+                <img src="{% static 'img/about/vertical_image.jpg' %}" class="img-fluid" alt="Internship at EPR GROUPS?">
             </div>
-            <div class="col-md-6">
-                <h3>🔹 Company Mission</h3>
-                <p>To leverage the power of AI and advanced technologies to solve real-world challenges, enhance operational efficiency, and drive business success with intelligent, data-driven solutions.</p>
+            <div class="col-sm-12 col-md-6 ">
+                <h2 class="intern-heading intern-custom-heading">What to expect from an Internship at EPR GROUPS?</h2>
+                <br>
+                <ul class="list-unstyled">
+                    <li class="mb-3 intern-custom-text">
+                        <strong>&#8226; Meaningful work</strong> – You'll be assigned tasks that directly contribute and add value to the company's projects.
+                    </li>
+                    <li class="mb-3 intern-custom-text">
+                        <strong>	&#8226; Exposure to diverse technologies</strong> – You will work with various programming languages, frameworks, and tools used in modern software development.
+                    </li>
+                    <li class="mb-3 intern-custom-text">
+                        <strong> 	&#8226; Mentorship and guidance</strong> – Senior experienced team members will mentor and guide you through your tasks and provide support to learn new skills.
+                    </li>
+                    <li class="mb-3 intern-custom-text">
+                        <strong> 	&#8226; Collaborative Environment</strong> – EPR GROUPS encourages teamwork and open communication.
+                    </li>
+                    <li class="mb-3 intern-custom-text">
+                        <strong>&#8226; Meaningful work</strong> – You'll be assigned tasks that directly contribute and add value to the company's projects.
+                    </li>
+                    <li class="mb-3 intern-custom-text">
+                        <strong>	&#8226; Exposure to diverse technologies</strong> – You will work with various programming languages, frameworks, and tools used in modern software development.
+                    </li>
+                    <li class="mb-3 intern-custom-text">
+                        <strong> 	&#8226; Mentorship and guidance</strong> – Senior experienced team members will mentor and guide you through your tasks and provide support to learn new skills.
+                    </li>
+                  
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Specialization -->
-    <section class="specialization container">
-        <h2 class="text-center">Our Areas of Specialization</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <h4>✅ Construction</h4>
-                <p>Enhancing project management, safety, and efficiency through AI-driven insights and automation.</p>
+    <!-- talkUs Section-->
+
+    <div class="background-container">
+        <div class="white-section"></div>
+        <div class="orange-section"></div>
+    </div>
+    <div class="container talkus-hero-section">
+        <div class="row align-items-center" style="width: 100%;">
+            <div class="col-lg-5">
+                <h1 class="talkus-heading">Have you got an idea?</h1>
+                <p class="talkus-description">Transform your vision into reality with our custom software solutions, designed to meet your unique needs and aspirations.</p>
             </div>
-            <div class="col-md-4">
-                <h4>✅ Workforce Management</h4>
-                <p>Streamlining employee processes and optimizing operations with intelligent workforce solutions.</p>
-            </div>
-            <div class="col-md-4">
-                <h4>✅ Healthcare</h4>
-                <p>Transforming patient care, medical data analysis, and operational efficiency with AI-driven healthcare solutions.</p>
+            <div class="col-lg-7 talkus-image-container">
+                <button class="btn talkus-button">Talk to us <span class="talkus-arrow">→</span></button>
             </div>
         </div>
-    </section>
+    </div>
+    </div>
 
-    <!-- Footer -->
-    <!-- <footer class="footer text-center">
-        <p>© 2025 EPRGROUPERS | Innovation, Excellence, Integrity, and Impact</p>
-    </footer> -->
+
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+    <!-- Main JS File -->
+    <!-- <script src="epr/js/about_us.js"></script> -->
+    <script src="{% static 'js/about_us.js' %}"></script>
 
 </body>
 </html>
