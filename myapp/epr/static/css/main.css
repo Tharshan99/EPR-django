@@ -1119,6 +1119,7 @@ section,
   color: var(--contrast-color);
   background: #360065;
   padding: 30px;
+  border-radius: 30px;
 }
 
 .why-us .why-box h3 {
