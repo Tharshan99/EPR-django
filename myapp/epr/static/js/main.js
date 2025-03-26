@@ -64,7 +64,10 @@
   const preloader = document.querySelector('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
-      preloader.remove();
+      // Add a delay of, for example, 3000 milliseconds (3 seconds)
+      setTimeout(() => {
+          preloader.remove();
+      }, 15000); // Adjust the delay as needed
     });
   }
 
@@ -96,7 +99,7 @@
    */
   function aosInit() {
     AOS.init({
-      duration: 600,
+      duration: 6000,
       easing: 'ease-in-out',
       once: true,
       mirror: false

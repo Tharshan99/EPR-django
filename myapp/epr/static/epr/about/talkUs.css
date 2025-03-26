@@ -30,20 +30,22 @@
     color: #666;
     margin-bottom: 30px;
     line-height: 1.6;
+    margin-left: 75px;
 }
 
 .talkus-button {
     font-size: 1rem;
     padding: 12px 30px;
     color: #fff;
-    background-color: #ff9933;
+    background-color: #10002B;
     border: none;
     border-radius: 4px;
     transition: all 0.3s ease;
 }
 
 .talkus-button:hover {
-    background-color: #ff8000;
+    color: white;
+    background-color: #360065;
     transform: translateY(-2px);
 }
 

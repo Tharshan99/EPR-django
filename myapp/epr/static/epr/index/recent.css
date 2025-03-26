@@ -1,16 +1,3 @@
-
-
-html,
-body {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
-  height: 100%;
-  width: 100%; 
-  background: #FFF;
-  font-family: 'poppins', sans-serif;
-  font-weight: 400;
-}
- 
 .wrapper {
   display: table;
   height: 100%;
@@ -19,7 +6,7 @@ body {
 
 .container-fostrap {
   display: table-cell;
-  padding: 1em;
+  /* padding: 1em; */
   text-align: center;
   vertical-align: middle;
 }
@@ -27,28 +14,28 @@ body {
   width: 100px;
   margin-bottom:15px
 }
+/* 
 h1.heading {
-  color: #fff;
-  font-size: 1.15em;
-  font-weight: 900;
-  margin: 0 0 0.5em;
-  color: #505050;
-}
+  color: #000000;
+  font-size: 3.25em;
+  font-family: 'Poppins', sans-serif;
+} */
+
 @media (min-width: 450px) {
-  h1.heading {
+  /* h1.heading {
     font-size: 3.55em;
-  }
+  } */
 }
 @media (min-width: 760px) {
-  h1.heading {
+  /* h1.heading {
     font-size: 3.05em;
-  }
+  } */
 }
 @media (min-width: 900px) {
-  h1.heading {
+  /* h1.heading {
     font-size: 3.25em;
     margin: 0 0 0.3em;
-  }
+  } */
 } 
 .card-recent {
   display: block; 
@@ -87,6 +74,10 @@ h1.heading {
 }
 .card-title a {
   color: #000;
+  text-decoration: none !important;
+}
+.card-title a:hover {
+  color: #360065;
   text-decoration: none !important;
 }
 .card-read-more {

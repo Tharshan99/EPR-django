@@ -1,165 +1,182 @@
 <style>
- .full-width-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;  /* Full width of the viewport */
-    font-size: 10vw; /* Adjusts size dynamically */
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1vw; /* Space between letters */
-    white-space: nowrap; /* Prevents text from wrapping */
-    overflow: hidden;
-}
-
-.full-width-text span {
-    transition: color 0.3s ease-in-out; /* Smooth transition */
-}
-
-.full-width-text span:hover {
-    color: rgb(255, 255, 255); /* Change to yellow on hover */
-    cursor: pointer;
-    text-shadow: 0 0 10px rgba(255, 255, 0, 0.2);
-}
-{% load static %}
-.footer .wave{
-  position: absolute;
-  top: -100px;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background: url("{% static 'img/wave.png' %}");
-  background-size: 1000px 100px;
-}
-
-footer .wave#wave1{
-  z-index: 1000;
-  opacity: 1;
-  bottom: 0;
-  animation: animateWave 4s linear infinite;
-}
-footer .wave#wave2{
-  z-index: 999;
-  opacity: 0.5;
-  bottom: 10px;
-  animation: animateWave_2 4s linear infinite;
-}
-footer .wave#wave3{
-  z-index: 1000;
-  opacity: 0.2;
-  bottom: 15px;
-  animation: animateWave_3 3s linear infinite;
-}
-footer .wave#wave4{
-  z-index: 999;
-  opacity: 0.7;
-  bottom: 20px;
-  animation: animateWave_4 3s linear infinite;
-}
-@keyframes animateWave_1{
-  0%{
-    background-position-x: 1000px;
-  }
-  100%{
-    background-position-x: 0px;
-  }
-}
-@keyframes animateWave_2{
-  0%{
-    background-position-x: 0px;
-  }
-  100%{
-    background-position-x: 1000px;
-  }
-}
-@keyframes animateWave_3{
-  0%{
-    background-position-x: 1000px;
-  }
-  100%{
-    background-position-x: 0px;
-  }
-}
-@keyframes animateWave_4{
-  0%{
-    background-position-x: 1000px;
-  }
-  100%{
-    background-position-x: 0px;
-  }
-}
-</style>
-
-<footer id="footer" class="footer position-relative" style="background-color: #10002B; color: #fff; padding: 50px 0;">
-
-<div class="waves">
-  <!-- <div class="wave" id="wave1"></div> -->
-  <!-- <div class="wave" id="wave2"></div>
-  <div class="wave" id="wave3"></div>
-  <div class="wave" id="wave4"></div> -->
-</div>
-
-<div>
-  <h1 class="full-width-text">
-    <span>E</span> <span>P</span> <span>R</span> &nbsp;
-    <span>G</span> <span>R</span> <span>O</span> <span>U</span> <span>P</span> <span>E</span> <span>R</span> <span>S</span>
-</h1>
-
-
-  <!-- <h1 align="center" class="d-flex">E <span>P <span>R <span> &nbsp; <span>G <span>R <span>O <span>U <span>P <span>E <span>R <span>S </span></span></span></span></span></span></span></span></span></span></span></h1> -->
-</div>
-
-    <div class="container footer-top">
-      <div class="row gy-4 justify-content-between">
-        
-        <!-- About Section -->
-        <div class="col-lg-4 col-md-4 footer-about">
-          <a href="#" class="logo d-flex align-items-center">
-            <span class="sitename" style="color: #4361EE; font-size: 24px; font-weight: bold;">EPR GROUPERS</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p> 4 th floor, 218 Stanley Rd,</p>
-            <p>Jaffna 40000, Sri Lanka</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+94 762544297</span></p>
-            <p><strong>Email:</strong> <span>eprgroupers@gmail.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href="#" target="_blank" class="social-icon"><i class="bi bi-linkedin"></i></a>
-            <a href="#" target="_blank" class="social-icon"><i class="bi bi-github"></i></a>
-            <a href="#" target="_blank" class="social-icon"><i class="bi bi-facebook"></i></a>
-          </div>
-        </div>
-  
-        <!-- Useful Links -->
-        <div class="col-lg-2 col-md-4 footer-links">
-          <h4 style="color: #4361EE;">Quick Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Schedule a Call</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-  
-        <!-- Services -->
-        <div class="col-lg-2 col-md-4 footer-links">
-          <h4 style="color: #4361EE;">Our Services</h4>
-          <ul>
-            <li><a href="#">Software Development</a></li>
-            <li><a href="#">Cloud Solutions</a></li>
-            <li><a href="#">AI & Machine Learning</a></li>
-            <li><a href="#">Cybersecurity</a></li>
-            <li><a href="#">IT Consulting</a></li>
-          </ul>
-        </div>
-  
-      </div>
-    </div>
-  
-    <!-- Copyright & Credits -->
-    <div class="container text-center mt-4">
-      <p style="margin: 0; font-size: 14px;">© 2025 <strong class="sitename" style="color: #00aaff;">EPR GROUPERS</strong> | All Rights Reserved</p>
-    </div>
-  
-  </footer>
+  .full-width-text {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100vw;  /* Full width of the viewport */
+     font-size: 10vw; /* Adjusts size dynamically */
+     font-weight: bold;
+     text-transform: uppercase;
+     letter-spacing: 1vw; /* Space between letters */
+     white-space: nowrap; /* Prevents text from wrapping */
+     overflow: hidden;
+ }
+ 
+ .full-width-text span {
+     transition: color 0.3s ease-in-out; /* Smooth transition */
+ }
+ 
+ .full-width-text span:hover {
+     color: rgb(255, 255, 255); /* Change to yellow on hover */
+     cursor: pointer;
+     text-shadow: 0 0 10px rgba(255, 255, 0, 0.2);
+ }
+ {% load static %}
+ .footer .wave{
+   position: absolute;
+   top: -100px;
+   left: 0;
+   width: 100%;
+   height: 100px;
+   background: url("{% static 'img/wave.png' %}");
+   background-size: 1000px 100px;
+ }
+ 
+ footer .wave#wave1{
+   z-index: 1000;
+   opacity: 1;
+   bottom: 0;
+   animation: animateWave 4s linear infinite;
+ }
+ footer .wave#wave2{
+   z-index: 999;
+   opacity: 0.5;
+   bottom: 10px;
+   animation: animateWave_2 4s linear infinite;
+ }
+ footer .wave#wave3{
+   z-index: 1000;
+   opacity: 0.2;
+   bottom: 15px;
+   animation: animateWave_3 3s linear infinite;
+ }
+ footer .wave#wave4{
+   z-index: 999;
+   opacity: 0.7;
+   bottom: 20px;
+   animation: animateWave_4 3s linear infinite;
+ }
+ @keyframes animateWave_1{
+   0%{
+     background-position-x: 1000px;
+   }
+   100%{
+     background-position-x: 0px;
+   }
+ }
+ @keyframes animateWave_2{
+   0%{
+     background-position-x: 0px;
+   }
+   100%{
+     background-position-x: 1000px;
+   }
+ }
+ @keyframes animateWave_3{
+   0%{
+     background-position-x: 1000px;
+   }
+   100%{
+     background-position-x: 0px;
+   }
+ }
+ @keyframes animateWave_4{
+   0%{
+     background-position-x: 1000px;
+   }
+   100%{
+     background-position-x: 0px;
+   }
+ }
+ </style>
+ 
+ <footer id="footer" class="footer position-relative" style="background-color: #10002B; color: #fff; padding: 50px 0;">
+ 
+ <div class="waves">
+   <!-- <div class="wave" id="wave1"></div> -->
+   <!-- <div class="wave" id="wave2"></div>
+   <div class="wave" id="wave3"></div>
+   <div class="wave" id="wave4"></div> -->
+ </div>
+ 
+ <div>
+   <h1 class="full-width-text">
+     <span>E</span> <span>P</span> <span>R</span> &nbsp;
+     <span>G</span> <span>R</span> <span>O</span> <span>U</span> <span>P</span> <span>E</span> <span>R</span> <span>S</span>
+ </h1>
+ 
+ 
+   <!-- <h1 align="center" class="d-flex">E <span>P <span>R <span> &nbsp; <span>G <span>R <span>O <span>U <span>P <span>E <span>R <span>S </span></span></span></span></span></span></span></span></span></span></span></h1> -->
+ </div>
+ 
+     <div class="container footer-top">
+       <div class="row gy-4 justify-content-between">
+         
+         <!-- About Section -->
+         <div class="col-lg-4 col-md-3 footer-about">
+           <a href="#" class="logo d-flex align-items-center">
+             <span class="sitename" style="color: #4361EE; font-size: 24px; font-weight: bold;">EPR GROUPERS</span>
+           </a>
+           <div class="footer-contact pt-3">
+             <p> 4 th floor, 218 Stanley Rd,</p>
+             <p>Jaffna 40000, Sri Lanka</p>
+             <p class="mt-3"><strong>Phone:</strong> <span>+94 762544297</span></p>
+             <p><strong>Email:</strong> <span>eprgroupers@gmail.com</span></p>
+           </div>
+           <div class="social-links d-flex mt-4">
+             <a href="#" target="_blank" class="social-icon"><i class="bi bi-linkedin"></i></a>
+             <a href="#" target="_blank" class="social-icon"><i class="bi bi-github"></i></a>
+             <a href="#" target="_blank" class="social-icon"><i class="bi bi-facebook"></i></a>
+           </div>
+         </div>
+         
+         <div class="col-lg-4 col-md-3 footer-about">
+           <a href="#" class="logo d-flex align-items-center">
+             <span class="sitename" style="color: #4361EE; font-size: 24px; font-weight: bold;">EPR GROUPERS</span>
+           </a>
+           <div class="footer-contact pt-3">
+             <p>No 11 , Gower St,</p>
+             <p>Colombo 00400</p>
+             <p class="mt-3"><strong>Phone:</strong> <span>+94 762544297</span></p>
+             <p><strong>Email:</strong> <span>eprgroupers@gmail.com</span></p>
+           </div>
+           <div class="social-links d-flex mt-4">
+             <a href="#" target="_blank" class="social-icon"><i class="bi bi-linkedin"></i></a>
+             <a href="#" target="_blank" class="social-icon"><i class="bi bi-github"></i></a>
+             <a href="#" target="_blank" class="social-icon"><i class="bi bi-facebook"></i></a>
+           </div>
+         </div>
+   
+         <!-- Useful Links -->
+         <div class="col-lg-2 col-md-3 footer-links">
+           <h4 style="color: #4361EE;">Quick Links</h4>
+           <ul>
+             <li><a href="#">Home</a></li>
+             <li><a href="#">About Us</a></li>
+             <li><a href="#">Careers</a></li>
+             <li><a href="#">Schedule a Call</a></li>
+             <li><a href="#">Contact</a></li>
+           </ul>
+         </div>
+   
+         <!-- Services -->
+         <div class="col-lg-2 col-md-3 footer-links">
+           <h4 style="color: #4361EE;">Our Services</h4>
+           <ul>
+             <li><a href="#">Software Development</a></li>
+             <li><a href="#">Cloud Solutions</a></li>
+             <li><a href="#">AI & Machine Learning</a></li>
+             <li><a href="#">Cybersecurity</a></li>
+             <li><a href="#">IT Consulting</a></li>
+           </ul>
+         </div>
+   
+       </div>
+     </div>
+   
+     <!-- Copyright & Credits -->
+     <div class="container text-center mt-4">
+       <p style="margin: 0; font-size: 14px;">© 2025 <strong class="sitename" style="color: #00aaff;">EPR GROUPERS</strong> | All Rights Reserved</p>
+     </div>
+   
+   </footer>

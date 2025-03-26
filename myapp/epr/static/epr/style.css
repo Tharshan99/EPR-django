@@ -121,7 +121,7 @@ font-weight: bold;
 
 /* WhatsApp Floating Icon */
 .whatsapp-float {
-    position: fixed;
+    /* position: fixed; */
     bottom: 20px;
     right: 50px;
     background-color: #25d366;
@@ -357,7 +357,7 @@ color: white;
 
 /* Contact */
 .contact-header-about {
-  background-color: #8427E2;
+  background-color: #360065;
   color: white;
   padding: 60px 20px;
   text-align: center;

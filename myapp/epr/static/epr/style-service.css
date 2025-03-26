@@ -73,7 +73,7 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: 'Poppins', sans-serif;
 }
 
 
@@ -171,7 +171,7 @@ section,
   left: 0;
   right: 0;
   height: 2px;
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  background: #4f7ed4; 
 }
 
 .services .service-item::after {
@@ -181,7 +181,7 @@ section,
   left: 0;
   width: 30px;
   height: 2px;
-  background: var(--accent-color);
+  background: #4f7ed4; 
   border-right: 5px solid var(--background-color);
 }
 
@@ -206,7 +206,7 @@ section,
   content: "";
   height: 30px;
   width: 30px;
-  background: color-mix(in srgb, var(--accent-color), transparent 70%);
+  background: #4f7ed4; 
   border-radius: 50px;
   z-index: 1;
   bottom: -15px;

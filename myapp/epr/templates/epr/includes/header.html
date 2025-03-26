@@ -1,82 +1,67 @@
 <!-- cookies box -->
 <div id="cookieConsentPopup" class="cookie-popup">
-    <p>
-      By clicking "Accept All Cookies", you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.
-    </p>
-    <div class="button-container">
-      <button id="acceptAllCookies">Accept All Cookies</button>
-      <button id="rejectAllCookies">Reject All</button>
-      <button id="cookieSettings">Cookies Settings</button>
-    </div>
+  <p>
+    By clicking "Accept All Cookies", you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.
+  </p>
+  <div class="button-container">
+    <button id="acceptAllCookies">Accept All Cookies</button>
+    <button id="rejectAllCookies">Reject All</button>
+    <button id="cookieSettings">Cookies Settings</button>
   </div>
-  <!-- cookies box end -->
-  
-  
-    <header id="header" class="header d-flex align-items-center bottom-top">
-      <div class="container-fluid container-xl position-relative d-flex align-items-center">
-  
-        <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          {% load static %}
-          <img src="{% static 'img/logo.png' %}" alt="">
-          
-  
-          <!-- <h1 class="sitename">EPR Groupers</h1> -->
-        </a>
-  
-        <nav id="navmenu" class="navmenu">
+</div>
+<!-- cookies box end -->
+
+
+<header id="header" class="header d-flex align-items-center bottom-top">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+    <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      {% load static %}
+      <img src="{% static 'img/logo.png' %}" alt="">
+      
+
+      <!-- <h1 class="sitename">EPR Groupers</h1> -->
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="{% url 'epr:index' %}" class="active">Home<br></a></li>
+        <li><a href="{% url 'epr:about_us'	 %}">About Us</a></li>
+        <li><a href="{% url 'epr:contact' %}">Contact</a></li>
+        <li><a href="{% url 'epr:career' %}">Careers</a></li>
+        <li><a href="{% url 'epr:blog' %}">Blogtest</a></li>
+
+        <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
-            <li><a href="{% url 'epr:index' %}" class="active">Home<br></a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="courses.html">Services</a></li>
-            <!-- <li class="dropdown"><a href="#"><span>Product</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li><a href="#">Dropdown 1</a></li>
+            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
+                <li><a href="#">Deep Dropdown 1</a></li>
+                <li><a href="#">Deep Dropdown 2</a></li>
+                <li><a href="#">Deep Dropdown 3</a></li>
+                <li><a href="#">Deep Dropdown 4</a></li>
+                <li><a href="#">Deep Dropdown 5</a></li>
               </ul>
-            </li> -->
-            <li><a href="events.html">About Us</a></li>
-            <li><a href="{% url 'epr:contact' %}">Contact</a></li>
-
-
-
-            <li><a href="#">Careers</a></li>
-  
-            <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
-              </ul>
-            </li> -->
-            <li><a href="contact.html">Contact</a></li>
+            </li>
+            <li><a href="#">Dropdown 2</a></li>
+            <li><a href="#">Dropdown 3</a></li>
+            <li><a href="#">Dropdown 4</a></li>
           </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
+        </li> -->
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+    <!-- <a class="btn-getstarted" href="">Login</a> -->
+
+  </div>
+
   
-        <!-- <a class="btn-getstarted" href="">Login</a> -->
-  
-      </div>
-    </header>
-  
+</header>
+
+<!-- <a href="https://wa.me/94753922147?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services!" 
+class="whatsapp-float" 
+target="_blank">
+ <i class="fab fa-whatsapp"></i>
+</a> -->

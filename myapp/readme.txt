@@ -18,15 +18,16 @@ tharshan12345
 
 
 1. install env file into epr2. (python -m venv env)
-2. pip install -r requirements.txt
+2. env activate
+3. pip install -r requirements.txt
 # should install django_extensions (pip install django_extensions)
 # should install crispy_forms (pip install django-crispy-forms)
-3. cd myapp
+4. cd myapp
 # pip install psycopg2-binary
 #python -m pip install Pillow
-4. python manage.py makemigrations
-5. python manage.py migrate
-6. python manage.py runserver
+5. python manage.py makemigrations
+6. python manage.py migrate
+7. python manage.py runserver
 
 rajahtharshan99@gmail.com
 root@1999

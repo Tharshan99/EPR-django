@@ -31,7 +31,7 @@
 .mission-section img {
     margin-right: 20px;
     border-radius: 50%;
-    border: 6px solid rgba(52, 2, 137, 0.3);
+    border: 2px solid #10002B;
     padding: 5px;
     width: 60px;
     height: auto;
@@ -59,7 +59,7 @@
     left: -30px;
     width: calc(100% + 80px);
     height: calc(100% + 40px);
-    border: 6px #834be4 solid;
+    border: 2px #10002B solid;
     border-left: 6px solid transparent;
     border-radius: 50%;
     rotate: -45deg;

@@ -19,12 +19,12 @@ section {
     place-items: center;
 }
 
-h1 {
+/* h1 {
     font-size: 5vh;
     padding: 20px;
     margin: 20px 0px;
     text-align: center;
-}
+} */
 
 .slider {
     display: flex;

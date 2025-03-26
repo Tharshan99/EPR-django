@@ -30,31 +30,57 @@ window.addEventListener('scroll', () => {
   // Change navmenu li color and background when scrolling
   const navMenu = document.querySelector('.header');
   const navMenuItems = document.querySelectorAll('.navmenu li a');
+  const letsTalkButton = document.querySelector('.lets-talk-button'); // Select the button
+
   if (currentScrollTop > 0) {
     navMenu.style.backgroundColor = 'white';
     navMenuItems.forEach(item => {
-      item.style.color = 'black';
+      item.style.color = '#10002B';
 
-      // Add hover effect for nav menu items
       item.addEventListener('mouseenter', () => {
-        item.style.color = '#007bff'; // Example hover color
+        item.style.color = '#360065';
       });
       item.addEventListener('mouseleave', () => {
-        item.style.color = 'black'; // Reset color after hover
+        item.style.color = '#10002B'; // Changed from 'black' to match scroll color
       });
+    });
+
+    // Style the button when scrolled
+    letsTalkButton.style.color = '#10002B';
+    letsTalkButton.style.borderColor = '#10002B';
+
+    letsTalkButton.addEventListener('mouseenter', () => {
+      letsTalkButton.style.color = '#360065';
+      letsTalkButton.style.borderColor = '#360065';
+    });
+    letsTalkButton.addEventListener('mouseleave', () => {
+      letsTalkButton.style.color = '#10002B';
+      letsTalkButton.style.borderColor = '#10002B';
     });
   } else {
     navMenu.style.backgroundColor = 'transparent';
     navMenuItems.forEach(item => {
       item.style.color = '#ffffff';
 
-      // Reset hover effect for nav menu items
       item.addEventListener('mouseenter', () => {
-        item.style.color = '#007bff'; // Example hover color
+        item.style.color = '#10002B';
       });
       item.addEventListener('mouseleave', () => {
-        item.style.color = '#ffffff'; // Reset color after hover
+        item.style.color = '#ffffff';
       });
+    });
+
+    // Style the button when not scrolled
+    letsTalkButton.style.color = 'white';
+    letsTalkButton.style.borderColor = 'white';
+
+    letsTalkButton.addEventListener('mouseenter', () => {
+      letsTalkButton.style.color = '#10002B';
+      letsTalkButton.style.borderColor = '#10002B';
+    });
+    letsTalkButton.addEventListener('mouseleave', () => {
+      letsTalkButton.style.color = 'white';
+      letsTalkButton.style.borderColor = 'white';
     });
   }
 });

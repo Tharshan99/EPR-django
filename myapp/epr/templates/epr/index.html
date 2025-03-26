@@ -91,7 +91,7 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: 'Poppins', sans-serif;
 }
 
 
@@ -267,6 +267,111 @@ section,
     color: #10002B !important;
   }
 
+
+  h1.heading {
+  color: #000000;
+  font-size: 3.25em;
+  font-family: 'Poppins', sans-serif;
+  /* margin: 0 0 0.5em; */
+}
+
+.lets-talk-button {
+    background-color: transparent; /* No background */
+    border: 2px solid rgb(255, 255, 255); /* Border */
+    padding: 0px 20px; /* Padding for spacing */
+    cursor: pointer; /* Change cursor on hover */
+    text-decoration: none; /* Remove underline */
+    color: black; /* Text color */
+    display: inline-block; /* Allows padding and width */
+    border-radius: 40px;
+  }
+
+  .lets-talk-button:hover {
+    border-color: rgb(255, 255, 255); /* Change border color on hover */
+    color: green; /* Change text color on hover. */
+  }
+
+/* PreLoade */
+#preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    overflow: hidden;
+    background-color: #f4f4f4; /* Match the new preloader's background */
+    display: flex; /* Center the loader */
+    justify-content: center;
+    align-items: center;
+}
+
+.absolute {
+    position: absolute;
+}
+
+/* Loader container */
+.loader {
+    display: flex;
+    gap: 1em; /* Equal spacing between letters */
+    margin: 0.25em 0;
+    animation: zoomIn 2s ease-in-out forwards; /* Zooms in smoothly */
+}
+
+/* Letter stroke animation (Runs parallel with zoom-in, Slowed Down) */
+.dash {
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+    animation: draw 4s ease-in-out infinite, fadeIn 1.5s ease-in-out forwards;
+    stroke: url(#textGradient); /* Apply gradient stroke */
+}
+
+/* SVG Gradient for Double Colors */
+<svg width="0" height="0">
+    <defs>
+        <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#10002B"/>
+            <stop offset="100%" stop-color="#360065"/>
+        </linearGradient>
+    </defs>
+</svg>
+
+/* Zoom-in effect (Parallel with text animation) */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Letter drawing animation (Slowed Down) */
+@keyframes draw {
+    0% {
+        stroke-dashoffset: 360; /* Start with the entire stroke hidden */
+    }
+    100% {
+        stroke-dashoffset: 0; /* Stroke is fully drawn */
+    }
+}
+
+/* Smooth floating movement after loading */
+@keyframes smoothMove {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+/* Preloader END */
   </style>
 
 
@@ -281,11 +386,12 @@ section,
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="{% url 'epr:index' %}" class="my-link">Home</a></li>
-        <li><a href="{% url 'epr:about_us'	 %}">About Us</a></li>
+        <li><a href="{% url 'epr:index' %}">Home</a></li>
+        <li><a href="{% url 'epr:about_us' %}">About Us</a></li>
         <li><a href="{% url 'epr:contact' %}">Contact</a></li>
         <li><a href="{% url 'epr:career' %}">Careers</a></li>
         <li><a href="{% url 'epr:blog' %}">Blog</a></li>
+        <!-- <button class="lets-talk-button"><a href="{% url 'epr:contact' %}">Lets Talk</a></button> -->
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 
@@ -338,7 +444,7 @@ section,
         <p class="paragraph" style="margin-left: 18px;">
           In a world filled with opportunities, having a mentor can make all the
           difference. Explore why people turn to this invaluable resource to
-          unlock their potential.
+          unlock their potential. ”Revolutionizing industries with AI-powered intelligence for efficiency, growth, and digital transformation.” 
         </p>
         <!-- <form id="form" autocomplete="off"> -->
           <!-- <input
@@ -370,9 +476,10 @@ section,
   
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h3 class="font-weight-bold">Services</h3>
-          <p>Empowering Businesses with AI & Technology Solutions</p>
-        </div><!-- End Section Title -->
+          <h1 class="heading">Services</h1>
+          <h4>Empowering Businesses with AI & Technology Solutions</h4>
+        </div>
+        <!-- End Section Title -->
   
         <div class="container">
   
@@ -382,8 +489,8 @@ section,
               <div class="service-item d-flex">
                 <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
                 <div>
-                  <h4 class="title"><a href="{% url 'epr:AI_Solutions' %}" class="stretched-link">Empower your business with intelligent AI solutions that optimize workflows, automate operations, and drive smarter decisions</a></h4>
-                  <p> Leverage cutting-edge AI technology to enhance business processes, streamline operations, and make data-driven decisions effortlessly.</p>
+                  <h2 style="font-weight: bold;"><a href="{% url 'epr:AI_Solutions' %}" class="stretched-link">AI Solutions</a></h2>
+                  <p>Empower your business with intelligent AI solutions that optimize workflows, automate operations, and drive smarter decisions. Empower your business with intelligent AI solutions</p>
                 </div>
               </div>
             </div>
@@ -393,8 +500,9 @@ section,
               <div class="service-item d-flex">
                 <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
                 <div>
-                  <h4 class="title"><a href="{% url 'epr:digitalMarketing' %}" class="stretched-link">Optimize your brand’s digital presence for maximum impact</a></h4>
-                  <p>Maximize your online presence with strategic digital marketing solutions designed to amplify your brand’s reach and engagement.</p>
+                  <h2 style="font-weight: bold;"><a href="{% url 'epr:digitalMarketing' %}" class="stretched-link">Digital Marketing</a></h2>
+                  <p>Optimize your brand’s digital presence for maximum impact. Optimize your brand’s digital presence for maximum impact.Optimize your brand’s digital presence for maximum impact.
+                  </p>
                 </div>
               </div>
             </div><!-- End Service Item -->
@@ -403,8 +511,9 @@ section,
               <div class="service-item d-flex">
                 <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
                 <div>
-                  <h4 class="title"><a href="{% url 'epr:IntelligentDataAnalysis' %}" class="stretched-link">Discover patterns and trends for smarter business decisions</a></h4>
-                  <p> Uncover actionable insights and key trends that drive informed decision-making for improved business outcomes.</p>
+                  <h2 style="font-weight: bold;"><a href="{% url 'epr:IntelligentDataAnalysis' %}" class="stretched-link">Intelligent data analysis</a></h2>
+                  <p>Discover patterns and trends for smarter business decisions
+                  </p>
                 </div>
               </div>
             </div><!-- End Service Item -->
@@ -413,8 +522,8 @@ section,
               <div class="service-item d-flex">
                 <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
                 <div>
-                  <h4 class="title"><a href="{% url 'epr:IOTMain' %}" class="stretched-link">Design, develop, and implement smart IoT ecosystems</a></h4>
-                  <p>Develop and deploy integrated IoT systems that enhance connectivity, efficiency, and automation across your business operations.</p>
+                  <h2 style="font-weight: bold;"><a href="{% url 'epr:IOTMain' %}" class="stretched-link">IoT Solution</a></h2>
+                  <p>Design, develop, and implement smart IoT ecosystems.</p>
                 </div>
               </div>
             </div><!-- End Service Item -->
@@ -423,8 +532,8 @@ section,
               <div class="service-item d-flex">
                 <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
                 <div>
-                  <h4 class="title"><a href="{% url 'epr:mobileMain' %}" class="stretched-link">Build user-friendly, innovative apps that engage and delight</a></h4>
-                  <p> Craft intuitive, high-performing mobile apps that provide seamless user experiences and boost engagement.</p>
+                  <h2 style="font-weight: bold;"><a href="{% url 'epr:mobileMain' %}" class="stretched-link">Mobile applications</a></h2>
+                  <p>Build user-friendly, innovative apps that engage and delight.</p>
                 </div>
               </div>
             </div><!-- End Service Item -->
@@ -433,8 +542,8 @@ section,
               <div class="service-item d-flex">
                 <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
                 <div>
-                  <h4 class="title"><a href="{% url 'epr:webMain' %}" class="stretched-link">Build fast, secure, and responsive websites tailored to your needs</a></h4>
-                  <p> Create high-performance, scalable websites designed to meet your specific business objectives with security and speed.</p>
+                  <h2 style="font-weight: bold;"><a href="{% url 'epr:webMain' %}" class="stretched-link">Web development</a></h2>
+                  <p>Build fast, secure, and responsive websites tailored to your needs.</p>
                 </div>
               </div>
             </div><!-- End Service Item -->
@@ -454,15 +563,16 @@ section,
     <!-- /Services Section -->
 
     <!-- Why Us Section -->
-    <section id="why-us" class="section why-us">
-
-      <div class="container">
-
+    <section id="why-us" class="section why-us" style="margin-top:2px;">
+      <!-- <h1 class="heading">Why Partner with us?</h1> -->
+        <!-- <h4 style="margin-bottom: 40px;">Empowering Businesses with AI & Technology Solutions</h4> -->
+      
+        <div class="container">
         <div class="row gy-4">
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="why-box" style="background-color: #360065;">
-              <h3>Why Partner with EPR Groupers?</h3>
+              <h3 style="text-align: center;">Why Partner with EPR Groupers?</h3>
               <p style="text-align: justify;">
                 At EPR Groupers, we specialize in delivering AI-driven solutions tailored to meet your unique needs. Our expert team is dedicated to ensuring seamless integration and superior performance, helping your business thrive in a rapidly evolving digital landscape. Partner with us for innovative solutions and exceptional support.
               </p>
@@ -512,9 +622,8 @@ section,
 <section class="wrapper">
   <div class="container-fostrap">
       <div>
-          <h1 class="heading">
-              Recent Project 
-          </h1>
+        <h1 class="heading">Recent Project</h1>
+        <h4 style="margin-bottom: 40px;">Empowering Businesses with AI & Technology Solutions</h4>
       </div>
       <div>
           <div class="container">
@@ -522,11 +631,11 @@ section,
                   <div class="col-xs-12 col-sm-4">
                       <div class="card-recent">
                           <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
-                          <img src="https://1.bp.blogspot.com/-Bii3S69BdjQ/VtdOpIi4aoI/AAAAAAAABlk/F0z23Yr59f0/s640/cover.jpg" />
+                          <img src="{% static 'img/recent/buildwith.png' %}" />
                         </a>
                           <div class="card-content">
                               <h4 class="card-title">
-                                  <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Bootstrap 3 Carousel FadeIn Out Effect
+                                  <a href="#"> BuildWith
                                 </a>
                               </h4>
                               <p class="">
@@ -543,15 +652,15 @@ section,
                   <div class="col-xs-12 col-sm-4">
                       <div class="card-recent">
                           <a class="img-card" href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">
-                          <img src="https://3.bp.blogspot.com/-bAsTyYC8U80/VtLZRKN6OlI/AAAAAAAABjY/kAoljiMALkQ/s400/material%2Bnavbar.jpg" />
+                          <img src="{% static 'img/recent/vsr.png' %}"/>
                         </a>
                           <div class="card-content">
                               <h4 class="card-title">
-                                  <a href="http://www.fostrap.com/2016/02/awesome-material-design-responsive-menu.html"> Material Design Responsive Menu
+                                  <a href="#"> POS System for VSR JEWELLERY
                                 </a>
                               </h4>
                               <p class="">
-                                  Material Design is a visual programming language made by Google. Language programming...
+                                  Material Design is a visual programming language made by Google. Language programming... Material Design is a visual programming language made by Google. Language programming...Material Design is a visual programming language made by Google. Language programming... 
                               </p>
                           </div>
                           <!-- <div class="card-read-more">
@@ -564,11 +673,11 @@ section,
                   <div class="col-xs-12 col-sm-4">
                       <div class="card-recent">
                           <a class="img-card" href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">
-                          <img src="https://4.bp.blogspot.com/-TDIJ17DfCco/Vtneyc-0t4I/AAAAAAAABmk/aa4AjmCvRck/s1600/cover.jpg" />
+                          <img src="{% static 'img/recent/dart.png' %}" />
                         </a>
                           <div class="card-content">
                               <h4 class="card-title">
-                                  <a href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">5  Button Hover Animation Effects
+                                  <a href="#">DART
                                 </a>
                               </h4>
                               <p class="">
@@ -595,7 +704,8 @@ section,
 
 <!-- recognition secction start -->
 <section>
-  <h1>Membership and Recognition</h1>
+  <h1 class="heading">Membership and Recognition</h1>
+        <h4 style="margin-bottom: 40px;">Empowering Businesses with AI & Technology Solutions</h4>
   <div class="slider">
       <div class="slider-items">
           <img src="{% static 'img/img-1.png' %}">
@@ -679,11 +789,12 @@ section,
 <!-- Testimonial Start -->
 <div class="container mt-5 swiper">
   <div class="text-center">
-      <h2 class="section-heading">Client Testimonials</h2>
+    <h1 class="heading">Success Stories</h1>
+    <h4 style="margin-bottom: 40px;">Empowering Businesses with AI & Technology Solutions</h4>
   </div>
-  <p class="description" style="background-color: #360065;">
+  <!-- <p class="description" style="background-color: #360065;">
       Read how our product has transformed workflows and increased productivity for professionals.
-  </p>
+  </p> -->
 
   <div class="slider-wrapper">
       <div class="row mt-4 swiper-wrapper">
@@ -700,7 +811,7 @@ section,
                   <p class="testimonial-text">
                     "EPR Groupers delivered an outstanding AI solution that transformed our business operations. Their expertise in automation helped us save time and reduce costs. The team was highly professional, understood our needs, and provided a seamless experience from start to finish."
                   </p>
-                  <p class="position-text" style="color:#360065">Canada</p>
+                  <p class="position-text" style="color:#10002B">Canada</p>
               </div>
           </div>
 
@@ -714,13 +825,13 @@ section,
                       <hr class="hr-line">
                   </div>
                   <p class="testimonial-text">
-                    "EPR Groupers built a custom AI model for our company that improved our workflow significantly. They listened to our requirements carefully and delivered a solution that integrated perfectly into our existing system. Their support and expertise made a huge difference in our success."
+                    "We appreciate EPR Groupers’ professionalism and expertise. Their AI-driven solutions have streamlined our operations, making our business more efficient. They provide great service and support throughout the entire process."
                   </p>
-                  <p class="position-text" style="color:#360065">UK</p>
+                  <p class="position-text" style="color:#10002B">UK</p>
               </div>
           </div>
 
-          <div class="col-md-3 col-sm-6 col-12 d-flex swiper-slide">
+          <!-- <div class="col-md-3 col-sm-6 col-12 d-flex swiper-slide">
               <div class="testimonial-card w-100">
                   <div class="user-info-wrapper">
                       <div class="user-info">
@@ -732,15 +843,15 @@ section,
                   <p class="testimonial-text">
                     "EPR Groupers provides high-quality services at affordable prices. They never compromise on quality, and their team is always ready to help. Whether it’s AI, web development, or mobile apps, they deliver excellent solutions that truly add value to our business."
                   </p>
-                  <p class="position-text" style="color:#360065">Canada</p>
+                  <p class="position-text" style="color:#10002B">Canada</p>
               </div>
-          </div>
+          </div> -->
 
           <div class="col-md-3 col-sm-6 col-12 d-flex swiper-slide">
               <div class="testimonial-card w-100">
                   <div class="user-info-wrapper">
                       <div class="user-info">
-                          <span class="name">Thusi</span>
+                          <span class="name">Thilak Jebasuntharam</span>
                           <img src="{% static 'img/client-4.jpg' %}" alt="User Image" class="user-img">
                       </div>
                       <hr class="hr-line">
@@ -748,7 +859,7 @@ section,
                   <p class="testimonial-text">
                     "EPR Groupers is always ahead of the curve with AI technology. Their solutions are future-ready and perfectly suited for modern businesses. If you want innovative AI services that actually work, they are the best choice. Highly recommended!"
                   </p>
-                  <p class="position-text" style="color:#360065">Sri Lanka</p>
+                  <p class="position-text" style="color:#10002B">Sri Lanka</p>
               </div>
           </div>
           <div class="col-md-3 col-sm-6 col-12 d-flex swiper-slide">
@@ -763,7 +874,7 @@ section,
                   <p class="testimonial-text">
                     "EPR Groupers delivers cutting-edge technology solutions with a strong focus on AI and innovation. Their team is reliable, skilled, and always ready to meet business needs with high-quality results."
                   </p>
-                  <p class="position-text" style="color:#360065">Germany</p>
+                  <p class="position-text" style="color:#10002B">Germany</p>
               </div>
           </div>
 
@@ -819,37 +930,38 @@ section,
 
       
   </div>
-  <div class="swiper-button-prev"> </div>
-      <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev" style="color:#10002B"> </div>
+      <div class="swiper-button-next" style="color:#10002B"></div>
 </div>
 <!-- Testimonial End -->
 
 <!-- FAQ Start-->
 <div class="container-faq" style="padding-left:40px; padding-right:40px;">
-  <h2>Frequently Asked Questions</h2>
+  <h1 class="heading">Frequently Asked Questions</h1>
+        <h4 style="margin-bottom: 40px;">Empowering Businesses with AI & Technology Solutions</h4>
   <div class="accordion" >
     <div class="accordion-item" style="border:none;">
-      &nbsp;&nbsp;&nbsp;&nbsp;<button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Why is the moon sometimes out during the day?</span><span class="icon" aria-hidden="true"></span></button>
+      &nbsp;&nbsp;&nbsp;&nbsp;<button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">What makes EPR Groupers different from other AI solution providers?</span><span class="icon" aria-hidden="true"></span></button>
       <div class="accordion-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+        <p>We focus on innovation, customization, and customer satisfaction, ensuring that you get an AI solution that truly meets your needs.</p>
       </div>
     </div>
     <div class="accordion-item" style="border:none;">
-      <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Why is the sky blue?</span><span class="icon" aria-hidden="true"></span></button>
+      <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">How do I get started with EPR Groupers’ AI solutions?</span><span class="icon" aria-hidden="true"></span></button>
       <div class="accordion-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+        <p>You can get started by contacting us through our website. We’ll discuss your needs and suggest the best AI solution for your business.</p>
       </div>
     </div>
     <div class="accordion-item" style="border:none;">
-      <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Will we ever discover aliens?</span><span class="icon" aria-hidden="true"></span></button>
+      <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">I already use some software in my business. Will your AI solutions work with my existing tools?</span><span class="icon" aria-hidden="true"></span></button>
       <div class="accordion-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+        <p>Absolutely! Our AI can integrate with most business software, whether it's CRM systems, databases, or cloud platforms. We’ll make sure it fits seamlessly into your workflow.</p>
       </div>
     </div>
     <div class="accordion-item" style="border:none;">
-      <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">How much does the Earth weigh?</span><span class="icon" aria-hidden="true"></span></button>
+      <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Can AI help improve customer experience in my business?</span><span class="icon" aria-hidden="true"></span></button>
       <div class="accordion-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+        <p>Yes! AI can enhance customer experience through chatbots, personalized recommendations, automated responses, and data-driven insights that help tailor services to customer needs.</p>
       </div>
     </div>
     <div class="accordion-item" style="border:none;">
@@ -1121,7 +1233,28 @@ section,
   <!-- <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
 
   <!-- Preloader -->
-  <div id="preloader"></div>
+  <div id="preloader">
+    <div class="loader">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64" class="inline-block">
+          <defs>
+              <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#10002B"/>
+                  <stop offset="100%" stop-color="#360065"/>
+              </linearGradient>
+          </defs>
+          <path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" stroke="url(#textGradient)" d="M 10,4 H 50 V 12 H 20 V 28 H 46 V 36 H 20 V 52 H 50 V 60 H 10 Z" class="dash" id="e" pathLength="360"></path>
+      </svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64" class="inline-block">
+          <path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" stroke="url(#textGradient)" d="M 10,4 H 30 Q 50,4 50,24 Q 50,44 30,44 H 20 V 60 H 10 Z M 20,12 V 36 H 28 Q 38,36 36,24 Q 38,12 28,12 Z" class="dash" id="p" pathLength="360"></path>
+      </svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64" class="inline-block">
+          <path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" stroke="url(#textGradient)" d="M 10,4 H 30 Q 50,4 50,24 Q 50,36 40,40 L 50,60 H 40 L 30,42 H 20 V 60 H 10 Z M 20,12 V 30 H 28 Q 38,30 38,24 Q 38,12 28,12 Z" class="dash" id="r" pathLength="360"></path>
+      </svg>
+  </div>
+  </div>
+
 
   <!-- Vendor JS Files -->
   {% load static %}

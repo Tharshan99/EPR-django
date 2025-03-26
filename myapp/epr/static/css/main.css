@@ -121,7 +121,7 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: 'Poppins', sans-serif;
 }
 
 /* PHP Email Form Messages
@@ -370,6 +370,7 @@ h6 {
     line-height: 0;
     margin-left: 5px;
     transition: 0.3s;
+    /* color: #10002B; */
   }
 
   .navmenu li:last-child a {
@@ -473,7 +474,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-dropdown-color);
+    color: #10002B;
     padding: 10px 20px;
     font-family: var(--nav-font);
     font-size: 17px;
@@ -593,13 +594,13 @@ h6 {
   font-size: 26px;
   font-weight: 700;
   letter-spacing: 1px;
-  font-family: var(--heading-font);
+  font-family: 'Poppins', sans-serif;
   color: var(--heading-color);
 }
 
 .footer .footer-about p {
   font-size: 14px;
-  font-family: var(--heading-font);
+  font-family: 'Poppins', sans-serif;
 }
 
 .footer .social-links a {
@@ -729,7 +730,7 @@ h6 {
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
-#preloader {
+/* #preloader {
   position: fixed;
   inset: 0;
   z-index: 999999;
@@ -749,7 +750,7 @@ h6 {
   width: 60px;
   height: 60px;
   animation: animate-preloader 1.5s linear infinite;
-}
+} */
 
 @keyframes animate-preloader {
   0% {
@@ -771,7 +772,7 @@ h6 {
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background-color: #10002B;
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -785,7 +786,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: color-mix(in srgb, #10002B, transparent 20%);
   color: var(--contrast-color);
 }
 
@@ -1056,7 +1057,7 @@ section,
 .about .content .read-more {
   background: var(--accent-color);
   color: var(--contrast-color);
-  font-family: var(--heading-font);
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 1px;
@@ -1107,7 +1108,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   padding: 0;
   margin: 0;
-  font-family: var(--heading-font);
+  font-family: 'Poppins', sans-serif;
   font-size: 15px;
   font-weight: 600;
 }
@@ -1147,12 +1148,12 @@ section,
 }
 
 .why-us .why-box .more-btn:hover {
-  color: var(--accent-color);
+  color: #10002B;
   background: var(--surface-color);
 }
 
 .why-us .icon-box {
-  background-color: var(--surface-color);
+  background-color: white;
   text-align: center;
   padding: 40px 30px;
   width: 100%;
@@ -1161,7 +1162,7 @@ section,
 }
 
 .why-us .icon-box i {
-  color: var(--accent-color);
+  color: white;
   font-size: 32px;
   margin-bottom: 30px;
   background: color-mix(in srgb, var(--accent-color), transparent 95%);
@@ -1186,7 +1187,7 @@ section,
 }
 
 .why-us .icon-box:hover i {
-  color: var(--contrast-color);
+  color: #10002B;
   background: var(--accent-color);
 }
 
@@ -1802,7 +1803,7 @@ section,
 .pricing .pricing-item h4 {
   font-size: 36px;
   font-weight: 600;
-  font-family: var(--heading-font);
+  font-family: 'Poppins', sans-serif;
 }
 
 .pricing .pricing-item h4 sup {
@@ -1856,7 +1857,7 @@ section,
   transition: none;
   font-size: 14px;
   font-weight: 400;
-  font-family: var(--heading-font);
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   transition: 0.3s;
 }

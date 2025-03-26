@@ -25,6 +25,15 @@
    <link rel="stylesheet" href="{% static 'epr/about/membership.css' %}">
    <link rel="stylesheet" href="{% static 'epr/about/intern.css' %}">
    <link rel="stylesheet" href="{% static 'epr/about/talkUs.css' %}">
+
+  <style>
+    h1.heading {
+  color: #000000;
+  font-size: 3.25em;
+  font-family: 'Poppins', sans-serif;
+  /* margin: 0 0 0.5em; */
+}
+  </style>
 </head>
 
 <header id="header" class="header d-flex align-items-center sticky-top " style="background-color: #61199f">
@@ -55,26 +64,30 @@
 
 <body>
     <div class="mission-container">
-        <div class="mission-title">Our Mission</div>
+      <div class="container section-title" data-aos="fade-up">
+        <h1 class="heading">Our Mission</h1>
+        <h4>Empowering Businesses with AI & Technology Solutions</h4>
+        <br>
+      </div>
         <div class="mission-row">
             <div class="mission-content">
                 
                 <div class="mission-section">
-                    <img src="{% static 'img/about/vision-svgrepo-com.svg' %}" alt="Vision">
+                    <img src="{% static 'img/about/vision.svg' %}" alt="Vision">
                     <div>
                         <h3>Vision</h3>
                         <p>This slide is 100% editable. Adapt it to your needs and capture your audience's attention.This slide is 100% editable.</p>
                     </div>
                 </div>
                 <div class="mission-section">
-                    <img src="{% static 'img/about/mission_13089918.png' %}" alt="Mission">
+                    <img src="{% static 'img/about/mission.svg' %}" alt="Mission">
                     <div>
                         <h3>Mission</h3>
                         <p>This slide is 100% editable. Adapt it to your needs and capture your audience's attention.This slide is 100% editable. </p>
                     </div>
                 </div>
                 <div class="mission-section">
-                    <img src="{% static 'img/about/goal-idea.svg' %}" alt="Goal">
+                    <img src="{% static 'img/about/goal.svg' %}" alt="Goal">
                     <div>
                         <h3>Goal</h3>
                         <p>This slide is 100% editable. Adapt it to your needs and capture your audience's attention.This slide is 100% editable.</p>
@@ -82,14 +95,16 @@
                 </div>
             </div>
             <div class="mission-image-container">
-                <img src="{% static 'img/about/v.jpg' %}" alt="Exploration">
+                <img src="{% static 'img/mug3.jpg' %}" alt="Exploration">
             </div>
         </div>
     </div>
 
     <!--Recogization  -->
     <section>
-        <h1>Membership and Recognition</h1>
+        <h1 class="heading">Membership and Recognition</h1>
+        <h4>Empowering Businesses with AI & Technology Solutions</h4>
+        <br><br>
         <div class="membership-slider">
             <div class="membership-slider-items">
                 <img src="https://www.zarla.com/images/nike-logo-2400x2400-20220504.png?crop=1:1,smart&width=150&dpr=2"
@@ -127,7 +142,7 @@
 
     <main class="main">
       <!-- About Section -->
-      <section id="about" class="about section light-background">
+      <!-- <section id="about" class="about section light-background">
   
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row align-items-xl-center gy-5">
@@ -148,7 +163,7 @@
                     <h3>Eius provident</h3>
                     <p>Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor voluptatem</p>
                   </div>
-                </div> <!-- End Icon Box -->
+                </div> 
   
                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
                   <div class="icon-box">
@@ -156,7 +171,7 @@
                     <h3>Rerum aperiam</h3>
                     <p>Autem saepe animi et aut aspernatur culpa facere. Rerum saepe rerum voluptates quia</p>
                   </div>
-                </div> <!-- End Icon Box -->
+                </div> 
   
                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
                   <div class="icon-box">
@@ -164,7 +179,7 @@
                     <h3>Veniam omnis</h3>
                     <p>Omnis perferendis molestias culpa sed. Recusandae quas possimus. Quod consequatur corrupti</p>
                   </div>
-                </div> <!-- End Icon Box -->
+                </div> 
   
                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
                   <div class="icon-box">
@@ -172,14 +187,15 @@
                     <h3>Delares sapiente</h3>
                     <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p>
                   </div>
-                </div> <!-- End Icon Box -->
+                </div> 
               </div>
             </div>
   
           </div>
         </div>
   
-      </section><!-- /About Section -->
+      </section> -->
+      <!-- /About Section -->
   
     
   
@@ -204,7 +220,7 @@
                 <img src="{% static 'img/about/vertical_image.jpg' %}" class="img-fluid" alt="Internship at EPR GROUPS?">
             </div>
             <div class="col-sm-12 col-md-6 ">
-                <h2 class="intern-heading intern-custom-heading">What to expect from an Internship at EPR GROUPS?</h2>
+                <h1 class="heading">What to expect from an Internship at EPR GROUPS?</h1>
                 <br>
                 <ul class="list-unstyled">
                     <li class="mb-3 intern-custom-text">
@@ -236,15 +252,15 @@
 
     <!-- talkUs Section-->
 
-    <div class="background-container">
-        <div class="white-section"></div>
-        <div class="orange-section"></div>
+    <div class="background-container" style="background-color: #360065;">
+        <!-- <div class="white-section"></div> -->
+        <!-- <div class="orange-section"></div> -->
     </div>
     <div class="container talkus-hero-section">
         <div class="row align-items-center" style="width: 100%;">
             <div class="col-lg-5">
-                <h1 class="talkus-heading">Have you got an idea?</h1>
-                <p class="talkus-description">Transform your vision into reality with our custom software solutions, designed to meet your unique needs and aspirations.</p>
+                <h1 class="talkus-heading" style="color:white">Have you got an idea?</h1>
+                <p class="talkus-description" style="color:white">Transform your vision into reality with our custom software solutions, designed to meet your unique needs and aspirations.</p>
             </div>
             <div class="col-lg-7 talkus-image-container">
                 <button class="btn talkus-button">Talk to us <span class="talkus-arrow">→</span></button>

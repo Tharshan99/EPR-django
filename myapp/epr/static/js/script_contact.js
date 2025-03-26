@@ -20,7 +20,7 @@ window.addEventListener('scroll', () => {
 
   // Show the WhatsApp icon when scrolling up or down, but not in the hero section
   if (!isHeroSectionVisible()) {
-    whatsappFloat.style.display = 'block';
+    whatsappFloat.style.display = 'none';
   } else {
     whatsappFloat.style.display = 'none';
   }
@@ -51,7 +51,7 @@ window.addEventListener('scroll', () => {
 
 // Function to change color on hover
 function hoverEffect(event) {
-  event.target.style.color = '#007bff'; // Change to blue on hover
+  event.target.style.color = '#10002B'; // Change to blue on hover
 }
 
 // Function to reset color after hover
